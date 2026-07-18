@@ -1336,3 +1336,205 @@ input[type="submit"]:hover {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+/* ---------- Interior pages ---------- */
+.page-hero {
+  position: relative;
+  height: 200px;
+  margin-top: 0;
+  background-image: linear-gradient(135deg, #8546c2 0%, #4f2683 50%, #271241 100%);
+  overflow: hidden;
+}
+
+.page-hero .hero-base {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero .wave {
+  bottom: 0;
+  transform: rotate(180deg);
+  z-index: 2;
+}
+
+.page-hero .wave svg {
+  height: 50px;
+}
+
+.page-hero .wave .shape-fill {
+  fill: #ffffff;
+}
+
+/* Interior pages need purple header bar even before scroll */
+body:not(.page-home) .site-header {
+  background: rgba(79, 38, 131, 0.96);
+}
+
+body:not(.page-home) main {
+  padding-top: 0;
+}
+
+/* Offset fixed header for interior hero */
+body:not(.page-home) .page-hero {
+  margin-top: 0;
+  padding-top: 90px;
+  height: auto;
+  min-height: 160px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 800px) {
+  body:not(.page-home) .page-hero {
+    padding-top: 120px;
+    min-height: 200px;
+  }
+}
+
+.content-wrap {
+  position: relative;
+  text-align: left;
+  background: #fff;
+  padding: 4rem 0 6rem;
+  z-index: 1;
+  min-height: 400px;
+}
+
+.content-wrap .container {
+  max-width: 900px;
+}
+
+.content-wrap h1.pagename {
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--purple-dark);
+  line-height: 1.15;
+}
+
+@media (min-width: 800px) {
+  .content-wrap h1.pagename {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+/* Ported CMS body */
+.page-content {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--dark);
+}
+
+.page-content h2,
+.page-content h3,
+.page-content h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-content h3 {
+  font-size: 2.2rem;
+  color: var(--purple);
+}
+
+.page-content h4 {
+  font-size: 1.9rem;
+  color: var(--purple);
+}
+
+.page-content p {
+  margin-bottom: 1.6rem;
+}
+
+.page-content ul,
+.page-content ol {
+  margin: 0 0 2rem 2rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.page-content ol {
+  list-style: decimal;
+}
+
+.page-content li {
+  margin-bottom: 0.6rem;
+}
+
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+.page-content iframe,
+.page-content video {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.page-content table td,
+.page-content table th {
+  padding: 0.8rem;
+  vertical-align: top;
+}
+
+.page-content a {
+  color: var(--purple);
+  text-decoration: underline;
+}
+
+.page-content .button,
+.page-content a.button {
+  text-decoration: none;
+}
+
+/* Placeholder / phase-2 notice */
+.phase-note {
+  background: #f4f0f8;
+  border-left: 4px solid var(--purple);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.phase-note strong {
+  color: var(--purple-dark);
+}
+
+/* Listing card stubs */
+.listing-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .listing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.listing-card {
+  border: 2px solid var(--purple);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+.listing-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.8rem;
+  color: var(--purple);
+}
