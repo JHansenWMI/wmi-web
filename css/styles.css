@@ -1,0 +1,1338 @@
+/* ============================================================
+   World Ministries International — Homepage styles
+   Brand: Purple #4F2683 / #8546C2 / #271241 · Gold #FFC62F
+   ============================================================ */
+
+:root {
+  --purple: #4f2683;
+  --purple-light: #8546c2;
+  --purple-dark: #271241;
+  --purple-mid: #320870;
+  --gold: #ffc62f;
+  --dark: #1e1d22;
+  --lavender: #dcd4e6;
+  --white: #ffffff;
+  --gray-text: #777;
+  --container: 1440px;
+  --header-h: 80px;
+  --font: "Poppins", system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+}
+
+/* 1rem = 10px */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--dark);
+  background: var(--dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--purple);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0 0 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 2rem;
+  /* Live skeleton uses 600; only Poppins 200/400/800 are loaded, so 600→800 */
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--purple-dark);
+  font-family: poppins, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* ---------- Buttons ---------- */
+.button,
+button,
+input[type="submit"] {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--gold);
+  border: 2px solid var(--gold);
+  color: var(--purple-dark);
+  line-height: 1;
+  font-size: 1.65rem;
+  height: 4rem;
+  text-align: center;
+  font-weight: 700;
+  font-family: var(--font);
+  text-decoration: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  background: transparent;
+  color: var(--purple-mid);
+  border-color: var(--purple-mid);
+  text-decoration: none;
+}
+
+.button-lg {
+  padding: 2rem 4rem;
+  height: auto;
+  font-size: 2rem;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2300;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header.is-stuck {
+  background: rgba(79, 38, 131, 0.96);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+@media (min-width: 800px) {
+  .header-inner {
+    padding: 3rem 0;
+  }
+}
+
+.site-header.is-stuck .header-inner {
+  padding: 1.2rem 0;
+}
+
+/* Match live site: .header-wrap .logo.three.cols { width: auto }
+   and .header-wrap .logo img { min-width: 160px; max-width: 200px }
+   flex-shrink: 0 so the nav row cannot squeeze the logo smaller. */
+.logo {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 100%;
+  min-width: 160px;
+  max-width: 200px;
+  display: block;
+  transition: all ease 0.3s;
+}
+
+.header-right {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+@media (min-width: 1000px) {
+  .header-right {
+    display: flex;
+  }
+}
+
+/* Top (secondary) nav */
+.top-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.25vw;
+}
+
+.top-nav a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5vw;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-nav .nav-donate a {
+  background: #fff;
+  color: var(--purple-mid);
+  border-radius: 0.25rem;
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+}
+
+.top-nav .nav-donate a:hover {
+  background: #fff;
+  color: var(--purple-mid);
+}
+
+@media (min-width: 1200px) {
+  .top-nav a {
+    font-size: 1.4rem;
+  }
+}
+
+/* Main nav */
+.main-nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+}
+
+.main-nav a {
+  display: block;
+  white-space: nowrap;
+  padding: 0.5rem 0.5vw;
+  color: #fff;
+  font: 500 1.3rem / 1 var(--font);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background 0.3s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+}
+
+@media (min-width: 1300px) {
+  .main-nav a {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .main-nav a {
+    font-size: 1.8rem;
+  }
+}
+
+/* Dropdowns */
+.main-nav .has-dropdown,
+.top-nav .has-dropdown {
+  position: relative;
+}
+
+.main-nav .dropdown,
+.top-nav .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--purple-dark);
+  border-radius: 0.5rem;
+  padding: 0.75rem 0;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  z-index: 50;
+  flex-direction: column;
+}
+
+.main-nav .has-dropdown:hover > .dropdown,
+.top-nav .has-dropdown:hover > .dropdown {
+  display: flex;
+}
+
+.main-nav .dropdown a,
+.top-nav .dropdown a {
+  text-align: left;
+  text-transform: none;
+  font-size: 1.4rem !important;
+  font-weight: 400;
+  padding: 0.85rem 1.5rem;
+  white-space: normal;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.main-nav .dropdown a:hover,
+.top-nav .dropdown a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  height: auto;
+  line-height: 1;
+}
+
+.menu-toggle:hover {
+  background: none;
+  border: none;
+  color: var(--gold);
+}
+
+@media (min-width: 1000px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Mobile drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2400;
+  background: rgba(30, 29, 34, 0.97);
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.mobile-nav.is-open {
+  display: block;
+}
+
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.mobile-nav-header img {
+  max-width: 160px;
+}
+
+.mobile-nav-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  height: auto;
+  padding: 0.5rem;
+}
+
+.mobile-nav-close:hover {
+  background: none;
+  border: none;
+  color: var(--gold);
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobile-nav a {
+  display: block;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.mobile-nav .mobile-donate a {
+  background: var(--gold);
+  color: var(--purple-dark);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  border: none;
+}
+
+.mobile-nav .sub {
+  padding-left: 1.5rem;
+}
+
+.mobile-nav .sub a {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 0.8rem 1rem;
+}
+
+/* ---------- Hero ----------
+   Matched to live .top-wrap / .featured-image / .featured-intro-wrap
+   Image size is the primary attention anchor — keep min-width: 70% on desktop.
+   Intro stays text-align: center (not left) like the live site. */
+.hero {
+  position: relative;
+  z-index: 400;
+  padding-top: 100px;
+  background-image: linear-gradient(135deg, #8546c2 0%, #4f2683 50%, #271241 100%);
+  color: #ccc;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: url("../assets/images/studio-bg.jpg") center / cover no-repeat;
+  opacity: 0.2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    padding-top: 11vw;
+  }
+
+  .hero .container {
+    flex-direction: row;
+  }
+}
+
+.hero-image {
+  display: flex;
+  position: relative;
+  text-align: center;
+  order: 1;
+  margin-bottom: -7%;
+  margin-top: auto;
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .hero-image {
+    order: 0;
+    min-width: 70%;
+  }
+}
+
+.hero-image img.dr-hansen {
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 300;
+  max-width: 90%;
+}
+
+.hero-intro {
+  order: 1;
+  position: relative;
+  min-width: 240px;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.1;
+  z-index: 400;
+  padding: 2rem 0;
+}
+
+@media (min-width: 800px) {
+  .hero-intro {
+    order: 2;
+  }
+}
+
+.hero-intro h1,
+.hero-intro h3 {
+  color: #fff;
+}
+
+.hero-intro h1 {
+  font-size: 5rem;
+  margin: 0 0 1rem;
+  /* Live CSS says 600, but only Poppins 800 is loaded for bold —
+     so "Warning!" renders ExtraBold. Set 800 explicitly. */
+  font-weight: 800;
+  line-height: 1.1;
+  font-family: poppins, sans-serif;
+}
+
+.hero-intro h3 {
+  opacity: 0.5;
+  color: #fff;
+  font-size: 1.7rem;
+  margin: 0 0 1rem;
+  font-weight: 800;
+  line-height: 1.1;
+  font-family: poppins, sans-serif;
+}
+
+/* Alarm line — live uses <p><strong>, inherits body size, white */
+.hero-intro strong {
+  color: #fff;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Mission lede — live wraps in <small> */
+.hero-intro .lede,
+.hero-intro small {
+  display: block;
+  font-size: 80%;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.hero-intro .lede p,
+.hero-intro small p {
+  margin: 0;
+}
+
+.hero-intro .button {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.hero-intro .button:hover,
+.hero-intro .button:focus {
+  color: #fff;
+  border-color: #fff;
+  background: transparent;
+}
+
+/* Wave divider */
+.wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+}
+
+.wave-bottom {
+  bottom: -1px;
+}
+
+.wave-bottom svg {
+  height: 16px;
+}
+
+.wave-bottom .shape-fill {
+  fill: var(--dark);
+}
+
+/* ---------- Listen ----------
+   Live: .listen-wrap { padding: 8rem; padding-top: 10rem; font-size: 2.4rem }
+   .listen-title is display:none on production */
+.listen {
+  position: relative;
+  background: var(--dark);
+  padding: 10rem 8rem 8rem;
+  font-size: 2.4rem;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 799px) {
+  .listen {
+    padding: 6rem 2rem;
+  }
+}
+
+.listen-title {
+  font-family: "Caveat", cursive;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 50%;
+  bottom: -8rem;
+  font-size: 6rem;
+  line-height: 1;
+  text-transform: lowercase;
+  z-index: 300;
+  display: none; /* matches live site */
+  margin: 0;
+  font-weight: 500;
+}
+
+.listen-logos {
+  display: flex;
+  flex-flow: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.listen-logos a {
+  display: block;
+}
+
+.listen-logos img {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  object-fit: contain;
+}
+
+@media (min-width: 800px) {
+  .listen-logos {
+    flex-flow: nowrap;
+  }
+
+  .listen-logos img {
+    height: 2.1vw;
+  }
+}
+
+/* ---------- ESN ---------- */
+.esn-section {
+  position: relative;
+  padding: 7rem 0 3rem;
+  background-image: linear-gradient(to right, #dddddd, #eeeeee, #ffffff);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.esn-section .wave-top {
+  top: -1px;
+  left: -1%;
+  width: 101%;
+  transform: rotate(180deg);
+}
+
+.esn-section .wave-top svg {
+  height: 16px;
+  transform: rotateY(180deg);
+}
+
+.esn-section .wave-top .shape-fill {
+  fill: var(--dark);
+}
+
+.esn-card {
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  padding-bottom: 0;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+@media (min-width: 800px) {
+  .esn-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.esn-card img {
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 200px;
+  max-width: 300px;
+  flex-shrink: 0;
+}
+
+.esn-card h3 {
+  color: #777;
+  /* live leaves h3 at skeleton scale (2.5rem / 3rem) */
+  margin-bottom: 2rem;
+}
+
+.esn-card p {
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+
+.esn-card .button {
+  background: #777;
+  border-color: #777;
+  color: #fff;
+  margin: 0;
+}
+
+.esn-card .button:hover {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+/* ---------- Thought of the Day ---------- */
+.thought-section {
+  position: relative;
+  padding: 2rem 0 7rem;
+  background-image: linear-gradient(to right, #dddddd, #eeeeee, #ffffff);
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.thought-section::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 100;
+  background: url("../assets/images/thought-bg.svg") center / contain no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+@media (min-width: 800px) {
+  .thought-section {
+    padding: 7rem 0;
+  }
+}
+
+.thought {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 4rem;
+}
+
+@media (min-width: 800px) {
+  .thought {
+    width: 70%;
+    padding-right: 2rem;
+  }
+}
+
+.thought h1 {
+  color: #8546c2;
+  text-transform: uppercase;
+  font-size: 5rem;
+  max-width: 600px;
+  text-align: left;
+  line-height: 0.8;
+  margin-bottom: 2rem;
+}
+
+.thought h3 {
+  color: var(--purple-dark);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thought p {
+  font-size: 2rem;
+  max-width: 640px;
+}
+
+.thought-section .wave-bottom-multi {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.thought-section .wave-bottom-multi svg {
+  height: 50px;
+  transform: rotateY(180deg);
+}
+
+.thought-section .wave-bottom-multi .shape-fill {
+  fill: #ffffff;
+}
+
+/* ---------- Video feed ---------- */
+.video-section {
+  background: #fff;
+  padding: 6rem 1rem 0;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.video-section h1 {
+  color: #dcd4e6;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 800; /* live 700 → maps to ExtraBold with our font set */
+  font-size: 3rem;
+  margin: 0 0 3rem;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+@media (min-width: 400px) {
+  .video-section h1 {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .video-section h1 {
+    width: 80%;
+  }
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: var(--container);
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+@media (min-width: 600px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    padding: 0;
+  }
+}
+
+.video-card {
+  background: var(--dark);
+  border-radius: 2rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(135deg, #8546c2 0%, #4f2683 50%, #271241 100%);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(79, 38, 131, 0.35);
+  text-decoration: none;
+}
+
+.video-card-inner {
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.video-card-inner i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+  display: block;
+}
+
+.video-card-inner span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+}
+
+.rumble-subscribe {
+  margin-top: 1rem;
+}
+
+/* ---------- Recent Prophecies ----------
+   Live uses Owl carousel; we use a grid until dynamic content is wired.
+   Card chrome matches .recent (purple border + offset title chip). */
+.prophecies-section {
+  background: #fff;
+  position: relative;
+  padding: 6rem 0;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.prophecies-section h1 {
+  color: #dcd4e6;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3rem;
+  margin: 0 0.25rem 3rem;
+}
+
+.prophecy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 700px) {
+  .prophecy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .prophecy-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.prophecy-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  font-size: 1.5rem;
+  border: solid #4f2683 2px;
+  border-radius: 1rem;
+  margin: 0 0.25rem;
+  overflow: hidden;
+  min-height: 220px;
+  background: #fff;
+}
+
+.prophecy-card h3 {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 1.5rem;
+  background: #4f2683;
+  color: #fff;
+  left: -2rem;
+  top: -2rem;
+  padding: 1rem 2rem;
+  position: relative;
+  text-align: left;
+  width: auto;
+  padding-right: 4rem;
+  min-height: 50px;
+  border-radius: 0 0 10rem 0;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.prophecy-card .lead-in {
+  flex: 1;
+}
+
+.prophecy-card .lead-in p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--dark);
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.prophecy-card .read-more {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  font-weight: 400;
+  color: var(--purple);
+  font-size: 1.5rem;
+}
+
+.prophecy-card .read-more:hover {
+  text-decoration: underline;
+}
+
+.prophecies-section .usa-cta {
+  margin-top: 1rem;
+}
+
+/* ---------- Newsletter ---------- */
+.newsletter-section {
+  background: var(--lavender);
+  padding: 7rem 0 3rem;
+  color: var(--dark);
+  text-align: center;
+  position: relative;
+}
+
+.newsletter-section .wave-top {
+  top: 0;
+}
+
+.newsletter-section .wave-top svg {
+  height: 33px;
+  margin-top: -1px;
+}
+
+.newsletter-section .wave-top .shape-fill {
+  fill: #ffffff;
+}
+
+.newsletter-section h2 {
+  color: var(--purple-dark);
+  margin-bottom: 1rem;
+}
+
+.newsletter-section > .container > p {
+  margin-bottom: 2.5rem;
+  font-size: 1.7rem;
+}
+
+.news-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.news-form input[type="email"] {
+  margin: 0;
+  border-radius: 10rem;
+  border: 2px solid #fff;
+  text-align: center;
+  padding: 0.4rem 2rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  font-family: var(--font);
+  color: var(--purple-mid);
+  width: 100%;
+  outline: none;
+}
+
+.news-form input[type="email"]:focus {
+  border-color: var(--purple);
+}
+
+.news-form input[type="submit"] {
+  margin: 1rem 0 0;
+  border-radius: 10rem;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .news-form {
+    flex-direction: row;
+  }
+
+  .news-form input[type="email"] {
+    border-radius: 10rem 0 0 10rem;
+    text-align: left;
+    flex: 1;
+  }
+
+  .news-form input[type="submit"] {
+    margin: 0;
+    border-radius: 0 10rem 10rem 0;
+    width: auto;
+    min-width: 160px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 12rem 0 2rem;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  background-image: linear-gradient(135deg, #8546c2 0%, #4f2683 50%, #271241 100%);
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .wave-top {
+  top: -1px;
+}
+
+.site-footer .wave-top svg {
+  height: 50px;
+  transform: rotateY(180deg);
+}
+
+.site-footer .wave-top .shape-fill {
+  fill: var(--lavender);
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 800px) {
+  .footer-top {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 800px) {
+  .footer-left {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+  }
+}
+
+.footer-logo img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .footer-logo img {
+    max-width: 260px;
+    margin: 0;
+  }
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .footer-nav {
+    padding-left: 3rem;
+  }
+
+  .footer-nav ul {
+    align-items: flex-start;
+  }
+}
+
+.footer-nav a {
+  font-size: 1.5rem;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .footer-right {
+    text-align: right;
+    align-items: flex-end;
+  }
+}
+
+.footer-contact {
+  line-height: 1.6;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+@media (min-width: 800px) {
+  .footer-social {
+    justify-content: flex-end;
+  }
+}
+
+.footer-social a {
+  font-size: 1.7rem;
+  background: var(--gold);
+  color: var(--purple-dark);
+  width: 30px;
+  height: 30px;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+  background: #fff;
+}
+
+.footer-social svg {
+  width: 17px;
+  height: 17px;
+}
+
+.footer-social svg path {
+  fill: var(--purple-dark);
+}
+
+.credits {
+  color: rgba(255, 255, 255, 0.4);
+  padding-top: 7rem;
+  font-size: 1.4rem;
+}
+
+.credits a {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.credits p {
+  margin: 0;
+}
+
+/* Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

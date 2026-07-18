@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-07-18T16:58:31.578794+00:00",
+  "base": "https://www.worldministries.org",
+  "elapsed_sec": 57.39,
+  "time_budget_sec": 240,
+  "html_pages": 75,
+  "assets": 400,
+  "unique_urls_seen": 482,
+  "queue_remaining": 0,
+  "errors": 7,
+  "skipped_policy": "No ?post= / ?title= / filtered listing queries except one sample article",
+  "sample_dynamic": [
+    "https://www.worldministries.org/reading.aspx?post=14080&title=Turning-Compassion-into-Action"
+  ],
+  "error_details": [
+    {
+      "url": "https://www.worldministries.org/Userfiles/podcast-logos/pandora.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.worldministries.org/asp/owl.video.play.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "http://www.worldministries.org/intercessors.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "http://www.worldministries.org/prayform-frame.htm",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.worldministries.org/uploads/3/1/6/7/31673277/7854739.jpg?1405802322",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.worldministries.org/eagles-saving-nations-statement-of-faith.aspx",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "http://www.worldministries.org/eagles-saving-nations-statement-of-faith.aspx",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

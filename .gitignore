@@ -1,0 +1,23 @@
+# Local scratch / comparison screenshots
+temp/
+.DS_Store
+
+# Raw archive of live site (reference only — large, not product code)
+old-site/
+
+# Editor / OS
+*.swp
+*~
+.idea/
+.vscode/
+
+# Env / secrets (for future Workers / Cloudflare)
+.env
+.env.*
+!.env.example
+
+# Build / deps (when added)
+node_modules/
+dist/
+.wrangler/
+.cloudflare/
