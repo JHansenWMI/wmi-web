@@ -171,28 +171,16 @@ input[type="submit"]:hover {
   left: 0;
   width: 100%;
   z-index: 2300;
-  /* Home: transparent over hero (live). Interior: solid purple (below). */
+  /* Live: transparent by default so page-hero / home gradient shows through.
+     Solid purple only after scroll (.stuck). Applies to home AND interior. */
   background: transparent;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Interior pages always use solid bar (live interior header) */
-body:not(.page-home) .site-header {
-  background: rgba(79, 38, 131, 0.96);
-}
-
-/* Home: solid only after scroll (live .stuck .header-wrap) */
-body.page-home .site-header.is-stuck {
-  background: rgba(79, 38, 131, 0.96);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-}
-
+/* Live .stuck .header-wrap */
 .site-header.is-stuck {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-}
-
-body:not(.page-home) .site-header.is-stuck {
   background: rgba(79, 38, 131, 0.96);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .header-inner {
@@ -1415,11 +1403,12 @@ body:not(.page-home) main {
   max-width: var(--container);
 }
 
-/* Two-column layout when side sub-nav is present */
+/* Two-column layout when side sub-nav is present.
+   Live skeleton: .three.cols (22%) + 4% gutter + .nine.cols (74%). */
 .content-wrap .container.has-subnav {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   align-items: stretch;
 }
 
@@ -1427,13 +1416,20 @@ body:not(.page-home) main {
   .content-wrap .container.has-subnav {
     flex-direction: row;
     align-items: flex-start;
-    gap: 4rem;
+    gap: 4%; /* live grid gutter between three/nine cols */
   }
 }
 
 .content-main {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
+}
+
+@media (min-width: 800px) {
+  .content-main {
+    flex: 1 1 74%;
+    width: 74%;
+  }
 }
 
 /* Side sub-nav (live .sub-nav) — desktop only */
@@ -1445,17 +1441,20 @@ body:not(.page-home) main {
   flex: 0 0 auto;
   width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 800px) {
   .sub-nav {
     display: block;
-    width: 28%;
-    min-width: 200px;
-    max-width: 320px;
+    flex: 0 0 22%;
+    width: 22%;
+    max-width: 22%;
+    min-width: 0;
   }
 }
 
+/* Live .sub-nav .l1 a — section title */
 .sub-nav .sub-nav-title,
 .sub-nav .sub-nav-title:hover {
   display: block;
@@ -1466,17 +1465,18 @@ body:not(.page-home) main {
   border: 2px solid transparent;
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 800; /* live 600 → ExtraBold with our font set */
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   font-family: poppins, sans-serif;
 }
 
+/* Live: font-size 4rem from 1200px up */
 @media (min-width: 1200px) {
   .sub-nav .sub-nav-title,
   .sub-nav .sub-nav-title:hover {
-    font-size: 3.2rem;
-    line-height: 1.05;
+    font-size: 4rem;
+    line-height: 1;
   }
 }
 
