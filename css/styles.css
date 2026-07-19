@@ -1687,9 +1687,9 @@ body:not(.page-home) main {
 }
 
 /*
- * CMS layout images: build_pages converts float/align + width/height into
- * classes and a small allowlisted style= (width/max-width/height only).
- * Do not force a global max 350px — respect CMS width (e.g. 220 vs 350).
+ * CMS layout images: build_pages sets allowlisted inline styles with
+ * !important (width/float/margin) so they win over this base rule.
+ * Fallback classes if inline styles are missing:
  */
 .page-content img.img-float-right {
   float: right;
@@ -1710,6 +1710,23 @@ body:not(.page-home) main {
   float: none;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Honor HTML width="N" when no inline width (presentational attrs lose to CSS) */
+.page-content img[width="220"] {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+}
+.page-content img[width="283"] {
+  width: 283px;
+  max-width: 100%;
+  height: auto;
+}
+.page-content img[width="350"] {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
 }
 
 .page-content .text-left {
