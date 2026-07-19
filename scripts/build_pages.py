@@ -259,6 +259,9 @@ def extract(html: str) -> tuple[str, str, str]:
 
 def clean_body(body: str, trim_listing: bool = False) -> str:
     # Remove ASP.NET / CMS noise
+    body = re.sub(r'<div class="specDivVSM"[^>]*>.*?</div>', "", body, flags=re.S | re.I)
+    body = re.sub(r'<div id="counterBox">[\s\S]*?</div>', "", body, flags=re.I)
+    body = re.sub(r'<div id="statsModalOverlay">[\s\S]*?</div>\s*</div>\s*</div>', "", body, flags=re.I)
     body = re.sub(r"<script[^>]*>.*?</script>", "", body, flags=re.S | re.I)
     body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
     body = re.sub(r'\s(style|on\w+)="[^"]*"', "", body, flags=re.I)
