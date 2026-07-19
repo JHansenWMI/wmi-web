@@ -145,6 +145,33 @@ Tracked during full-page review. Dynamic items are deferred on purpose.
 | Newsletter submit backend | Pass 2 | Open | UI only for now |
 | Footer “Efinitytech” credit | P3 | Accept | Drop for new host |
 
+## Screenshot review backlog (2026-07-19)
+
+From `temp/screenshots/` above-the-fold compare (local vs live).
+
+### Fixed this pass
+
+| Issue | Fix |
+|-------|-----|
+| Side nav listed parent page as purple pill (e.g. About) | Children only + large title (live behavior) |
+| Content `h2`/`h3` too bright purple | Use `#271241` (purple-dark) like live skeleton |
+| Content column too narrow (`max-width: 900px`) | Use site container width (~80% / 1440) |
+| Donate `h5` labels not purple | Style `h4`–`h6` in `.page-content` |
+| Long PayPal URLs overflow | `overflow-wrap: anywhere` |
+| Donate missions link still `reading.html?…` | → `missions.html` |
+
+### Ask before changing (next pass)
+
+| Item | Why uncertain |
+|------|----------------|
+| **Rumble / video embeds** (About orientation, watch-warning grid) | Pass 2 / dynamic; live has players, local has “Loading…” or empty after script strip |
+| **Home header transparent vs solid** | We unified to solid per request; live home is still more transparent at top of hero — confirm keep solid |
+| **PayPal “hosted button” widgets** | Live may use PayPal JS widgets; we use gold link-buttons to same URLs — OK or restore hosted forms? |
+| **Shareable Link raw URLs** on donate | Live shows them too; hide or shorten in redesign? |
+| **Interior hero wave layers** | Subtle multi-wave vs ours — polish only if noticed |
+| **Testimonials layout** | Image stack vs live grid — needs design preference |
+| **Prophecies / reading listing density** | Shells trimmed for phase 2 by design |
+
 ## How to ask for the next pass
 
 Be specific about **what jumps out** (e.g. “pastor image still small on 1440px laptop”) and **what can wait**. Vague “make it match” is less useful than one or two human-attention items.

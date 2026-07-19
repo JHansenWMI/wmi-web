@@ -147,21 +147,9 @@
         "</a>";
     }
 
+    // Live side nav: large section title + children only (no duplicate parent row).
+    // Parent page itself has no purple pill; only a matching child is .is-active.
     let list = "<ul>";
-    // Include parent as first link if it has a real page and differs from children
-    const childHrefs = branch.children.map(function (c) {
-      return c.href;
-    });
-    if (branch.href && childHrefs.indexOf(branch.href) === -1) {
-      list +=
-        '<li><a class="sub-nav-link' +
-        (pageMatches(branch.href, file) ? " is-active" : "") +
-        '" href="' +
-        esc(branch.href) +
-        '">' +
-        esc(branch.label) +
-        "</a></li>";
-    }
     branch.children.forEach(function (child) {
       if (child.external) return;
       list +=

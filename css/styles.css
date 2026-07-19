@@ -326,8 +326,18 @@ input[type="submit"]:hover {
   color: #320870;
 }
 
+.top-nav li.is-active > a:not(.nav-donate a),
 .top-nav a.is-active:not(.nav-donate a) {
   color: #fff;
+  font-weight: 800;
+  opacity: 1;
+}
+
+/* Donate pill stays white even when current page */
+.top-nav li.nav-donate.is-active > a,
+.top-nav .nav-donate a.is-active {
+  background: #fff;
+  color: var(--purple-mid);
 }
 
 /* Mobile menu button */
@@ -1380,13 +1390,13 @@ body:not(.page-home) .page-hero {
   min-height: 400px;
 }
 
+/* Match live content width (site .container ~80% / 1440) — was capped at 900px */
 .content-wrap .container {
-  max-width: 900px;
+  max-width: var(--container);
 }
 
 /* Two-column layout when side sub-nav is present */
 .content-wrap .container.has-subnav {
-  max-width: var(--container);
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -1508,7 +1518,7 @@ body:not(.page-home) .page-hero {
   }
 }
 
-/* Ported CMS body */
+/* Ported CMS body — live skeleton: h1–h3 use #271241; h4+ use purple */
 .page-content {
   font-size: 1.7rem;
   line-height: 1.5;
@@ -1522,14 +1532,59 @@ body:not(.page-home) .page-hero {
   margin-bottom: 1.5rem;
 }
 
+.page-content h2,
 .page-content h3 {
   font-size: 2.2rem;
-  color: var(--purple);
+  color: var(--purple-dark); /* #271241 — not bright purple */
+  font-weight: 800;
 }
 
-.page-content h4 {
+.page-content h4,
+.page-content h5,
+.page-content h6 {
   font-size: 1.9rem;
   color: var(--purple);
+  font-weight: 800;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-content h5,
+.page-content h6 {
+  font-size: 1.7rem;
+}
+
+.page-content strong {
+  color: inherit;
+}
+
+/* Donate / multi-column tables */
+.page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.page-content table td {
+  width: 50%;
+  padding: 1rem 2rem 2rem 0;
+  vertical-align: top;
+}
+
+@media (max-width: 700px) {
+  .page-content table,
+  .page-content table tbody,
+  .page-content table tr,
+  .page-content table td {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Long shareable URLs wrap instead of overflowing */
+.page-content a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .page-content p {
@@ -1562,19 +1617,6 @@ body:not(.page-home) .page-hero {
 .page-content video {
   max-width: 100%;
   border-radius: 1rem;
-}
-
-.page-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-}
-
-.page-content table td,
-.page-content table th {
-  padding: 0.8rem;
-  vertical-align: top;
 }
 
 .page-content a {
