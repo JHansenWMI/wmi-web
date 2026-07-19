@@ -390,35 +390,20 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
                 if re.fullmatch(r"[\w\s.%+-]+", val) and "expression" not in val:
                     keep_style[prop] = val
 
-        # HTML width/height attributes → explicit CSS (author stylesheets can
-        # otherwise ignore presentational width= and show full intrinsic size)
+        # Images: live uses width/height HTML attributes + style="float:…" only.
+        # Do NOT invent width:Npx inline styles (that produced 350×258 vs live ~271×200).
+        # Float → class; sizing → CSS from height/width attributes.
         if tag.lower().startswith("<img"):
-            w_attr = re.search(r'\swidth="(\d+)"', tag, re.I)
-            if w_attr:
-                keep_style["width"] = w_attr.group(1) + "px"
-            if "width" in keep_style:
-                keep_style["max-width"] = "100%"
-                keep_style["height"] = "auto"
-            # Put float in style too — higher cascade than stylesheet alone
-            if "img-float-right" in classes:
-                keep_style["float"] = "right"
-                keep_style.setdefault("margin", "0.5rem 0 1.5rem 2rem")
-            elif "img-float-left" in classes:
-                keep_style["float"] = "left"
-                keep_style.setdefault("margin", "0.5rem 2rem 1.5rem 0")
-            elif "img-center" in classes:
-                keep_style["display"] = "block"
-                keep_style["margin-left"] = "auto"
-                keep_style["margin-right"] = "auto"
+            # Drop width/height from keep_style if copied from style= — attrs handle size
+            for k in ("width", "height", "max-width", "max-height", "min-width"):
+                keep_style.pop(k, None)
 
         tag = re.sub(r'\sstyle="[^"]*"', "", tag, flags=re.I)
         tag = re.sub(r'\salign="[^"]*"', "", tag, flags=re.I)
         tag = _add_class(tag, *classes)
-        if keep_style:
-            # !important so global .page-content img rules cannot enlarge CMS sizes
-            style_str = "; ".join(
-                f"{k}: {v} !important" for k, v in keep_style.items()
-            )
+        if keep_style and not tag.lower().startswith("<img"):
+            # Non-img tags may keep allowlisted layout styles
+            style_str = "; ".join(f"{k}: {v}" for k, v in keep_style.items())
             tag = re.sub(r"<(\w+)", rf'<\1 style="{style_str}"', tag, count=1)
         return tag
 

@@ -1679,18 +1679,45 @@ body:not(.page-home) main {
   margin-bottom: 0.6rem;
 }
 
+/*
+ * Content images — match live CMS pattern:
+ *   <img width="350" height="200" style="float: left;">
+ * Live renders height-led (~271×200), not width-led (350×258).
+ * We use classes instead of style= for float; size from height attr.
+ */
 .page-content img {
   max-width: 100%;
-  height: auto;
   border-radius: 1rem;
   margin: 1rem 0;
+  height: auto;
 }
 
-/*
- * CMS layout images: build_pages sets allowlisted inline styles with
- * !important (width/float/margin) so they win over this base rule.
- * Fallback classes if inline styles are missing:
- */
+/* When CMS set both dimensions, size by height (live DevTools behavior) */
+.page-content img[width][height] {
+  width: auto;
+  max-width: 100%;
+}
+
+.page-content img[height="200"] {
+  height: 200px;
+  width: auto;
+  max-width: 100%;
+}
+
+.page-content img[height="163"] {
+  height: 163px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Only width attr (no height): width-led */
+.page-content img[width]:not([height]) {
+  width: auto; /* presentational width attr still applies unless overridden */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Float classes = live style="float: left|right" */
 .page-content img.img-float-right {
   float: right;
   margin: 0.5rem 0 1.5rem 2rem;
@@ -1710,23 +1737,6 @@ body:not(.page-home) main {
   float: none;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Honor HTML width="N" when no inline width (presentational attrs lose to CSS) */
-.page-content img[width="220"] {
-  width: 220px;
-  max-width: 100%;
-  height: auto;
-}
-.page-content img[width="283"] {
-  width: 283px;
-  max-width: 100%;
-  height: auto;
-}
-.page-content img[width="350"] {
-  width: 350px;
-  max-width: 100%;
-  height: auto;
 }
 
 .page-content .text-left {
