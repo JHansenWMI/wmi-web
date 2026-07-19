@@ -92,9 +92,26 @@ old live site
   → (phase 2) CMS / Workers    →  dynamic articles, prophecies, thought of day
 ```
 
-Light cleanup in `build_pages.py`: strip scripts/comments, map common `.aspx` → `.html`, trim huge listing dumps.
+### CMS `style=` attributes — overall strategy
 
-A **refactor pass** (cleaner semantic HTML, local images, forms) can follow once structure is signed off.
+**Do not** re-apply every CMS style (728× `font-size` alone). That would fight the design system and reintroduce junk.
+
+**Do not** fix only page-by-page as the primary approach — it does not scale and will regress on rebuild.
+
+**Do** improve `build_pages.py` once, with an **allowlist**:
+
+| Keep / convert | Drop (use site CSS) |
+|----------------|---------------------|
+| `float` → `.img-float-left/right` | `font-size`, `font-family` |
+| `text-align` → `.text-*` | `color`, `padding` |
+| `width` / `height` / `max-width` (safe units) | `background`, `position` |
+| simple `margin-*` | `cursor`, flex junk, etc. |
+
+Typography and **content padding** stay in `css/styles.css` (we intentionally keep slightly roomier padding than live).
+
+After changing the converter: `python3 scripts/build_pages.py` and spot-check via screenshots.
+
+Light cleanup also: strip scripts (except Rumble/widgets), map `.aspx` → `.html`, trim huge listing dumps.
 
 ## Phase 2 (deferred)
 

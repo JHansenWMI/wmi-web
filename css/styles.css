@@ -1686,17 +1686,19 @@ body:not(.page-home) main {
   margin: 1rem 0;
 }
 
-/* CMS float/align images (converted from style= by build_pages.py) */
+/*
+ * CMS layout images: build_pages converts float/align + width/height into
+ * classes and a small allowlisted style= (width/max-width/height only).
+ * Do not force a global max 350px — respect CMS width (e.g. 220 vs 350).
+ */
 .page-content img.img-float-right {
   float: right;
   margin: 0.5rem 0 1.5rem 2rem;
-  max-width: min(100%, 350px);
 }
 
 .page-content img.img-float-left {
   float: left;
   margin: 0.5rem 2rem 1.5rem 0;
-  max-width: min(100%, 350px);
 }
 
 .page-content img.img-float-none {
@@ -1708,6 +1710,19 @@ body:not(.page-home) main {
   float: none;
   margin-left: auto;
   margin-right: auto;
+}
+
+.page-content .text-left {
+  text-align: left;
+}
+.page-content .text-right {
+  text-align: right;
+}
+.page-content .text-center {
+  text-align: center;
+}
+.page-content .text-justify {
+  text-align: justify;
 }
 
 /* Clear floats so following headings/sections don't wrap incorrectly */
@@ -1728,7 +1743,8 @@ body:not(.page-home) main {
     float: none;
     display: block;
     margin: 1rem auto;
-    max-width: 100%;
+    max-width: 100% !important;
+    width: auto !important;
   }
 }
 

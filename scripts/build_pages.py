@@ -288,49 +288,149 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
 
     body = re.sub(r"<!--(?!WMI_KEEP_SCRIPT_).*?-->", "", body, flags=re.S)
 
-    # Convert image float/align to classes before stripping style=
-    def _img_layout_classes(m: re.Match) -> str:
-        tag = m.group(0)
-        classes: list[str] = []
-        style_m = re.search(r'\sstyle="([^"]*)"', tag, re.I)
-        if style_m:
-            style = style_m.group(1).lower()
-            if re.search(r"float\s*:\s*right", style):
-                classes.append("img-float-right")
-            if re.search(r"float\s*:\s*left", style):
-                classes.append("img-float-left")
-            if re.search(r"float\s*:\s*none", style):
-                classes.append("img-float-none")
-            if re.search(r"text-align\s*:\s*center|margin\s*:\s*0\s+auto", style):
-                classes.append("img-center")
-        align_m = re.search(r'\salign="(left|right|center|middle)"', tag, re.I)
-        if align_m:
-            a = align_m.group(1).lower()
-            if a == "right":
-                classes.append("img-float-right")
-            elif a == "left":
-                classes.append("img-float-left")
-            elif a == "center":
-                classes.append("img-center")
+    # ------------------------------------------------------------------
+    # Layout styles: convert/allowlist — do NOT re-apply CMS font/padding.
+    # Font sizes (700+) are design-system owned; page-by-page would not scale.
+    # ------------------------------------------------------------------
+    LAYOUT_PROPS = {
+        "float",
+        "text-align",
+        "width",
+        "height",
+        "max-width",
+        "max-height",
+        "min-width",
+        "margin",
+        "margin-left",
+        "margin-right",
+        "margin-top",
+        "margin-bottom",
+        "vertical-align",
+    }
+
+    def _parse_style(style: str) -> dict[str, str]:
+        out: dict[str, str] = {}
+        for part in style.split(";"):
+            if ":" not in part:
+                continue
+            k, v = part.split(":", 1)
+            k, v = k.strip().lower(), v.strip()
+            if k and v:
+                out[k] = v
+        return out
+
+    def _add_class(tag: str, *classes: str) -> str:
+        classes = [c for c in classes if c]
         if not classes:
             return tag
         class_str = " ".join(dict.fromkeys(classes))
         if re.search(r'\sclass="', tag, re.I):
-            tag = re.sub(
+            return re.sub(
                 r'\sclass="([^"]*)"',
                 lambda cm: f' class="{cm.group(1)} {class_str}"',
                 tag,
                 count=1,
                 flags=re.I,
             )
-        else:
-            tag = re.sub(r"<img\b", f'<img class="{class_str}"', tag, count=1, flags=re.I)
+        return re.sub(r"^<(\w+)", rf'<\1 class="{class_str}"', tag, count=1)
+
+    def _safe_size(val: str) -> str | None:
+        val = val.strip().lower()
+        if val in ("auto", "0"):
+            return val
+        if re.fullmatch(r"\d+\.?\d*(px|%)?", val):
+            if val[-1].isdigit():
+                return val + "px"
+            return val
+        return None
+
+    def _rewrite_tag_styles(m: re.Match) -> str:
+        tag = m.group(0)
+        # event handlers always go
+        tag = re.sub(r'\s(on\w+)="[^"]*"', "", tag, flags=re.I)
+
+        classes: list[str] = []
+        keep_style: dict[str, str] = {}
+
+        style_m = re.search(r'\sstyle="([^"]*)"', tag, re.I)
+        props = _parse_style(style_m.group(1)) if style_m else {}
+
+        # align= attribute (legacy)
+        align_m = re.search(r'\salign="(left|right|center|middle)"', tag, re.I)
+        if align_m:
+            a = align_m.group(1).lower()
+            if a == "right":
+                classes.append("img-float-right" if tag.lower().startswith("<img") else "text-right")
+            elif a == "left":
+                classes.append("img-float-left" if tag.lower().startswith("<img") else "text-left")
+            elif a == "center":
+                classes.append("img-center" if tag.lower().startswith("<img") else "text-center")
+
+        for prop, val in props.items():
+            if prop not in LAYOUT_PROPS:
+                continue  # drop font-size, padding, color, etc.
+            if prop == "float":
+                v = val.lower().split()[0]
+                if v == "right":
+                    classes.append("img-float-right")
+                elif v == "left":
+                    classes.append("img-float-left")
+                elif v == "none":
+                    classes.append("img-float-none")
+            elif prop == "text-align":
+                v = val.lower().split()[0]
+                if v in ("left", "right", "center", "justify"):
+                    classes.append(f"text-{v}")
+            elif prop in ("width", "height", "max-width", "max-height", "min-width"):
+                sz = _safe_size(val)
+                if sz:
+                    keep_style[prop] = sz
+            elif prop.startswith("margin") or prop == "vertical-align":
+                # keep simple values only
+                if re.fullmatch(r"[\w\s.%+-]+", val) and "expression" not in val:
+                    keep_style[prop] = val
+
+        # HTML width/height attributes → CSS so they win over stylesheet height:auto quirks
+        if tag.lower().startswith("<img"):
+            w_attr = re.search(r'\swidth="(\d+)"', tag, re.I)
+            h_attr = re.search(r'\sheight="(\d+)"', tag, re.I)
+            if w_attr and "width" not in keep_style:
+                keep_style["width"] = w_attr.group(1) + "px"
+            if h_attr and "height" not in keep_style:
+                # prefer aspect-ratio via height:auto once width set
+                keep_style.setdefault("height", "auto")
+            if "width" in keep_style:
+                keep_style.setdefault("max-width", "100%")
+                keep_style.setdefault("height", "auto")
+
+        tag = re.sub(r'\sstyle="[^"]*"', "", tag, flags=re.I)
+        tag = re.sub(r'\salign="[^"]*"', "", tag, flags=re.I)
+        tag = _add_class(tag, *classes)
+        if keep_style:
+            style_str = "; ".join(f"{k}: {v}" for k, v in keep_style.items())
+            tag = re.sub(r"<(\w+)", rf'<\1 style="{style_str}"', tag, count=1)
         return tag
 
-    body = re.sub(r"<img\b[^>]*>", _img_layout_classes, body, flags=re.I)
+    # Rewrite styles on common content tags only (allowlist applied inside)
+    body = re.sub(
+        r"<(img|p|div|span|table|tr|td|th|h[1-6]|ul|ol|li|section|article)\b[^>]*>",
+        _rewrite_tag_styles,
+        body,
+        flags=re.I,
+    )
+    # Strip style=/on* only on tags we did not process (rare leftovers)
+    def _strip_unprocessed_styles(m: re.Match) -> str:
+        tag = m.group(0)
+        name = m.group(1).lower()
+        if name in {
+            "img", "p", "div", "span", "table", "tr", "td", "th",
+            "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li",
+            "section", "article",
+        }:
+            return tag  # already allowlisted
+        return re.sub(r'\s(style|on\w+)="[^"]*"', "", tag, flags=re.I)
 
-    body = re.sub(r'\s(style|on\w+)="[^"]*"', "", body, flags=re.I)
-    body = re.sub(r'\salign="[^"]*"', "", body, flags=re.I)
+    body = re.sub(r"<(\w+)\b[^>]*>", _strip_unprocessed_styles, body)
 
     for i, script in enumerate(kept_scripts):
         body = body.replace(f"<!--WMI_KEEP_SCRIPT_{i}-->", script)
