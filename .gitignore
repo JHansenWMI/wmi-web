@@ -21,3 +21,5 @@ node_modules/
 dist/
 .wrangler/
 .cloudflare/
+__pycache__/
+*.pyc
