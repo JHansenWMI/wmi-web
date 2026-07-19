@@ -1523,12 +1523,14 @@ body:not(.page-home) main {
   text-decoration: none;
 }
 
+/* Live skeleton h1.pagename */
 .content-wrap h1.pagename {
-  margin-bottom: 3rem;
-  font-size: 3.5rem;
+  margin: 0 0 4rem;
+  font-size: 4rem;
   font-weight: 300;
   color: var(--purple-dark);
-  line-height: 1.15;
+  line-height: 1.1;
+  font-family: poppins, sans-serif;
 }
 
 @media (min-width: 800px) {
@@ -1538,44 +1540,93 @@ body:not(.page-home) main {
   }
 }
 
-/* Ported CMS body — live skeleton: h1–h3 use #271241; h4+ use purple */
+/* Ported CMS body — match live skeleton.css typography (do not shrink) */
 .page-content {
   font-size: 1.7rem;
-  line-height: 1.5;
+  line-height: 1.4;
+  font-weight: 400;
   color: var(--dark);
+  font-family: poppins, system-ui, sans-serif;
 }
 
+.page-content p {
+  margin: 0 0 2rem;
+}
+
+.page-content h1,
 .page-content h2,
 .page-content h3,
-.page-content h4 {
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.page-content h2,
-.page-content h3 {
-  font-size: 2.2rem;
-  color: var(--purple-dark); /* #271241 — not bright purple */
-  font-weight: 800;
-}
-
 .page-content h4,
 .page-content h5,
 .page-content h6 {
-  font-size: 1.9rem;
-  color: var(--purple);
-  font-weight: 800;
-  margin-top: 1.5rem;
+  margin: 0 0 2rem;
+  font-weight: 800; /* live 600 → ExtraBold with Poppins 200/400/800 */
+  line-height: 1.1;
+  font-family: poppins, sans-serif;
+}
+
+.page-content h1 {
+  font-size: 3rem;
+  color: var(--purple-dark);
+}
+
+.page-content h2 {
+  font-size: 3rem;
+  color: var(--purple-dark);
+}
+
+.page-content h3 {
+  font-size: 2.5rem;
+  color: var(--purple-dark); /* #271241 */
+}
+
+.page-content h4 {
+  font-size: 2.5rem;
+  color: var(--purple); /* #4F2683 */
   margin-bottom: 1rem;
 }
 
-.page-content h5,
+.page-content h5 {
+  font-size: 2rem;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
 .page-content h6 {
-  font-size: 1.7rem;
+  font-size: 2rem;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) {
+  .page-content h1 {
+    font-size: 5rem;
+  }
+
+  .page-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .page-content h3 {
+    font-size: 3rem; /* was wrongly 2.2rem */
+  }
+
+  .page-content h4 {
+    font-size: 2.5rem;
+  }
+
+  .page-content h5 {
+    font-size: 2rem;
+  }
+
+  .page-content h6 {
+    font-size: 1.7rem;
+  }
 }
 
 .page-content strong {
   color: inherit;
+  font-weight: 700;
 }
 
 /* Donate / multi-column tables */
@@ -1605,10 +1656,12 @@ body:not(.page-home) main {
 .page-content a {
   overflow-wrap: anywhere;
   word-break: break-word;
+  color: var(--purple);
+  text-decoration: underline;
 }
 
-.page-content p {
-  margin-bottom: 1.6rem;
+.page-content a.button {
+  text-decoration: none;
 }
 
 .page-content ul,
@@ -1664,16 +1717,6 @@ body:not(.page-home) main {
   color: #777;
   font-size: 1.5rem;
   margin: 1rem 0;
-}
-
-.page-content a {
-  color: var(--purple);
-  text-decoration: underline;
-}
-
-.page-content .button,
-.page-content a.button {
-  text-decoration: none;
 }
 
 /* Placeholder / phase-2 notice */
