@@ -39,6 +39,7 @@ const LIVE_PATH = {
   "index.html": "/",
   "about.html": "/about.aspx",
   "wmi-orientation.html": "/wmi-orientation.aspx",
+  "wmi-orientation-2.html": "/wmi-orientation-2.aspx",
   "dr-hansens-bio.html": "/dr-hansens-bio.aspx",
   "what-is-a-prophet.html": "/what-is-a-prophet.aspx",
   "statement-of-faith.html": "/statement-of-faith.aspx",

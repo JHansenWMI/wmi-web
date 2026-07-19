@@ -29,6 +29,10 @@ PAGES: dict[str, dict] = {
         "ref": "wmi-orientation.html",
         "description": "WMI Orientation with Dr. Jonathan Hansen.",
     },
+    "wmi-orientation-2.html": {
+        "ref": "wmi-orientation-2.html",
+        "description": "WMI Orientation (About section) with Dr. Jonathan Hansen.",
+    },
     "dr-hansens-bio.html": {
         "ref": "dr-hansens-bio.html",
         "description": "Biography of Dr. Jonathan Hansen.",
@@ -477,7 +481,7 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
         "intercessors.aspx": "intercessors.html",
         "intercessor-application-form.aspx": "intercessor-application.html",
         "wmi-orientation.aspx": "wmi-orientation.html",
-        "wmi-orientation-2.aspx": "wmi-orientation.html",
+        "wmi-orientation-2.aspx": "wmi-orientation-2.html",
         "all-prophecies.aspx": "prophecies.html",
         "eagles-saving-nations-membership.aspx": "eagles-saving-nations.html",
         "eagles-saving-nations-vision.aspx": "eagles-saving-nations-vision.html",

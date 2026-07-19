@@ -17,7 +17,8 @@ window.WMI_NAV = {
       label: "About",
       href: "about.html",
       children: [
-        { label: "WMI Orientation", href: "wmi-orientation.html" },
+        // Live About sub-nav: wmi-orientation-2.aspx (same label, different URL than Warning TV)
+        { label: "WMI Orientation", href: "wmi-orientation-2.html" },
         { label: "Dr. Hansen's Bio", href: "dr-hansens-bio.html" },
         { label: "What Is A Prophet", href: "what-is-a-prophet.html" },
         { label: "Statement Of Faith", href: "statement-of-faith.html" },
@@ -48,6 +49,7 @@ window.WMI_NAV = {
       label: "Warning TV, Radio & Social Media",
       href: "watch-warning.html",
       children: [
+        // Live Warning TV sub-nav: wmi-orientation.aspx (not -2)
         { label: "WMI Orientation", href: "wmi-orientation.html" },
         { label: "Warning Social Media Video", href: "watch-warning.html" },
         { label: "The Overcoming Women TV", href: "the-overcoming-women.html" },
