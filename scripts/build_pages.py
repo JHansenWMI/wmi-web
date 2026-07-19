@@ -287,7 +287,50 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
     # already handled above.
 
     body = re.sub(r"<!--(?!WMI_KEEP_SCRIPT_).*?-->", "", body, flags=re.S)
+
+    # Convert image float/align to classes before stripping style=
+    def _img_layout_classes(m: re.Match) -> str:
+        tag = m.group(0)
+        classes: list[str] = []
+        style_m = re.search(r'\sstyle="([^"]*)"', tag, re.I)
+        if style_m:
+            style = style_m.group(1).lower()
+            if re.search(r"float\s*:\s*right", style):
+                classes.append("img-float-right")
+            if re.search(r"float\s*:\s*left", style):
+                classes.append("img-float-left")
+            if re.search(r"float\s*:\s*none", style):
+                classes.append("img-float-none")
+            if re.search(r"text-align\s*:\s*center|margin\s*:\s*0\s+auto", style):
+                classes.append("img-center")
+        align_m = re.search(r'\salign="(left|right|center|middle)"', tag, re.I)
+        if align_m:
+            a = align_m.group(1).lower()
+            if a == "right":
+                classes.append("img-float-right")
+            elif a == "left":
+                classes.append("img-float-left")
+            elif a == "center":
+                classes.append("img-center")
+        if not classes:
+            return tag
+        class_str = " ".join(dict.fromkeys(classes))
+        if re.search(r'\sclass="', tag, re.I):
+            tag = re.sub(
+                r'\sclass="([^"]*)"',
+                lambda cm: f' class="{cm.group(1)} {class_str}"',
+                tag,
+                count=1,
+                flags=re.I,
+            )
+        else:
+            tag = re.sub(r"<img\b", f'<img class="{class_str}"', tag, count=1, flags=re.I)
+        return tag
+
+    body = re.sub(r"<img\b[^>]*>", _img_layout_classes, body, flags=re.I)
+
     body = re.sub(r'\s(style|on\w+)="[^"]*"', "", body, flags=re.I)
+    body = re.sub(r'\salign="[^"]*"', "", body, flags=re.I)
 
     for i, script in enumerate(kept_scripts):
         body = body.replace(f"<!--WMI_KEEP_SCRIPT_{i}-->", script)
