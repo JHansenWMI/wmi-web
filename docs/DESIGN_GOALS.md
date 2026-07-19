@@ -96,6 +96,20 @@ Google Fonts (match live):
 | **Hero text alignment** | Intro stays `text-align: center` even on desktop (narrow right column). |
 | **Hidden live UI** | `.listen-title` (“Listen On…”) is `display: none` on live — keep it hidden. |
 | **“Improving” while copying** | Resist restyling (left-align hero, smaller type, extra weights). Match first; improve later if product asks. |
+| **Font smoothing** | Do **not** set `-webkit-font-smoothing: antialiased` on `body`. Live uses browser default (subpixel); antialiased thins white nav text. |
+| **Hero lede line-height** | “Proclaiming the Kingdom…” uses `line-height: 1.1` (live `.featured-intro-wrap`), not body `1.4`. |
+
+## Homepage pass 1 — product decisions (2026-07)
+
+Owner review: remaining homepage diffs were **intentionally skipped** for now.
+
+| Decision | Guidance |
+|----------|----------|
+| **Above-the-fold / first impression** | Prioritize hero, logo, primary nav weight/feel, headline block. Keep iterating if something “jumps out.” |
+| **Below the fold** | OK if “just as good” in the new layout even when not pixel-matched (ESN, prophecy grid vs carousel, section rhythm). Do not block ship on these. |
+| **Dynamic content → pass 2** | Thought for the Day body, Rumble/Warning TV embeds, live prophecy list, newsletter backend. Shells/placeholders are fine until CMS/Workers. |
+| **Menu spacing / micro-diffs** | Accept unless a human calls them out again. |
+| **Re-open a skipped item** | Only when product names it (e.g. “ESN card next”) — not by default when polishing other pages. |
 
 ## Signed off (human-checked)
 
@@ -106,10 +120,13 @@ Update this list as sections are approved.
 | Header logo size | Closer | Live 160–200px; no scroll shrink |
 | Hero pastor image | Closer | Desktop `min-width: 70%` |
 | Hero “Warning!” weight | Closer | ExtraBold 800 via font load + weight |
+| Hero lede line-height | Closer | `1.1` on “Proclaiming…” |
+| Main nav stroke weight | Closer | No forced antialiased smoothing |
 | Listen title visible | Fixed | `display: none` like live |
 | Menu spacing | Accept differences | P3 |
-| Thought of the Day (dynamic) | Deferred | Static placeholder OK |
-| Warning TV videos (dynamic) | Deferred | Placeholders / Rumble link OK |
+| Homepage below-fold polish | Accept for pass 1 | New look OK; not pixel-chasing |
+| Thought of the Day (dynamic) | Pass 2 | Static placeholder OK |
+| Warning TV videos (dynamic) | Pass 2 | Placeholders / Rumble link OK |
 
 ## Homepage audit backlog (static)
 
@@ -121,10 +138,11 @@ Tracked during full-page review. Dynamic items are deferred on purpose.
 | ESN heading size / card padding | P1 | Done | Default h3 scale; `padding-bottom: 0` |
 | Thought h1 `line-height: 0.8`, always `5rem` | P2 | Done | Matched live |
 | Prophecy title chip offset (`left/top: -2rem`) | P2 | Done | Purple tab hangs off corner |
-| Prophecy layout = horizontal strip | P3 | Open | Live Owl carousel; grid OK short-term |
-| Video embeds | Deferred | Open | Rumble JS on live |
-| Thought of the Day content | Deferred | Open | CMS/API later |
-| Newsletter submit backend | Deferred | Open | UI only for now |
+| Prophecy layout = horizontal strip | P3 | Accept pass 1 | Live Owl carousel; grid OK |
+| Below-fold visual parity (general) | P3 | Accept pass 1 | Product: fine if “just as good” |
+| Video embeds | Pass 2 | Open | Rumble JS on live |
+| Thought of the Day content | Pass 2 | Open | CMS/API later |
+| Newsletter submit backend | Pass 2 | Open | UI only for now |
 | Footer “Efinitytech” credit | P3 | Accept | Drop for new host |
 
 ## How to ask for the next pass

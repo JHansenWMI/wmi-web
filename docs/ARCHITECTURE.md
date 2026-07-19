@@ -52,6 +52,18 @@ Every page loads, in order:
 1. Edit `js/nav-data.js`
 2. Refresh the browser — no rebuild required for nav-only changes
 
+### Header vs side sub-nav
+
+| Context | Behavior |
+|---------|----------|
+| **Desktop header** | Top-level links only — **no hover dropdowns** (matches live) |
+| **Side sub-nav** | On interior pages that belong to a nav item **with `children`**: left sticky list (section title + links). Current page highlighted purple; header section link highlighted gold. |
+| **Home** | No side sub-nav |
+| **Leaf pages** (Donate, Prophecies, …) | No side sub-nav |
+| **Mobile** | Hamburger lists all levels; side sub-nav hidden (`display: none` below 800px) |
+
+Logic lives in `js/site-chrome.js` (`findNavBranch` / `injectSideSubNav`).
+
 ### Adding a page
 
 1. Add a `.html` file using the interior shell (or extend `scripts/build_pages.py` mapping)

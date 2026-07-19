@@ -29,37 +29,156 @@
     return `href="${href}"`;
   }
 
-  function renderItems(items, opts) {
-    opts = opts || {};
+  /** Desktop header: parent links only — no hover dropdowns (side sub-nav instead). */
+  function renderItems(items) {
     return items
       .map(function (item) {
-        const hasKids = item.children && item.children.length;
         const classes = [];
-        if (hasKids) classes.push("has-dropdown");
         if (item.donate) classes.push("nav-donate");
-        if (opts.subClass) classes.push(opts.subClass);
+        if (item.children && item.children.length) classes.push("has-children");
 
         let html =
           "<li" +
           (classes.length ? ' class="' + classes.join(" ") + '"' : "") +
           ">";
-        html += "<a " + linkAttrs(item) + ">" + esc(item.label) + "</a>";
-        if (hasKids) {
-          html += '<ul class="dropdown">';
-          item.children.forEach(function (child) {
-            html +=
-              "<li><a " +
-              linkAttrs(child) +
-              ">" +
-              esc(child.label) +
-              "</a></li>";
-          });
-          html += "</ul>";
-        }
+        html +=
+          "<a " +
+          linkAttrs(item) +
+          ' data-nav-href="' +
+          esc(item.href || "") +
+          '">' +
+          esc(item.label) +
+          "</a>";
         html += "</li>";
         return html;
       })
       .join("");
+  }
+
+  function currentPageFile() {
+    let path = window.location.pathname || "";
+    // "/about.html" or "/foo/bar/" or ""
+    path = path.replace(/\/+$/, "");
+    const parts = path.split("/");
+    let file = parts[parts.length - 1] || "index.html";
+    if (!file || file.indexOf(".") === -1) file = "index.html";
+    return file;
+  }
+
+  function pageMatches(href, file) {
+    if (!href || href.indexOf("http") === 0) return false;
+    const h = href.split("/").pop();
+    return h === file;
+  }
+
+  /**
+   * If this page is a parent-with-children or one of those children,
+   * return the branch { label, href, children }.
+   */
+  function findNavBranch(file) {
+    if (file === "index.html") return null;
+
+    const trees = [].concat(NAV.main || [], NAV.top || []);
+    for (let i = 0; i < trees.length; i++) {
+      const item = trees[i];
+      if (!item.children || !item.children.length) continue;
+      if (pageMatches(item.href, file)) return item;
+      for (let j = 0; j < item.children.length; j++) {
+        if (pageMatches(item.children[j].href, file)) return item;
+      }
+    }
+    return null;
+  }
+
+  function markHeaderActive(file, branch) {
+    const links = document.querySelectorAll(
+      ".main-nav a[data-nav-href], .top-nav a[data-nav-href]"
+    );
+    links.forEach(function (a) {
+      a.classList.remove("is-active");
+      const li = a.closest("li");
+      if (li) li.classList.remove("is-active");
+    });
+
+    // Prefer highlighting the section parent when we have a branch
+    const targetHref = branch ? branch.href : null;
+    links.forEach(function (a) {
+      const href = a.getAttribute("data-nav-href") || "";
+      const match =
+        (targetHref && pageMatches(href, targetHref.split("/").pop())) ||
+        pageMatches(href, file);
+      if (match) {
+        a.classList.add("is-active");
+        const li = a.closest("li");
+        if (li) li.classList.add("is-active");
+      }
+    });
+  }
+
+  function injectSideSubNav(file, branch) {
+    if (!branch || !branch.children || !branch.children.length) return;
+    if (document.body.classList.contains("page-home")) return;
+
+    const container = document.querySelector(".content-wrap > .container");
+    if (!container || container.classList.contains("has-subnav")) return;
+
+    // Wrap existing content
+    const main = document.createElement("div");
+    main.className = "content-main";
+    while (container.firstChild) {
+      main.appendChild(container.firstChild);
+    }
+
+    const aside = document.createElement("aside");
+    aside.className = "sub-nav";
+    aside.setAttribute("aria-label", branch.label + " section");
+
+    // Large section title (like live .l1) — links to parent when different page
+    let titleHtml;
+    if (pageMatches(branch.href, file)) {
+      titleHtml =
+        '<div class="sub-nav-title">' + esc(branch.label) + "</div>";
+    } else {
+      titleHtml =
+        '<a class="sub-nav-title" href="' +
+        esc(branch.href) +
+        '">' +
+        esc(branch.label) +
+        "</a>";
+    }
+
+    let list = "<ul>";
+    // Include parent as first link if it has a real page and differs from children
+    const childHrefs = branch.children.map(function (c) {
+      return c.href;
+    });
+    if (branch.href && childHrefs.indexOf(branch.href) === -1) {
+      list +=
+        '<li><a class="sub-nav-link' +
+        (pageMatches(branch.href, file) ? " is-active" : "") +
+        '" href="' +
+        esc(branch.href) +
+        '">' +
+        esc(branch.label) +
+        "</a></li>";
+    }
+    branch.children.forEach(function (child) {
+      if (child.external) return;
+      list +=
+        '<li><a class="sub-nav-link' +
+        (pageMatches(child.href, file) ? " is-active" : "") +
+        '" href="' +
+        esc(child.href) +
+        '">' +
+        esc(child.label) +
+        "</a></li>";
+    });
+    list += "</ul>";
+
+    aside.innerHTML = titleHtml + list;
+    container.classList.add("has-subnav");
+    container.appendChild(aside);
+    container.appendChild(main);
   }
 
   function renderMobileItems() {
@@ -239,6 +358,11 @@
         '<input type="submit" id="news-submit" value="Subscribe">' +
         "</form></div></section>";
     }
+
+    const file = currentPageFile();
+    const branch = findNavBranch(file);
+    markHeaderActive(file, branch);
+    injectSideSubNav(file, branch);
   }
 
   if (document.readyState === "loading") {

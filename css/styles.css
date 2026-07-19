@@ -39,7 +39,8 @@ body {
   line-height: 1.4;
   color: var(--dark);
   background: var(--dark);
-  -webkit-font-smoothing: antialiased;
+  /* No -webkit-font-smoothing: live site uses browser default (subpixel).
+     antialiased thins white nav text on purple and looks lighter. */
 }
 
 img {
@@ -170,6 +171,8 @@ input[type="submit"]:hover {
   left: 0;
   width: 100%;
   z-index: 2300;
+  /* Same solid bar on home + interior (was transparent on home until scroll) */
+  background: rgba(79, 38, 131, 0.96);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -304,46 +307,26 @@ input[type="submit"]:hover {
   }
 }
 
-/* Dropdowns */
-.main-nav .has-dropdown,
-.top-nav .has-dropdown {
-  position: relative;
+/* Desktop header: no hover dropdowns (live site uses side sub-nav instead).
+   Dropdown markup is omitted from top/main; mobile menu still lists children. */
+
+/* Active section in header (gold pill, like live .selected) */
+.main-nav a.is-active,
+.main-nav li.is-active > a {
+  background: #ffc62f;
+  color: #320870;
+  border-radius: 0.25rem;
+  font-weight: 800;
+  opacity: 1;
 }
 
-.main-nav .dropdown,
-.top-nav .dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 220px;
-  background: var(--purple-dark);
-  border-radius: 0.5rem;
-  padding: 0.75rem 0;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-  z-index: 50;
-  flex-direction: column;
+.main-nav a.is-active:hover,
+.main-nav li.is-active > a:hover {
+  background: #ffc62f;
+  color: #320870;
 }
 
-.main-nav .has-dropdown:hover > .dropdown,
-.top-nav .has-dropdown:hover > .dropdown {
-  display: flex;
-}
-
-.main-nav .dropdown a,
-.top-nav .dropdown a {
-  text-align: left;
-  text-transform: none;
-  font-size: 1.4rem !important;
-  font-weight: 400;
-  padding: 0.85rem 1.5rem;
-  white-space: normal;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.main-nav .dropdown a:hover,
-.top-nav .dropdown a:hover {
-  background: rgba(255, 255, 255, 0.12);
+.top-nav a.is-active:not(.nav-donate a) {
   color: #fff;
 }
 
@@ -578,20 +561,21 @@ input[type="submit"]:hover {
   margin-bottom: 2rem;
 }
 
-/* Mission lede — live wraps in <small> */
+/* Mission lede — live wraps in <small>; inherits .featured-intro-wrap line-height: 1.1 */
 .hero-intro .lede,
 .hero-intro small {
   display: block;
   font-size: 80%;
   color: #ccc;
   margin-bottom: 2rem;
-  line-height: 1.4;
+  line-height: 1.1;
   font-weight: 400;
 }
 
 .hero-intro .lede p,
 .hero-intro small p {
   margin: 0;
+  line-height: 1.1;
 }
 
 .hero-intro .button {
@@ -1367,11 +1351,6 @@ input[type="submit"]:hover {
   fill: #ffffff;
 }
 
-/* Interior pages need purple header bar even before scroll */
-body:not(.page-home) .site-header {
-  background: rgba(79, 38, 131, 0.96);
-}
-
 body:not(.page-home) main {
   padding-top: 0;
 }
@@ -1403,6 +1382,115 @@ body:not(.page-home) .page-hero {
 
 .content-wrap .container {
   max-width: 900px;
+}
+
+/* Two-column layout when side sub-nav is present */
+.content-wrap .container.has-subnav {
+  max-width: var(--container);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+@media (min-width: 800px) {
+  .content-wrap .container.has-subnav {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+}
+
+.content-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Side sub-nav (live .sub-nav) — desktop only */
+.sub-nav {
+  display: none;
+  z-index: 300;
+  position: sticky;
+  top: 120px;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 800px) {
+  .sub-nav {
+    display: block;
+    width: 28%;
+    min-width: 200px;
+    max-width: 320px;
+  }
+}
+
+.sub-nav .sub-nav-title,
+.sub-nav .sub-nav-title:hover {
+  display: block;
+  background: #fff;
+  color: #dcd4e6;
+  line-height: 1;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 800;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  font-family: poppins, sans-serif;
+}
+
+@media (min-width: 1200px) {
+  .sub-nav .sub-nav-title,
+  .sub-nav .sub-nav-title:hover {
+    font-size: 3.2rem;
+    line-height: 1.05;
+  }
+}
+
+.sub-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+}
+
+.sub-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.sub-nav .sub-nav-link {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  line-height: 1.2;
+  font-size: 1.65rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all ease 0.3s;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--purple);
+  z-index: 1;
+}
+
+.sub-nav .sub-nav-link:hover {
+  background: none;
+  border: 2px solid #4f2683;
+  text-decoration: none;
+  color: var(--purple);
+}
+
+.sub-nav .sub-nav-link.is-active {
+  background: #4f2683;
+  color: #fff;
+  border: 2px solid #4f2683;
+  text-decoration: none;
 }
 
 .content-wrap h1.pagename {
