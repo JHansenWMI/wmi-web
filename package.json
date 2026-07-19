@@ -1,0 +1,12 @@
+{
+  "name": "wmi-web",
+  "private": true,
+  "description": "World Ministries International static site",
+  "scripts": {
+    "screenshots": "node scripts/screenshot-compare.mjs",
+    "screenshots:install": "npx playwright install chromium"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

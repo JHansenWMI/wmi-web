@@ -46,6 +46,19 @@ old-site/                  Full crawl + assets (gitignored, local only)
 python3 scripts/build_pages.py
 ```
 
+### Visual compare (local vs live)
+
+Above-the-fold screenshots for the priority pages:
+
+```bash
+npm install && npm run screenshots:install   # once
+python3 -m http.server 8080                  # if not already running
+npm run screenshots
+# open http://localhost:8080/temp/screenshots/index.html
+```
+
+Details: [`docs/VISUAL_COMPARE.md`](docs/VISUAL_COMPARE.md). Output is gitignored under `temp/`.
+
 ## Brand
 
 | Token | Hex |
