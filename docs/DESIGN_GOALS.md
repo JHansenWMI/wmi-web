@@ -165,11 +165,12 @@ From `temp/screenshots/` above-the-fold compare (local vs live).
 | Item | Why uncertain |
 |------|----------------|
 | **Rumble / video embeds** (About orientation, watch-warning grid) | Pass 2 / dynamic; live has players, local has “Loading…” or empty after script strip |
-| **Home header transparent vs solid** | We unified to solid per request; live home is still more transparent at top of hero — confirm keep solid |
-| **PayPal “hosted button” widgets** | Live may use PayPal JS widgets; we use gold link-buttons to same URLs — OK or restore hosted forms? |
-| **Shareable Link raw URLs** on donate | Live shows them too; hide or shorten in redesign? |
-| **Interior hero wave layers** | Subtle multi-wave vs ours — polish only if noticed |
-| **Testimonials layout** | Image stack vs live grid — needs design preference |
+| **Home header transparent vs solid** | **Resolved:** match live — transparent on home until scroll; solid on interior |
+| **PayPal buttons** | **Resolved:** gold links to hosted_button_id URLs are correct (no separate PayPal.js widget on live) |
+| **Shareable Link raw URLs** on donate | **Resolved:** keep, match live |
+| **Interior hero wave layers** | **Resolved:** multi-path white wave (live shape) |
+| **Testimonials layout** | **Resolved:** stack OK (matches live at various widths) |
+| **Rumble / video embeds** | **Resolved:** preserve Rumble + github.io widget scripts in build |
 | **Prophecies / reading listing density** | Shells trimmed for phase 2 by design |
 
 ## How to ask for the next pass

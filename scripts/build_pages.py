@@ -262,9 +262,35 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
     body = re.sub(r'<div class="specDivVSM"[^>]*>.*?</div>', "", body, flags=re.S | re.I)
     body = re.sub(r'<div id="counterBox">[\s\S]*?</div>', "", body, flags=re.I)
     body = re.sub(r'<div id="statsModalOverlay">[\s\S]*?</div>\s*</div>\s*</div>', "", body, flags=re.I)
-    body = re.sub(r"<script[^>]*>.*?</script>", "", body, flags=re.S | re.I)
-    body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+
+    # Preserve Rumble embeds + WMI video widgets (work on localhost via CDN)
+    kept_scripts: list[str] = []
+
+    def _keep_script(m: re.Match) -> str:
+        tag = m.group(0)
+        if re.search(
+            r"rumble\.com|Rumble\(|jhansenwmi\.github\.io/rumble",
+            tag,
+            re.I,
+        ):
+            kept_scripts.append(tag)
+            return f"<!--WMI_KEEP_SCRIPT_{len(kept_scripts) - 1}-->"
+        return ""
+
+    body = re.sub(
+        r"<script\b[^>]*>[\s\S]*?</script>",
+        _keep_script,
+        body,
+        flags=re.I,
+    )
+    # Self-closing / empty external scripts sometimes appear as <script src="..."></script>
+    # already handled above.
+
+    body = re.sub(r"<!--(?!WMI_KEEP_SCRIPT_).*?-->", "", body, flags=re.S)
     body = re.sub(r'\s(style|on\w+)="[^"]*"', "", body, flags=re.I)
+
+    for i, script in enumerate(kept_scripts):
+        body = body.replace(f"<!--WMI_KEEP_SCRIPT_{i}-->", script)
     # Empty fonts / junk
     body = re.sub(r"<font[^>]*>", "", body, flags=re.I)
     body = re.sub(r"</font>", "", body, flags=re.I)

@@ -171,14 +171,28 @@ input[type="submit"]:hover {
   left: 0;
   width: 100%;
   z-index: 2300;
-  /* Same solid bar on home + interior (was transparent on home until scroll) */
-  background: rgba(79, 38, 131, 0.96);
+  /* Home: transparent over hero (live). Interior: solid purple (below). */
+  background: transparent;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.site-header.is-stuck {
+/* Interior pages always use solid bar (live interior header) */
+body:not(.page-home) .site-header {
+  background: rgba(79, 38, 131, 0.96);
+}
+
+/* Home: solid only after scroll (live .stuck .header-wrap) */
+body.page-home .site-header.is-stuck {
   background: rgba(79, 38, 131, 0.96);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.site-header.is-stuck {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+body:not(.page-home) .site-header.is-stuck {
+  background: rgba(79, 38, 131, 0.96);
 }
 
 .header-inner {
@@ -1331,13 +1345,17 @@ input[type="submit"]:hover {
   border: 0;
 }
 
-/* ---------- Interior pages ---------- */
+/* ---------- Interior pages ----------
+   Live .hero is fixed 200px; multi-layer white wave at bottom (rotated).
+   Fixed header overlays the top of the hero (same as live). */
 .page-hero {
   position: relative;
   height: 200px;
   margin-top: 0;
+  padding-top: 0;
   background-image: linear-gradient(135deg, #8546c2 0%, #4f2683 50%, #271241 100%);
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .page-hero .hero-base {
@@ -1347,37 +1365,39 @@ input[type="submit"]:hover {
   z-index: 1;
 }
 
+/* Live .custom-shape-divider-bottom-1599021597 */
 .page-hero .wave {
+  position: absolute;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
   transform: rotate(180deg);
   z-index: 2;
 }
 
 .page-hero .wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
   height: 50px;
 }
 
+/* Layered white fills — path opacity attributes (.25 / .5 / 1) create multi-wave */
 .page-hero .wave .shape-fill {
   fill: #ffffff;
 }
 
 body:not(.page-home) main {
+  /* Fixed header overlays hero; no extra main padding (live pattern) */
   padding-top: 0;
 }
 
-/* Offset fixed header for interior hero */
-body:not(.page-home) .page-hero {
-  margin-top: 0;
-  padding-top: 90px;
-  height: auto;
-  min-height: 160px;
-  box-sizing: border-box;
-}
-
-@media (min-width: 800px) {
-  body:not(.page-home) .page-hero {
-    padding-top: 120px;
-    min-height: 200px;
+/* Keep a little room so logo/nav clear the top of the purple band on small screens */
+@media (max-width: 999px) {
+  .page-hero {
+    height: 160px;
   }
 }
 
@@ -1617,6 +1637,33 @@ body:not(.page-home) .page-hero {
 .page-content video {
   max-width: 100%;
   border-radius: 1rem;
+}
+
+/* Rumble single-video embeds (About, Orientation, etc.) */
+.page-content [id^="rumble_"] {
+  max-width: 720px;
+  width: 100%;
+  margin: 1.5rem 0 2.5rem;
+  min-height: 200px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #111;
+}
+
+.page-content [id^="rumble_"] iframe {
+  width: 100% !important;
+  border-radius: 1rem;
+}
+
+/* Rumble grid widgets (Warning TV pages) */
+.page-content .rw-root {
+  margin: 1.5rem 0;
+}
+
+.page-content .rw-status {
+  color: #777;
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
 .page-content a {
