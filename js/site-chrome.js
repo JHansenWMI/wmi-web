@@ -71,9 +71,19 @@
     return h === file;
   }
 
+  /** True if file matches this item or any nested child (L2/L3). */
+  function itemMatchesTree(item, file) {
+    if (pageMatches(item.href, file)) return true;
+    if (!item.children) return false;
+    for (let i = 0; i < item.children.length; i++) {
+      if (itemMatchesTree(item.children[i], file)) return true;
+    }
+    return false;
+  }
+
   /**
-   * If this page is a parent-with-children or one of those children,
-   * return the branch { label, href, children }.
+   * If this page is a parent-with-children or one of those children (incl. L3),
+   * return the top-level branch { label, href, children }.
    */
   function findNavBranch(file) {
     if (file === "index.html") return null;
@@ -82,10 +92,7 @@
     for (let i = 0; i < trees.length; i++) {
       const item = trees[i];
       if (!item.children || !item.children.length) continue;
-      if (pageMatches(item.href, file)) return item;
-      for (let j = 0; j < item.children.length; j++) {
-        if (pageMatches(item.children[j].href, file)) return item;
-      }
+      if (itemMatchesTree(item, file)) return item;
     }
     return null;
   }
@@ -147,19 +154,50 @@
         "</a>";
     }
 
-    // Live side nav: large section title + children only (no duplicate parent row).
-    // Parent page itself has no purple pill; only a matching child is .is-active.
-    let list = "<ul>";
+    // Live side nav:
+    //  L1 title, L2 links (purple pill when selected),
+    //  L3 panel under selected L2 (.ul3 lavender box) when L2 has children
+    //  and current page is that L2 or one of its L3 descendants.
+    let list = '<ul class="sub-nav-l2">';
     branch.children.forEach(function (child) {
       if (child.external) return;
+      const childActive = pageMatches(child.href, file);
+      const hasL3 = child.children && child.children.length;
+      const l3Match =
+        hasL3 &&
+        child.children.some(function (g) {
+          return pageMatches(g.href, file);
+        });
+      // Show L3 when on the L2 page or any L3 page under it
+      const showL3 = hasL3 && (childActive || l3Match);
+      const l2Active = childActive || l3Match;
+
+      list += '<li class="sub-nav-l2-item' + (showL3 ? " is-expanded" : "") + '">';
       list +=
-        '<li><a class="sub-nav-link' +
-        (pageMatches(child.href, file) ? " is-active" : "") +
+        '<a class="sub-nav-link' +
+        (l2Active ? " is-active" : "") +
         '" href="' +
         esc(child.href) +
         '">' +
         esc(child.label) +
-        "</a></li>";
+        "</a>";
+
+      if (showL3) {
+        list += '<ul class="sub-nav-l3">';
+        child.children.forEach(function (g) {
+          if (g.external) return;
+          list +=
+            '<li><a class="sub-nav-l3-link' +
+            (pageMatches(g.href, file) ? " is-active" : "") +
+            '" href="' +
+            esc(g.href) +
+            '">' +
+            esc(g.label) +
+            "</a></li>";
+        });
+        list += "</ul>";
+      }
+      list += "</li>";
     });
     list += "</ul>";
 

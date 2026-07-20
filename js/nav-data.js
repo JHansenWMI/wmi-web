@@ -34,10 +34,25 @@ window.WMI_NAV = {
       label: "Contact",
       href: "contact.html",
       children: [
-        { label: "Prayer", href: "prayer.html" },
-        { label: "Prayer Requests to Gate Breakers", href: "prayer-requests.html" },
-        { label: "Soldiers of the Cross Info", href: "intercessors.html" },
-        { label: "Soldiers of the Cross Form", href: "intercessor-application.html" },
+        // Live: L2 Prayer with L3 nested (ul3 panel under selected Prayer)
+        {
+          label: "Prayer",
+          href: "prayer.html",
+          children: [
+            {
+              label: "Prayer Requests to Gate Breakers",
+              href: "prayer-requests.html",
+            },
+            {
+              label: "Soldiers of the Cross Info",
+              href: "intercessors.html",
+            },
+            {
+              label: "Soldiers of the Cross Form",
+              href: "intercessor-application.html",
+            },
+          ],
+        },
       ],
     },
     { label: "Donate", href: "donate.html", donate: true },
@@ -83,7 +98,14 @@ window.WMI_NAV = {
         { label: "Pastoral Articles", href: "pastoral-articles.html" },
         { label: "Soldiers of the Cross Articles", href: "soldiers-of-the-cross.html" },
         { label: "Dr. Hansen's Thought For The Day", href: "thought-for-the-day.html" },
-        { label: "Prophecies", href: "prophecies.html" },
+        {
+          label: "Prophecies",
+          href: "prophecies.html",
+          children: [
+            // Live: all-prophecies.aspx?cat=544 under Reading → Prophecies
+            { label: "Prophecy - USA", href: "prophecies.html" },
+          ],
+        },
         { label: "The Dorcas Fund Articles", href: "the-dorcas-fund-articles.html" },
       ],
     },

@@ -1523,6 +1523,63 @@ body:not(.page-home) main {
   text-decoration: none;
 }
 
+/* L3 nested panel — live .sub-nav .selected > .ul3 */
+.sub-nav .sub-nav-l2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-nav .sub-nav-l2-item {
+  margin: 0;
+  padding: 0;
+}
+
+.sub-nav .sub-nav-l3 {
+  display: block;
+  position: relative;
+  list-style: none;
+  margin: -1.5rem 0 0;
+  padding: 3rem 1rem 1.5rem;
+  z-index: 0;
+  background: #ece8f1;
+  border-radius: 0 0 0.5rem 0.5rem;
+  border: 2px solid #cfc5dc;
+}
+
+.sub-nav .sub-nav-l3-link {
+  position: relative;
+  display: block;
+  padding: 0 1rem;
+  text-decoration: none;
+  transition: all ease 0.3s;
+  border-radius: 0.5rem;
+  font-size: 90%;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  border: 2px solid transparent;
+  color: var(--purple);
+}
+
+.sub-nav .sub-nav-l3-link:hover {
+  background: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  color: var(--purple);
+}
+
+.sub-nav .sub-nav-l3-link.is-active,
+.sub-nav .sub-nav-l3-link.is-active:hover {
+  background: #4f2683;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* L2 active sits above the L3 panel (live z-index on .l2 a) */
+.sub-nav .sub-nav-l2-item.is-expanded > .sub-nav-link {
+  position: relative;
+  z-index: 1;
+}
+
 /* Live skeleton h1.pagename */
 .content-wrap h1.pagename {
   margin: 0 0 4rem;
