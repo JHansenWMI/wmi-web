@@ -1781,6 +1781,13 @@ body:not(.page-home) main {
   border-radius: 1rem;
 }
 
+/* Dorcas / CMS carousels: don't apply bio float margins to swiper slides */
+.page-content .swiper-slide img {
+  float: none !important;
+  margin: 0 !important;
+  border-radius: 0;
+}
+
 /* Rumble single-video embeds (About, Orientation, etc.) */
 .page-content [id^="rumble_"] {
   max-width: 720px;

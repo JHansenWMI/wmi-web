@@ -267,13 +267,14 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
     body = re.sub(r'<div id="counterBox">[\s\S]*?</div>', "", body, flags=re.I)
     body = re.sub(r'<div id="statsModalOverlay">[\s\S]*?</div>\s*</div>\s*</div>', "", body, flags=re.I)
 
-    # Preserve Rumble embeds + WMI video widgets (work on localhost via CDN)
+    # Preserve embeds + carousels that work on localhost via CDN
     kept_scripts: list[str] = []
+    kept_styles: list[str] = []
 
     def _keep_script(m: re.Match) -> str:
         tag = m.group(0)
         if re.search(
-            r"rumble\.com|Rumble\(|jhansenwmi\.github\.io/rumble",
+            r"rumble\.com|Rumble\(|jhansenwmi\.github\.io/rumble|Swiper|swiper",
             tag,
             re.I,
         ):
@@ -287,10 +288,29 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
         body,
         flags=re.I,
     )
-    # Self-closing / empty external scripts sometimes appear as <script src="..."></script>
-    # already handled above.
 
-    body = re.sub(r"<!--(?!WMI_KEEP_SCRIPT_).*?-->", "", body, flags=re.S)
+    # Keep page-embedded <style> (e.g. Dorcas Swiper galleries); map #content → .page-content
+    def _keep_style_block(m: re.Match) -> str:
+        block = m.group(0)
+        # CMS sometimes wraps CSS in HTML comments inside <style>
+        block = re.sub(r"<!--|-->", "", block)
+        block = block.replace("#content", ".page-content")
+        kept_styles.append(block)
+        return f"<!--WMI_KEEP_STYLE_{len(kept_styles) - 1}-->"
+
+    body = re.sub(
+        r"<style\b[^>]*>[\s\S]*?</style>",
+        _keep_style_block,
+        body,
+        flags=re.I,
+    )
+
+    body = re.sub(
+        r"<!--(?!WMI_KEEP_(?:SCRIPT|STYLE)_).*?-->",
+        "",
+        body,
+        flags=re.S,
+    )
 
     # ------------------------------------------------------------------
     # Layout styles: convert/allowlist — do NOT re-apply CMS font/padding.
@@ -310,6 +330,20 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
         "margin-top",
         "margin-bottom",
         "vertical-align",
+        # flex hero rows (Dorcas photo + logo side by side)
+        "display",
+        "flex",
+        "flex-wrap",
+        "flex-direction",
+        "flex-grow",
+        "flex-shrink",
+        "flex-basis",
+        "gap",
+        "row-gap",
+        "column-gap",
+        "align-items",
+        "justify-content",
+        "clear",
     }
 
     def _parse_style(style: str) -> dict[str, str]:
@@ -389,24 +423,39 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
                 sz = _safe_size(val)
                 if sz:
                     keep_style[prop] = sz
+            elif prop in (
+                "display",
+                "flex",
+                "flex-wrap",
+                "flex-direction",
+                "flex-grow",
+                "flex-shrink",
+                "flex-basis",
+                "gap",
+                "row-gap",
+                "column-gap",
+                "align-items",
+                "justify-content",
+                "clear",
+            ):
+                # allow flex rows (Dorcas hero) and clear:both
+                if re.fullmatch(r"[\w\s.%+-]+", val) and "expression" not in val:
+                    keep_style[prop] = val
             elif prop.startswith("margin") or prop == "vertical-align":
                 # keep simple values only
                 if re.fullmatch(r"[\w\s.%+-]+", val) and "expression" not in val:
                     keep_style[prop] = val
 
-        # Images: live uses width/height HTML attributes + style="float:…" only.
-        # Do NOT invent width:Npx inline styles (that produced 350×258 vs live ~271×200).
-        # Float → class; sizing → CSS from height/width attributes.
+        # Images: keep max-width from CMS (e.g. 340px Dorcas hero); float → class;
+        # do not force width:Npx from HTML attrs (height-led CSS handles bio photos).
         if tag.lower().startswith("<img"):
-            # Drop width/height from keep_style if copied from style= — attrs handle size
-            for k in ("width", "height", "max-width", "max-height", "min-width"):
-                keep_style.pop(k, None)
+            # Keep max-width/height from style; drop forced width unless only max-width
+            pass
 
         tag = re.sub(r'\sstyle="[^"]*"', "", tag, flags=re.I)
         tag = re.sub(r'\salign="[^"]*"', "", tag, flags=re.I)
         tag = _add_class(tag, *classes)
-        if keep_style and not tag.lower().startswith("<img"):
-            # Non-img tags may keep allowlisted layout styles
+        if keep_style:
             style_str = "; ".join(f"{k}: {v}" for k, v in keep_style.items())
             tag = re.sub(r"<(\w+)", rf'<\1 style="{style_str}"', tag, count=1)
         return tag
@@ -434,6 +483,8 @@ def clean_body(body: str, trim_listing: bool = False) -> str:
 
     for i, script in enumerate(kept_scripts):
         body = body.replace(f"<!--WMI_KEEP_SCRIPT_{i}-->", script)
+    for i, style_block in enumerate(kept_styles):
+        body = body.replace(f"<!--WMI_KEEP_STYLE_{i}-->", style_block)
     # Empty fonts / junk
     body = re.sub(r"<font[^>]*>", "", body, flags=re.I)
     body = re.sub(r"</font>", "", body, flags=re.I)
