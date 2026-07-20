@@ -1,17 +1,19 @@
 /**
- * In-page article editor (first implementation).
+ * In-page article editor (articles only).
  *
- * Scope: blog article body only (.article-edit-region / [data-edit="rich"]).
+ * Scope: blog article body (.article-edit-region / [data-edit="rich"]).
  *
- * Login (dev / intranet preview):
- *   - Open any page with ?editor=1 → login form in the bar
- *   - Password: default "wmi-edit" (override via window.WMI_EDITOR_PASSWORD)
- *   - Session: sessionStorage wmi_editor_session=1 for this browser tab
+ * Login (dev / localhost preview):
+ *   - ?editor=1 → password form in the bar
+ *   - Password: "wmi-edit" (override window.WMI_EDITOR_PASSWORD)
+ *   - Session: sessionStorage wmi_editor_session=1
  *
- * Flow when logged in on an article:
- *   1. Top bar appears (View | Edit | Log out)
- *   2. Click Edit → body is contenteditable; rich-text tools show
- *   3. Edit the article; Discard / Save (Save → localStorage for now)
+ * Save:
+ *   - Preferred: POST /api/editor/save → content/articles/YYMMDD-Title.html
+ *     (requires scripts/dev_server.py / npm run dev — not plain http.server)
+ *   - Fallback: localStorage draft if write API is unavailable
+ *
+ * Flow: Log in → open article → Edit → rich tools → Save
  */
 (function () {
   "use strict";
@@ -19,6 +21,8 @@
   var SESSION_KEY = "wmi_editor_session";
   var SAVE_PREFIX = "wmi_editor_draft:";
   var DEFAULT_PASSWORD = "wmi-edit";
+  var API_STATUS = "/api/editor/status";
+  var API_SAVE = "/api/editor/save";
 
   var state = {
     mode: "view", // view | edit
@@ -27,6 +31,9 @@
     postId: null,
     originalHtml: "",
     dirty: false,
+    writeEnabled: false,
+    writeChecked: false,
+    lastSavePath: "",
   };
 
   function password() {
@@ -59,11 +66,54 @@
   }
 
   function findPostId() {
+    var region = findArticleRegion();
+    if (region && region.getAttribute("data-post-id")) {
+      return region.getAttribute("data-post-id");
+    }
     try {
       return new URLSearchParams(window.location.search).get("post") || "unknown";
     } catch (e) {
       return "unknown";
     }
+  }
+
+  function postMeta() {
+    var region = state.region || findArticleRegion();
+    var titleEl = document.querySelector(".blog-single .post-title");
+    var dateEl = document.querySelector(".blog-single .post-date");
+    return {
+      postId: findPostId(),
+      title:
+        (region && region.getAttribute("data-post-title")) ||
+        (titleEl && titleEl.textContent.trim()) ||
+        "Untitled",
+      date:
+        (region && region.getAttribute("data-post-date")) ||
+        (dateEl && dateEl.textContent.trim()) ||
+        "",
+      blog:
+        (region && region.getAttribute("data-post-blog")) ||
+        "pastoral-articles",
+      slug: (region && region.getAttribute("data-post-slug")) || "",
+    };
+  }
+
+  function probeWriteApi() {
+    return fetch(API_STATUS, { method: "GET", cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("no api");
+        return r.json();
+      })
+      .then(function (data) {
+        state.writeEnabled = !!(data && data.writeEnabled);
+        state.writeChecked = true;
+        return state.writeEnabled;
+      })
+      .catch(function () {
+        state.writeEnabled = false;
+        state.writeChecked = true;
+        return false;
+      });
   }
 
   function syncBarHeight() {
@@ -170,8 +220,10 @@
     var pass = input ? input.value : "";
     if (pass === password()) {
       setLoggedIn(true);
-      renderBar();
-      syncArticle();
+      probeWriteApi().then(function () {
+        renderBar();
+        syncArticle();
+      });
     } else {
       alert("Incorrect password.");
       if (input) {
@@ -181,31 +233,109 @@
     }
   }
 
+  function saveLocalDraft(id, html) {
+    try {
+      localStorage.setItem(SAVE_PREFIX + id, html);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function clearLocalDraft(id) {
+    try {
+      localStorage.removeItem(SAVE_PREFIX + id);
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
   function doSave() {
     if (!state.region) return;
     var html = state.region.innerHTML;
-    var id = state.postId || findPostId();
-    try {
-      localStorage.setItem(SAVE_PREFIX + id, html);
-    } catch (err) {
-      alert("Could not save draft: " + err);
+    var meta = postMeta();
+    var id = meta.postId;
+
+    // Always keep a browser backup while saving
+    saveLocalDraft(id, html);
+
+    if (!state.writeEnabled) {
+      // Re-probe once in case server was started after page load
+      probeWriteApi().then(function (ok) {
+        if (ok) {
+          doSave();
+          return;
+        }
+        state.originalHtml = html;
+        state.dirty = false;
+        state.mode = "view";
+        exitEditMode(true);
+        renderBar();
+        flashStatus(
+          "Browser draft only — run npm run dev for file save (content/articles/)."
+        );
+      });
       return;
     }
-    state.originalHtml = html;
-    state.dirty = false;
-    state.mode = "view";
-    exitEditMode(true);
-    renderBar();
-    flashStatus("Draft saved in this browser (localStorage). Publish pipeline later.");
+
+    var saveBtn = state.bar && state.bar.querySelector('[data-editor-action="save"]');
+    if (saveBtn) {
+      saveBtn.disabled = true;
+      saveBtn.textContent = "Saving…";
+    }
+
+    fetch(API_SAVE, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        password: password(),
+        postId: id,
+        title: meta.title,
+        date: meta.date,
+        blog: meta.blog,
+        slug: meta.slug,
+        html: html,
+      }),
+    })
+      .then(function (r) {
+        return r.json().then(function (data) {
+          return { httpOk: r.ok, data: data };
+        });
+      })
+      .then(function (res) {
+        if (!res.httpOk || !res.data || !res.data.ok) {
+          var err =
+            (res.data && res.data.error) || "Save failed (is npm run dev running?)";
+          throw new Error(err);
+        }
+        state.originalHtml = html;
+        state.dirty = false;
+        state.mode = "view";
+        state.lastSavePath = res.data.path || res.data.file || "";
+        clearLocalDraft(id);
+        exitEditMode(true);
+        renderBar();
+        flashStatus("Saved " + (res.data.path || res.data.file), 4000);
+      })
+      .catch(function (err) {
+        // Keep edit mode; local draft already stored
+        renderBar();
+        flashStatus(String(err.message || err), 5000);
+        alert(
+          "Could not save snippet file.\n\n" +
+            (err.message || err) +
+            "\n\nA browser draft was kept. Use npm run dev (not plain http.server)."
+        );
+      });
   }
 
-  function flashStatus(msg) {
+  function flashStatus(msg, ms) {
     var el = state.bar && state.bar.querySelector(".wmi-editor-status");
     if (!el) return;
     el.textContent = msg;
     setTimeout(function () {
       if (el) el.textContent = state.dirty ? "Unsaved changes" : "";
-    }, 2500);
+    }, ms || 2500);
   }
 
   function runFormat(cmd) {
@@ -233,11 +363,10 @@
     if (!state.originalHtml) {
       state.originalHtml = region.innerHTML;
     }
-    // Restore draft if any
     try {
       var draft = localStorage.getItem(SAVE_PREFIX + state.postId);
       if (draft && draft !== region.innerHTML) {
-        if (confirm("Restore draft saved in this browser?")) {
+        if (confirm("Restore unsaved browser draft?")) {
           region.innerHTML = draft;
         }
       }
@@ -272,14 +401,12 @@
 
   function renderBar() {
     if (!isLoggedIn() && !wantEditorParam() && !document.querySelector(".blog-single")) {
-      // No bar on public listing unless ?editor=1
       if (!wantEditorParam()) {
         removeBar();
         return;
       }
     }
 
-    // Logged out: only show bar if ?editor=1 or already had bar
     if (!isLoggedIn()) {
       if (!wantEditorParam()) {
         removeBar();
@@ -293,7 +420,7 @@
         '<input type="password" id="wmi-editor-password" autocomplete="current-password" />' +
         "</label>" +
         '<button type="button" class="wmi-editor-btn" data-editor-action="login">Log in</button>' +
-        '<span class="wmi-editor-hint">Dev password: wmi-edit · add ?editor=1</span>' +
+        '<span class="wmi-editor-hint">Dev password: wmi-edit · use npm run dev to save files</span>' +
         "</div>";
       var inp = barLogin.querySelector("#wmi-editor-password");
       if (inp) {
@@ -304,12 +431,13 @@
           inp.focus();
         }, 50);
       }
+      setTimeout(syncBarHeight, 0);
       return;
     }
 
-    // Logged in
     var onArticle = !!findArticleRegion();
     var bar = ensureBar();
+    var saveLabel = state.writeEnabled ? "Save" : "Save draft";
     var html =
       '<div class="wmi-editor-bar-inner">' +
       '<span class="wmi-editor-brand">WMI Editor</span>' +
@@ -320,7 +448,7 @@
       '<button type="button" class="wmi-editor-btn' +
       (state.mode === "edit" ? " is-active" : "") +
       '"' +
-      (onArticle ? "" : " disabled title=\"Open an article to edit\"") +
+      (onArticle ? "" : ' disabled title="Open an article to edit"') +
       ' data-editor-action="edit">Edit</button>' +
       "</div>";
 
@@ -336,18 +464,26 @@
         '<button type="button" class="wmi-editor-btn wmi-editor-fmt" data-editor-action="fmt:clear" title="Clear formatting">Clear</button>' +
         "</div>" +
         '<button type="button" class="wmi-editor-btn" data-editor-action="discard">Discard</button>' +
-        '<button type="button" class="wmi-editor-btn wmi-editor-btn-primary" data-editor-action="save">Save draft</button>';
+        '<button type="button" class="wmi-editor-btn wmi-editor-btn-primary" data-editor-action="save">' +
+        saveLabel +
+        "</button>";
     }
+
+    var status = "";
+    if (state.dirty) status = "Unsaved changes";
+    else if (!onArticle) status = "Open an article to edit";
+    else if (state.lastSavePath) status = "Last save: " + state.lastSavePath;
+    else if (state.writeChecked && !state.writeEnabled)
+      status = "File save off (use npm run dev)";
 
     html +=
       '<span class="wmi-editor-status" aria-live="polite">' +
-      (state.dirty ? "Unsaved changes" : onArticle ? "" : "Open an article to edit") +
+      status +
       "</span>" +
       '<button type="button" class="wmi-editor-btn wmi-editor-btn-quiet" data-editor-action="logout">Log out</button>' +
       "</div>";
 
     bar.innerHTML = html;
-    // Re-bind after innerHTML wipe; height may grow when rich tools appear
     setTimeout(syncBarHeight, 0);
   }
 
@@ -369,12 +505,10 @@
     renderBar();
   }
 
-  // Observe article mount (reading.js replaces #reading-app HTML)
   function observe() {
     var app = document.getElementById("reading-app");
     if (app) {
       var mo = new MutationObserver(function () {
-        // Defer so reading.js finishes
         setTimeout(syncArticle, 0);
       });
       mo.observe(app, { childList: true, subtree: true });
@@ -387,9 +521,14 @@
   function init() {
     observe();
     if (isLoggedIn() || wantEditorParam()) {
-      renderBar();
+      if (isLoggedIn()) {
+        probeWriteApi().then(function () {
+          renderBar();
+        });
+      } else {
+        renderBar();
+      }
     }
-    // Re-check after load (article may render async)
     setTimeout(syncArticle, 100);
     setTimeout(syncArticle, 500);
     setTimeout(syncArticle, 1500);

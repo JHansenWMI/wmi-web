@@ -269,10 +269,11 @@ Ship and serve articles as **static files + JavaScript**, same family as the res
 
 | Piece | Role |
 |-------|------|
-| **HTML snippets** (one file per article, or fragment + shell) | Body content after Word cleanup |
-| **Index/catalog JSON** (or small JS module) | id, title, slug, date, category ids, path to snippet, excerpt |
+| **HTML snippets** | Body fragments: **`content/articles/YYMMDD-Title.html`** (see folder README) |
+| **Snippet index** | `content/articles/_index.json` — post id → filename (editor **Save** updates this) |
+| **Index/catalog JSON** (or small JS module) | id, title, slug, date, category ids, optional `bodyPath`, excerpt; demo may still inline `bodyHtml` as fallback |
 | **Listing JS** (`reading.js` today) | Load catalog, filter by category/search/year, render cards |
-| **Article view** | Load snippet into the article chrome (or navigate to a static page built from the snippet) |
+| **Article view** | Prefer snippet from `_index.json`; else catalog `bodyHtml` |
 
 **Why this fits**
 

@@ -158,7 +158,7 @@ From `temp/screenshots/` above-the-fold compare (local vs live).
 | Content column too narrow (`max-width: 900px`) | Use site container width (~80% / 1440) |
 | Donate `h5` labels not purple | Style `h4`–`h6` in `.page-content` |
 | Long PayPal URLs overflow | `overflow-wrap: anywhere` |
-| Donate missions link still `reading.html?…` | → `missions.html` |
+| Donate / nav Missions & Benevolence | Match live: `reading.html?cat=494` / `?cat=520` (not stub pages) |
 
 ### Ask before changing (next pass)
 

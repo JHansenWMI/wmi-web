@@ -43,8 +43,11 @@
     }
   });
 
+  var SNIPPET_INDEX_URL = "content/articles/_index.json";
+
   var state = {
     catalog: null,
+    snippetIndex: null, // { posts: { id: { file, title, ... } } }
     view1: "compact-view", // compact | expanded
     view2: "grid-view", // grid | list
     search: "",
@@ -149,6 +152,46 @@
     );
     h = h.trim();
     return h || "<p></p>";
+  }
+
+  /** Strip optional tooling comment header from snippet files. */
+  function stripSnippetHeader(html) {
+    if (!html) return "";
+    return String(html)
+      .replace(/^\s*<!--[\s\S]*?-->\s*/, "")
+      .trim();
+  }
+
+  function snippetMetaFor(postId) {
+    var posts = state.snippetIndex && state.snippetIndex.posts;
+    if (!posts) return null;
+    return posts[String(postId)] || null;
+  }
+
+  /**
+   * Prefer content/articles snippet when indexed; else catalog bodyHtml.
+   * Returns a Promise<string> of cleaned body HTML.
+   */
+  function loadArticleBody(post) {
+    var meta = snippetMetaFor(post.id);
+    var path =
+      (meta && meta.file && "content/articles/" + meta.file) ||
+      post.bodyPath ||
+      null;
+    if (!path) {
+      return Promise.resolve(cleanArticleBody(post.bodyHtml));
+    }
+    return fetch(path, { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("snippet " + r.status);
+        return r.text();
+      })
+      .then(function (text) {
+        return cleanArticleBody(stripSnippetHeader(text));
+      })
+      .catch(function () {
+        return cleanArticleBody(post.bodyHtml);
+      });
   }
 
   function filterPosts(catId, search, year) {
@@ -397,6 +440,7 @@
     hidePageName(true);
     document.title = post.title + " | World Ministries International";
 
+    // Shell first; body filled after snippet/catalog resolve
     var html =
       '<div class="blog-content-wrap pastoral articles">' +
       '<div class="blog-main">' +
@@ -411,32 +455,52 @@
         : "") +
       categoryLinksHtml(post) +
       "</div>" +
-      '<div class="post-content article-edit-region" data-edit="rich" data-edit-id="article-body">' +
-      cleanArticleBody(post.bodyHtml) +
-      "</div>" +
+      '<div class="post-content article-edit-region" data-edit="rich" data-edit-id="article-body"' +
+      ' data-post-id="' +
+      esc(post.id) +
+      '" data-post-title="' +
+      esc(post.title) +
+      '" data-post-date="' +
+      esc(post.date || "") +
+      '" data-post-blog="' +
+      esc(post.blog || (state.catalog && state.catalog.blog) || "") +
+      '" data-post-slug="' +
+      esc(post.slug || "") +
+      '"><p class="phase-note">Loading article…</p></div>' +
       "</div></div></div>";
 
     root.innerHTML = html;
     bindToolbarEvents("");
-    root.querySelectorAll(".specDivVSM").forEach(function (el) {
-      el.remove();
+
+    loadArticleBody(post).then(function (body) {
+      var region = root.querySelector(".article-edit-region");
+      if (!region) return;
+      // Still on this post?
+      if (region.getAttribute("data-post-id") !== String(post.id)) return;
+      region.innerHTML = body;
+      root.querySelectorAll(".specDivVSM").forEach(function (el) {
+        el.remove();
+      });
+      var leaked = document.getElementById("counterBox");
+      if (leaked && !leaked.classList.contains("page-stats")) {
+        var overlay = document.getElementById("statsModalOverlay");
+        if (overlay) overlay.remove();
+        leaked.remove();
+      }
+      try {
+        document.dispatchEvent(
+          new CustomEvent("wmi:article-ready", {
+            detail: {
+              postId: post.id,
+              title: post.title,
+              fromSnippet: !!snippetMetaFor(post.id),
+            },
+          })
+        );
+      } catch (e) {
+        /* ignore */
+      }
     });
-    // Safety: scrapes sometimes inject a global stats widget outside post-content
-    var leaked = document.getElementById("counterBox");
-    if (leaked && !leaked.classList.contains("page-stats")) {
-      var overlay = document.getElementById("statsModalOverlay");
-      if (overlay) overlay.remove();
-      leaked.remove();
-    }
-    try {
-      document.dispatchEvent(
-        new CustomEvent("wmi:article-ready", {
-          detail: { postId: post.id, title: post.title },
-        })
-      );
-    } catch (e) {
-      /* IE not relevant */
-    }
   }
 
   function renderError(msg) {
@@ -449,10 +513,6 @@
 
   function start(catalog) {
     state.catalog = catalog;
-    if (catalog.pageBase) {
-      // prefer catalog's own page if set
-      // (PAGE_BASE already from data-page / filename)
-    }
     var p = params();
     state.search = p.srch || "";
     state.year = p.year || "";
@@ -469,12 +529,30 @@
     renderListing(p.cat || DEFAULT_CAT || "");
   }
 
-  fetch(CATALOG_URL)
-    .then(function (r) {
+  function loadSnippetIndex() {
+    return fetch(SNIPPET_INDEX_URL, { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) return null;
+        return r.json();
+      })
+      .then(function (idx) {
+        state.snippetIndex = idx || { version: 1, posts: {} };
+      })
+      .catch(function () {
+        state.snippetIndex = { version: 1, posts: {} };
+      });
+  }
+
+  Promise.all([
+    fetch(CATALOG_URL).then(function (r) {
       if (!r.ok) throw new Error("Could not load catalog");
       return r.json();
+    }),
+    loadSnippetIndex(),
+  ])
+    .then(function (results) {
+      start(results[0]);
     })
-    .then(start)
     .catch(function (err) {
       renderError(String(err.message || err));
     });

@@ -3,6 +3,7 @@
   "private": true,
   "description": "World Ministries International static site",
   "scripts": {
+    "dev": "python3 scripts/dev_server.py",
     "screenshots": "node scripts/screenshot-compare.mjs",
     "screenshots:install": "npx playwright install chromium"
   },

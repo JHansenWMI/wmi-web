@@ -222,11 +222,21 @@ Local preview of the first on-page editor. **Not** production auth or publish.
 | Login | `?editor=1` → bar password form. Default password `wmi-edit` (override `window.WMI_EDITOR_PASSWORD`). Session: `sessionStorage wmi_editor_session` |
 | Modes | Logged-in bar: **View** \| **Edit** \| Log out. Edit only enabled on an open article (`?post=…`) |
 | Rich tools | Bold, italic, underline, lists, link, clear (`document.execCommand` for the spike) |
-| Save | **Save draft** → `localStorage` key `wmi_editor_draft:{postId}`. No write to repo / no publish yet |
+| Save (files) | **`npm run dev`** → `POST /api/editor/save` writes `content/articles/YYMMDD-Title.html` + updates `_index.json`. See [content/articles/README.md](../content/articles/README.md). |
+| Save (fallback) | Without the write API: browser `localStorage` draft only (`wmi_editor_draft:{postId}`) |
+| Load | `js/reading.js` prefers snippet via `_index.json` over catalog `bodyHtml` |
 
-**Try it:** open `http://localhost:8080/reading.html?editor=1`, log in, open any article, click **Edit**, click the body, format and type. Discard restores the loaded catalog HTML; re-Edit may offer to restore a browser draft.
+**Try it:**
 
-Next spikes: real Mini auth, save into snippet/working tree, locks, publish path. Still not for the public Cloudflare site.
+```bash
+npm run dev   # not plain python -m http.server
+```
+
+Open `http://127.0.0.1:8080/reading.html?editor=1`, log in (`wmi-edit`), open an article, **Edit**, change text, **Save**. File appears under `content/articles/`. Reload the article — body comes from the snippet.
+
+**Not yet:** Mini login, locks, git publish / Cloudflare deploy, title-field edit, Word import pipeline.
+
+Next spikes: real Mini auth, locks, publish path (commit/push of snippets + thin catalog). Still not for the public Cloudflare site (no write API there).
 
 ---
 

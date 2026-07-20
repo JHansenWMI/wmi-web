@@ -54,14 +54,20 @@
     {
       "from": "/reading.aspx",
       "query": { "cat": "520" },
-      "to": "/benevolence.html",
-      "note": "Live nav Benevolence used reading.aspx?cat=520"
+      "to": "/reading.html?cat=520",
+      "note": "Live Benevolence nav = Reading category 520 (keep as reading, not a stub page)"
     },
     {
       "from": "/reading.aspx",
       "queryContains": { "cat": "520" },
-      "to": "/benevolence.html",
-      "note": "Same mapping if other params present"
+      "to": "/reading.html?cat=520",
+      "note": "Same if other params (e.g. nv=) present"
+    },
+    {
+      "from": "/reading.aspx",
+      "queryContains": { "cat": "494" },
+      "to": "/reading.html?cat=494",
+      "note": "Live Missions nav = reading.aspx?nv=494&cat=494"
     }
   ],
   "redirects": [
@@ -109,8 +115,10 @@
     { "from": "/prophecies.aspx", "to": "/prophecies.html" },
     { "from": "/eagles-saving-nations.aspx", "to": "/eagles-saving-nations.html" },
     { "from": "/intercessor-application.aspx", "to": "/intercessor-application.html" },
-    { "from": "/benevolence.aspx", "to": "/benevolence.html" },
-    { "from": "/missions.aspx", "to": "/missions.html" },
+    { "from": "/benevolence.aspx", "to": "/reading.html?cat=520", "note": "Live used reading?cat=520; local stub benevolence.html redirects too" },
+    { "from": "/missions.aspx", "to": "/reading.html?cat=494", "note": "Live used reading?cat=494; local stub missions.html redirects too" },
+    { "from": "/benevolence.html", "to": "/reading.html?cat=520", "note": "Former local stub" },
+    { "from": "/missions.html", "to": "/reading.html?cat=494", "note": "Former local stub" },
     { "from": "/tv-guests.aspx", "to": "/tv-guests.html" },
     { "from": "/radio-guests.aspx", "to": "/radio-guests.html" },
     { "from": "/attributes-of-eagles.aspx", "to": "/attributes-of-eagles.html" },

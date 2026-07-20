@@ -26,7 +26,8 @@ window.WMI_NAV = {
         { label: "Testimonials", href: "testimonials.html" },
       ],
     },
-    { label: "Benevolence", href: "benevolence.html" },
+    // Live: reading.aspx?cat=520 (blog category, not a standalone page)
+    { label: "Benevolence", href: "reading.html?cat=520" },
     { label: "The Dorcas Fund", href: "the-dorcas-fund.html" },
     { label: "Bible College", href: "bible-college.html" },
     { label: "Prayer", href: "prayer.html" },
@@ -79,7 +80,8 @@ window.WMI_NAV = {
       ],
     },
     { label: "Prophecies", href: "prophecies.html" },
-    { label: "Missions", href: "missions.html" },
+    // Live: reading.aspx?nv=494&cat=494 (Mission Trips category)
+    { label: "Missions", href: "reading.html?cat=494" },
     {
       label: "Eagles Saving Nations",
       href: "eagles-saving-nations.html",
@@ -133,7 +135,8 @@ window.WMI_NAV = {
   /** Footer link column (subset of utility links) */
   footer: [
     { label: "About", href: "about.html" },
-    { label: "Benevolence", href: "benevolence.html" },
+    // Live: reading.aspx?cat=520 (blog category, not a standalone page)
+    { label: "Benevolence", href: "reading.html?cat=520" },
     { label: "The Dorcas Fund", href: "the-dorcas-fund.html" },
     { label: "Bible College", href: "bible-college.html" },
     { label: "Prayer", href: "prayer.html" },
