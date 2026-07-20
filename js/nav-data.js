@@ -92,20 +92,26 @@ window.WMI_NAV = {
       ],
     },
     {
+      // Menu-builder style: labels → existing pages or blog+category URLs
       label: "Reading",
       href: "reading.html",
       children: [
-        { label: "Pastoral Articles", href: "pastoral-articles.html" },
+        // Live: reading.aspx?cat=493
+        { label: "Pastoral Articles", href: "reading.html?cat=493" },
+        // Live: soldiers-of-the-cross.aspx (separate blog)
         { label: "Soldiers of the Cross Articles", href: "soldiers-of-the-cross.html" },
+        // Live: thought-for-the-day.aspx
         { label: "Dr. Hansen's Thought For The Day", href: "thought-for-the-day.html" },
         {
+          // Live: all-prophecies.aspx
           label: "Prophecies",
           href: "prophecies.html",
           children: [
-            // Live: all-prophecies.aspx?cat=544 under Reading → Prophecies
-            { label: "Prophecy - USA", href: "prophecies.html" },
+            // Live: all-prophecies.aspx?cat=544
+            { label: "Prophecy - USA", href: "prophecies.html?cat=544" },
           ],
         },
+        // Live: the-dorcas-fund-articles.aspx
         { label: "The Dorcas Fund Articles", href: "the-dorcas-fund-articles.html" },
       ],
     },

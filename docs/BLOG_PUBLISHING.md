@@ -261,6 +261,86 @@ Aligns with existing Mini habits (Media Archive Searcher, rumble feed jobs): **p
 
 ---
 
+## Content storage preference (long-form blogs)
+
+**Current lean (preferred): not a runtime database for public Reading.**
+
+Ship and serve articles as **static files + JavaScript**, same family as the rest of wmi-web:
+
+| Piece | Role |
+|-------|------|
+| **HTML snippets** (one file per article, or fragment + shell) | Body content after Word cleanup |
+| **Index/catalog JSON** (or small JS module) | id, title, slug, date, category ids, path to snippet, excerpt |
+| **Listing JS** (`reading.js` today) | Load catalog, filter by category/search/year, render cards |
+| **Article view** | Load snippet into the article chrome (or navigate to a static page built from the snippet) |
+
+**Why this fits**
+
+- Matches a static Cloudflare site (no DB on the edge for public reads).  
+- Word → cleanup → snippet is a natural pipeline output.  
+- Easy to git-diff, review, and publish from the Mini.  
+- Sample demo already points this way: `data/reading-catalog.json` + `js/reading.js` (bodies inlined in the demo catalog for simplicity; production can keep **bodies in separate `.html` snippets** and catalog entries as metadata + `bodyPath`).
+
+**What a “database” was only for in the notes**
+
+- Optional **Mini-side** queue/state for publish workflow (draft / ready / live) — can also be JSON files.  
+- **Thought For The Day** was sketched as a small local table for row editing; even that can be “JSON array + admin UI” if we want zero SQL. Prefer the lightest store that makes the row UI pleasant.
+
+**Not preferred for public long-form:** querying Postgres/SQLite on every page view of Reading.
+
+Publish step: Mini writes/updates snippets + regenerates catalog index → git push / deploy → CDN.
+
+### Scale & search (locked lean)
+
+Rough load after cutover:
+
+| Stream | Cadence | Implication |
+|--------|---------|-------------|
+| Long-form (Pastoral, Prophecies, Soldiers, Dorcas, …) | ~**4 articles / month** | Tiny growth; easy to keep as snippets + catalog |
+| Thought For The Day | ~**1 / day** since mid‑2022 | ~1.5k+ rows; fine as year-bucketed JSON, not “too big for static” |
+
+**Search (match live “find all articles with this word/phrase”):**  
+prefer a **full-text index built at publish** over all snippets + TOTD — e.g. Pagefind, Lunr, or a generated `search-index.json` — not a runtime DB on Cloudflare.
+
+```text
+Word / TFTD row UI  →  snippets + TOTD buckets + catalog
+                              │
+                              ├──► reading.js (list / filter / article)
+                              └──► search index (rebuild on publish)
+                                         │
+                                         └──► search UI on public site
+```
+
+No Cloudflare database required for public reads or search at this volume. Optional SQLite on the Mini remains only if the **admin** tools want it; public stays static files + JS + prebuilt index.
+
+---
+
+## Public URL shape (Reading / articles)
+
+**Dev today** (static files, `python -m http.server`): query strings work without rewrites.
+
+| View | Dev URL |
+|------|---------|
+| Listing | `reading.html` |
+| Category | `reading.html?cat=493` |
+| Article | `reading.html?post=14080&title=turning-compassion-into-action` |
+
+**Goal** (Cloudflare / Mini routing — no `.html`, slash style instead of `?` / `&`):
+
+| View | Goal path |
+|------|-----------|
+| Listing | `/reading` |
+| Category | `/reading/category/pastoral-articles` (or `/reading/category/493`) |
+| Article | `/reading/14080/turning-compassion-into-action` |
+
+Legacy live maps with redirects, e.g.  
+`/reading.aspx?post=14080&title=Turning-Compassion-into-Action` → goal article path.
+
+First UI demo: `reading.html` + `js/reading.js` + `data/reading-catalog.json` (sample posts).  
+Catalog field `urlGoal` documents the target shape for deploy config later.
+
+---
+
 ## Open questions
 
 - Default input: `.docx` only, filtered HTML only, or both?  

@@ -210,13 +210,33 @@ Public Cloudflare deployment does not include this login surface.
 
 ---
 
+## v1 spike (implemented — articles only)
+
+Local preview of the first on-page editor. **Not** production auth or publish.
+
+| Piece | Location / behavior |
+|-------|---------------------|
+| Script | `js/editor.js` on blog shells (`reading.html`, `prophecies.html`, …) |
+| Styles | `css/styles.css` (`.wmi-editor-bar`, `.article-edit-region.is-editing`) |
+| Region | `.post-content.article-edit-region` with `data-edit="rich"` (set by `js/reading.js` when an article mounts) |
+| Login | `?editor=1` → bar password form. Default password `wmi-edit` (override `window.WMI_EDITOR_PASSWORD`). Session: `sessionStorage wmi_editor_session` |
+| Modes | Logged-in bar: **View** \| **Edit** \| Log out. Edit only enabled on an open article (`?post=…`) |
+| Rich tools | Bold, italic, underline, lists, link, clear (`document.execCommand` for the spike) |
+| Save | **Save draft** → `localStorage` key `wmi_editor_draft:{postId}`. No write to repo / no publish yet |
+
+**Try it:** open `http://localhost:8080/reading.html?editor=1`, log in, open any article, click **Edit**, click the body, format and type. Discard restores the loaded catalog HTML; re-Edit may offer to restore a browser draft.
+
+Next spikes: real Mini auth, save into snippet/working tree, locks, publish path. Still not for the public Cloudflare site.
+
+---
+
 ## Phasing (loose)
 
 Not a schedule — a possible order that **does not block** public site cutover:
 
 0. **Now** — Finish public static site, cutover, legacy redirects. No dependency on this editor.  
-1. **Spike** — Intranet preview of one page; bar; a few `text` regions; no real save.  
-2. **Rich region + toolbar** — One constrained rich body.  
+1. **Spike** — Intranet preview of one page; bar; a few `text` regions; no real save. **← article bar + rich body done (v1 above)**  
+2. **Rich region + toolbar** — Harden beyond `execCommand` if needed (TipTap-class later).  
 3. **Save + lock** — Working tree or store; page lock; login.  
 4. **Publish** — Path to git/Cloudflare that editors or dev can run safely.  
 5. **Blog-oriented UX** — If static markers aren’t enough for daily long-form work.  

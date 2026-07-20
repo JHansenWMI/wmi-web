@@ -62,21 +62,55 @@
     const parts = path.split("/");
     let file = parts[parts.length - 1] || "index.html";
     if (!file || file.indexOf(".") === -1) file = "index.html";
+    // strip query if somehow present
+    file = file.split("?")[0];
     return file;
   }
 
-  function pageMatches(href, file) {
+  function currentSearch() {
+    return window.location.search || "";
+  }
+
+  /** File part of href (no path, no query). */
+  function hrefFile(href) {
+    if (!href || href.indexOf("http") === 0) return "";
+    return (href.split("/").pop() || "").split("?")[0];
+  }
+
+  /** Query string of href including leading ? or "". */
+  function hrefQuery(href) {
+    if (!href) return "";
+    const i = href.indexOf("?");
+    return i >= 0 ? href.slice(i) : "";
+  }
+
+  /**
+   * Match nav href to current page.
+   * - href without query → matches that file with any query (parent blog link)
+   * - href with query → requires same file + same query (e.g. Prophecy USA ?cat=544)
+   */
+  function pageMatches(href, file, search) {
     if (!href || href.indexOf("http") === 0) return false;
-    const h = href.split("/").pop();
-    return h === file;
+    search = search != null ? search : currentSearch();
+    const hf = hrefFile(href);
+    if (!hf || hf !== file) return false;
+    const hq = hrefQuery(href);
+    if (!hq) return true;
+    return hq === search;
   }
 
   /** True if file matches this item or any nested child (L2/L3). */
-  function itemMatchesTree(item, file) {
-    if (pageMatches(item.href, file)) return true;
+  function itemMatchesTree(item, file, search) {
+    search = search != null ? search : currentSearch();
+    if (pageMatches(item.href, file, search)) return true;
+    // Parent with query-less href still matches when a child with same file is active
+    if (hrefFile(item.href) === file && !hrefQuery(item.href)) {
+      // only if some descendant matches, or bare file with empty search
+      if (!search) return true;
+    }
     if (!item.children) return false;
     for (let i = 0; i < item.children.length; i++) {
-      if (itemMatchesTree(item.children[i], file)) return true;
+      if (itemMatchesTree(item.children[i], file, search)) return true;
     }
     return false;
   }
@@ -87,17 +121,19 @@
    */
   function findNavBranch(file) {
     if (file === "index.html") return null;
+    const search = currentSearch();
 
     const trees = [].concat(NAV.main || [], NAV.top || []);
     for (let i = 0; i < trees.length; i++) {
       const item = trees[i];
       if (!item.children || !item.children.length) continue;
-      if (itemMatchesTree(item, file)) return item;
+      if (itemMatchesTree(item, file, search)) return item;
     }
     return null;
   }
 
   function markHeaderActive(file, branch) {
+    const search = currentSearch();
     const links = document.querySelectorAll(
       ".main-nav a[data-nav-href], .top-nav a[data-nav-href]"
     );
@@ -112,8 +148,8 @@
     links.forEach(function (a) {
       const href = a.getAttribute("data-nav-href") || "";
       const match =
-        (targetHref && pageMatches(href, targetHref.split("/").pop())) ||
-        pageMatches(href, file);
+        (targetHref && pageMatches(href, hrefFile(targetHref), search)) ||
+        pageMatches(href, file, search);
       if (match) {
         a.classList.add("is-active");
         const li = a.closest("li");
@@ -129,6 +165,8 @@
     const container = document.querySelector(".content-wrap > .container");
     if (!container || container.classList.contains("has-subnav")) return;
 
+    const search = currentSearch();
+
     // Wrap existing content
     const main = document.createElement("div");
     main.className = "content-main";
@@ -142,7 +180,7 @@
 
     // Large section title (like live .l1) — links to parent when different page
     let titleHtml;
-    if (pageMatches(branch.href, file)) {
+    if (pageMatches(branch.href, file, search)) {
       titleHtml =
         '<div class="sub-nav-title">' + esc(branch.label) + "</div>";
     } else {
@@ -161,18 +199,32 @@
     let list = '<ul class="sub-nav-l2">';
     branch.children.forEach(function (child) {
       if (child.external) return;
-      const childActive = pageMatches(child.href, file);
       const hasL3 = child.children && child.children.length;
       const l3Match =
         hasL3 &&
         child.children.some(function (g) {
-          return pageMatches(g.href, file);
+          return pageMatches(g.href, file, search);
         });
-      // Show L3 when on the L2 page or any L3 page under it
-      const showL3 = hasL3 && (childActive || l3Match);
-      const l2Active = childActive || l3Match;
+      // Exact L2 match (same file + same query, or same file if L2 has no query)
+      const childExact = pageMatches(child.href, file, search);
+      // Parent page of an L3 (e.g. prophecies.html while on ?cat=544)
+      const l2IsParentOfActiveL3 =
+        hasL3 &&
+        l3Match &&
+        hrefFile(child.href) === file &&
+        !hrefQuery(child.href);
+      const l2Active = childExact || l2IsParentOfActiveL3;
+      // Show L3 panel when on this L2, or on any of its L3 links
+      const expandL3 =
+        hasL3 &&
+        (l3Match ||
+          (childExact && !hrefQuery(child.href)) ||
+          (hrefFile(child.href) === file &&
+            !hrefQuery(child.href) &&
+            (l3Match || search === "")));
 
-      list += '<li class="sub-nav-l2-item' + (showL3 ? " is-expanded" : "") + '">';
+      list +=
+        '<li class="sub-nav-l2-item' + (expandL3 ? " is-expanded" : "") + '">';
       list +=
         '<a class="sub-nav-link' +
         (l2Active ? " is-active" : "") +
@@ -182,13 +234,13 @@
         esc(child.label) +
         "</a>";
 
-      if (showL3) {
+      if (expandL3) {
         list += '<ul class="sub-nav-l3">';
         child.children.forEach(function (g) {
           if (g.external) return;
           list +=
             '<li><a class="sub-nav-l3-link' +
-            (pageMatches(g.href, file) ? " is-active" : "") +
+            (pageMatches(g.href, file, search) ? " is-active" : "") +
             '" href="' +
             esc(g.href) +
             '">' +

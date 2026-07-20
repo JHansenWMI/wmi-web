@@ -118,6 +118,17 @@ When you rename a page, update **both** if the build still inlines those strings
 3. If build content still references the old path, update `build_pages.py` replacements or re-run with shared source.  
 4. Deploy.
 
+## Reading / blog paths
+
+In addition to dropping `.html` / `.aspx`, **blog articles** should prefer **slash paths** over query strings when the edge router allows it:
+
+| Legacy live | Dev (now) | Goal |
+|-------------|-----------|------|
+| `/reading.aspx?post=14080&title=…` | `reading.html?post=14080&title=…` | `/reading/14080/{slug}` |
+| `/reading.aspx?cat=493` | `reading.html?cat=493` | `/reading/category/…` |
+
+See [BLOG_PUBLISHING.md](./BLOG_PUBLISHING.md) and `data/reading-catalog.json` → `urlGoal`.
+
 ## Future: clean URLs
 
 See also architecture notes on extensionless paths. When enabled:

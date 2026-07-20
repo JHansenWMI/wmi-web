@@ -1,0 +1,443 @@
+{
+  "blog": "pastoral-articles",
+  "title": "Reading",
+  "description": "Design demo catalog from sample posts (not full archive).",
+  "urlDev": {
+    "listing": "reading.html",
+    "byCategory": "reading.html?cat={id}",
+    "article": "reading.html?post={id}&title={slug}"
+  },
+  "urlGoal": {
+    "note": "Clean paths after Cloudflare/Mini routing (no .html, slash style).",
+    "listing": "/reading",
+    "byCategory": "/reading/category/{slug}",
+    "article": "/reading/{id}/{slug}",
+    "legacyLive": "/reading.aspx?post={id}&title={Title-Slug}"
+  },
+  "categories": [
+    {
+      "id": "491",
+      "slug": "radio-guests",
+      "name": "Radio Guests"
+    },
+    {
+      "id": "492",
+      "slug": "tv-guests",
+      "name": "TV Guests"
+    },
+    {
+      "id": "493",
+      "slug": "pastoral-articles",
+      "name": "Pastoral Articles"
+    },
+    {
+      "id": "494",
+      "slug": "mission-trips",
+      "name": "Mission Trips"
+    },
+    {
+      "id": "496",
+      "slug": "africa",
+      "name": "Africa"
+    },
+    {
+      "id": "497",
+      "slug": "caribbean",
+      "name": "Caribbean"
+    },
+    {
+      "id": "498",
+      "slug": "middle-east",
+      "name": "Middle East"
+    },
+    {
+      "id": "499",
+      "slug": "asia",
+      "name": "Asia"
+    },
+    {
+      "id": "500",
+      "slug": "central-america",
+      "name": "Central America"
+    },
+    {
+      "id": "501",
+      "slug": "north-america",
+      "name": "North America"
+    },
+    {
+      "id": "502",
+      "slug": "australia-oceania",
+      "name": "Australia/Oceania"
+    },
+    {
+      "id": "503",
+      "slug": "europe",
+      "name": "Europe"
+    },
+    {
+      "id": "504",
+      "slug": "south-america",
+      "name": "South America"
+    },
+    {
+      "id": "505",
+      "slug": "bible-teaching",
+      "name": "Bible Teaching"
+    },
+    {
+      "id": "506",
+      "slug": "israel",
+      "name": "Israel"
+    },
+    {
+      "id": "513",
+      "slug": "new-world-order",
+      "name": "New World Order"
+    },
+    {
+      "id": "514",
+      "slug": "united-states",
+      "name": "United States of America"
+    },
+    {
+      "id": "520",
+      "slug": "benevolence",
+      "name": "Benevolence"
+    },
+    {
+      "id": "523",
+      "slug": "eagles-saving-nations",
+      "name": "Eagles Saving Nations"
+    },
+    {
+      "id": "550",
+      "slug": "prophecies",
+      "name": "Prophecies"
+    },
+    {
+      "id": "590",
+      "slug": "soldiers-of-the-cross",
+      "name": "Soldiers of the Cross"
+    }
+  ],
+  "posts": [
+    {
+      "id": "14080",
+      "title": "Turning Compassion into Action",
+      "slug": "turning-compassion-into-action",
+      "date": "7/14/2026",
+      "categoryIds": [
+        "493",
+        "494",
+        "496",
+        "520"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=14080&title=Turning-Compassion-into-Action",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "14050",
+      "title": "The Sacrifice God Desires",
+      "slug": "the-sacrifice-god-desires",
+      "date": "6/26/2026",
+      "categoryIds": [
+        "493",
+        "590"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=14050&title=The-Sacrifice-God-Desires",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "14029",
+      "title": "Kenya Trip April 2026",
+      "slug": "kenya-trip-april-2026",
+      "date": "6/11/2026",
+      "categoryIds": [
+        "494",
+        "496"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=14029&title=Kenya-Trip-April-2026",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13998",
+      "title": "King David's Mighty Men",
+      "slug": "king-davids-mighty-men",
+      "date": "5/29/2026",
+      "categoryIds": [
+        "505"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13998&title=King-Davids-Mighty-Men",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13973",
+      "title": "World Ministries International Family",
+      "slug": "world-ministries-international-family",
+      "date": "5/14/2026",
+      "categoryIds": [
+        "590"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13973&title=World-Ministries-International-Family",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13893",
+      "title": "2025 TV & Radio Guests",
+      "slug": "2025-tv-radio-guests",
+      "date": "4/30/2026",
+      "categoryIds": [
+        "491",
+        "492"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13893&title=2025-TV-&-Radio-Guests",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13894",
+      "title": "AMERICA HAS THE SPIRIT OF SODOM & GOMORRAH",
+      "slug": "america-has-the-spirit-of-sodom-gomorrah",
+      "date": "4/16/2026",
+      "categoryIds": [
+        "501",
+        "505",
+        "514"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13894&title=AMERICA-HAS-THE-SPIRIT-OF-SODOM-&-GOMORRAH",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13855",
+      "title": "January 2026 - Canada - Sheriffs Rally - General Mike Flynn",
+      "slug": "january-2026-canada-sheriffs-rally-general-mike-flynn",
+      "date": "3/27/2026",
+      "categoryIds": [
+        "501",
+        "513",
+        "514"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13855&title=January-2026---Canada---Sheriffs-Rally---General-Mike-Flynn",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13715",
+      "title": "The Marxist - Islamic - Attack on America",
+      "slug": "the-marxist-islamic-attack-on-america",
+      "date": "2/27/2026",
+      "categoryIds": [
+        "513"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13715&title=The-Marxist---Islamic---Attack-on-America",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13652",
+      "title": "The Philippines Nov 19 - Dec 3, 2025",
+      "slug": "the-philippines-nov-19-dec-3-2025",
+      "date": "1/30/2026",
+      "categoryIds": [
+        "499"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13652&title=The-Philippines-Nov-19---Dec-3,-2025",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13615",
+      "title": "The 9th World Holy Spirit Ministries International Conference - Korea",
+      "slug": "the-9th-world-holy-spirit-ministries-international-conference-korea",
+      "date": "1/6/2026",
+      "categoryIds": [
+        "499"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13615&title=The-9th-World-Holy-Spirit-Ministries-International-Conference---Korea",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13524",
+      "title": "Israel October 2025",
+      "slug": "israel-october-2025",
+      "date": "11/26/2025",
+      "categoryIds": [
+        "498",
+        "506"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13524&title=Israel-October-2025",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13477",
+      "title": "Germany in Prophecy",
+      "slug": "germany-in-prophecy",
+      "date": "10/31/2025",
+      "categoryIds": [
+        "503",
+        "550"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13477&title=Germany-in-Prophecy",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13437",
+      "title": "Prophecy-Ukraine & Russia-America & Nuclear War",
+      "slug": "prophecy-ukraine-russia-america-nuclear-war",
+      "date": "10/15/2025",
+      "categoryIds": [
+        "550"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13437&title=Prophecy-Ukraine-&-Russia-America-&-Nuclear-War--",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13409",
+      "title": "Kenya & Malawi September 4-18, 2025",
+      "slug": "kenya-malawi-september-4-18-2025",
+      "date": "9/28/2025",
+      "categoryIds": [
+        "523"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13409&title=Kenya-&-Malawi-September-4-18,-2025",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13314",
+      "title": "Kenya Mission Trip May 19-31, 2025",
+      "slug": "kenya-mission-trip-may-19-31-2025",
+      "date": "8/12/2025",
+      "categoryIds": [
+        "523"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13314&title=Kenya-Mission-Trip-May-19-31,-2025",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "13047",
+      "title": "The Church in Prophecy in Every Nation",
+      "slug": "the-church-in-prophecy-in-every-nation",
+      "date": "6/27/2025",
+      "categoryIds": [
+        "498",
+        "506"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=13047&title=The-Church-in-Prophecy-in-Every-Nation",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "12938",
+      "title": "2024 TV & Radio Guests",
+      "slug": "2024-tv-radio-guests",
+      "date": "6/13/2025",
+      "categoryIds": [
+        "491",
+        "492"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=12938&title=2024-TV-&-Radio-Guests",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "12844",
+      "title": "NORWAY APRIL 1-9, 2025",
+      "slug": "norway-april-1-9-2025",
+      "date": "4/28/2025",
+      "categoryIds": [
+        "503"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=12844&title=NORWAY-APRIL-1-9,-2025",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "12768",
+      "title": "WASHINGTON D.C. JANUARY 20-23, 2025",
+      "slug": "washington-dc-january-20-23-2025",
+      "date": "4/14/2025",
+      "categoryIds": [
+        "504"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=12768&title=WASHINGTON-D.C.-JANUARY-20-23,-2025",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "12294",
+      "title": "Bogota, Colombia, South America Mission Trip - March 12-19, 2024",
+      "slug": "bogota-colombia-south-america-mission-trip-march-12-19-2024",
+      "date": "8/21/2024",
+      "categoryIds": [
+        "504"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=12294&title=Bogota,-Colombia,-South-America-Mission-Trip---March-12-19,-2024",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "10823",
+      "title": "WARNING - 25 PROPHETIC DREAMS",
+      "slug": "warning-25-prophetic-dreams",
+      "date": "2/7/2024",
+      "categoryIds": [
+        "497",
+        "500",
+        "502"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=10823&title=WARNING---25-PROPHETIC-DREAMS",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "10751",
+      "title": "THE PLUMB LINE",
+      "slug": "the-plumb-line",
+      "date": "1/8/2024",
+      "categoryIds": [
+        "502"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=10751&title=THE-PLUMB-LINE",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "10425",
+      "title": "Tattoos and the Pagan Nations",
+      "slug": "tattoos-and-the-pagan-nations",
+      "date": "9/22/2023",
+      "categoryIds": [
+        "497",
+        "500"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=10425&title=Tattoos-and-the-Pagan-Nations",
+      "blog": "pastoral-articles"
+    },
+    {
+      "id": "7774",
+      "title": "Kenya Trip, May 12-23, 2017",
+      "slug": "kenya-trip-may-12-23-2017",
+      "date": "7/10/2017",
+      "categoryIds": [
+        "520"
+      ],
+      "excerpt": "View All Filter Year 2025 February 2024 September February 2022 September January 2021 December January 2020 September July June April March 2015 February 2014 July June May April March February January 2013 December…",
+      "sourceUrl": "https://www.worldministries.org/reading.aspx?post=7774&title=Kenya-Trip,-May-12-23,-2017",
+      "blog": "pastoral-articles"
+    }
+  ]
+}
