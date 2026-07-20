@@ -2,16 +2,28 @@
 
 Static site for Cloudflare Pages. Shared chrome is **data-driven in JavaScript** so menus are edited in one place.
 
+## Related docs
+
+| Doc | Topic |
+|-----|--------|
+| [DESIGN_GOALS.md](./DESIGN_GOALS.md) | Visual fidelity, fonts, scope |
+| [VISUAL_COMPARE.md](./VISUAL_COMPARE.md) | Screenshot workflow |
+| [LEGACY_URLS.md](./LEGACY_URLS.md) | Bookmarks / email links / `.aspx` redirects after cutover |
+
+**Legacy redirects (data):** [`legacy-redirects.json`](../legacy-redirects.json) — hand-maintained map; no full-site rescan required (solo editor tracks renames).
+
 ## Layout
 
 ```
 index.html                 Homepage (hero, sections)
 *.html                     Interior pages (generated or hand-maintained)
+legacy-redirects.json      ★ Old .aspx / renamed paths → current pages (cutover)
 css/styles.css             Brand + layout + interior styles
 js/
   nav-data.js              ★ Single source of truth for all menus
   site-chrome.js           Renders header, mobile nav, footer, newsletter bar
   main.js                  Sticky header, mobile menu, forms
+  page-stats.js            Optional per-page view counter (opt-in mount)
 assets/                    Production images/icons
 scripts/
   build_pages.py           Port reference HTML → interior pages
@@ -120,6 +132,17 @@ Light cleanup also: strip scripts (except Rumble/widgets), map `.aspx` → `.htm
 - Rumble video embeds (home + watch pages)
 - Newsletter + form backends (Workers)
 - Image assets fully local (stop hotlinking `worldministries.org/Userfiles`)
+- Clean (extensionless) public URLs + generate Cloudflare `_redirects` / Worker from `legacy-redirects.json`
+
+## Cutover: bookmarks & old emails
+
+Solo editor model: **no ongoing rescan of the old CMS**. Track renames in `legacy-redirects.json`.
+
+1. Explicit map (renames + known query keys)  
+2. Same-stem `.aspx` → current page  
+3. 404  
+
+Details: [LEGACY_URLS.md](./LEGACY_URLS.md).
 
 ## Local preview
 
@@ -128,3 +151,4 @@ python3 -m http.server 8080
 # http://localhost:8080
 # http://localhost:8080/about.html
 ```
+

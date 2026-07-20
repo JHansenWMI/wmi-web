@@ -164,6 +164,159 @@ input[type="submit"]:hover {
   font-size: 2rem;
 }
 
+/* ---------- Forms (match live skeleton) ---------- */
+/* CMS editor placeholders — always hidden on production-like view */
+.specDivVSM {
+  display: none !important;
+}
+
+/* Anti-spam honeypot used by live MasterForm pages */
+input[name="to_email_address"] {
+  display: none !important;
+  position: absolute;
+  left: -9999px;
+}
+
+label,
+legend {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="password"],
+textarea,
+select {
+  padding: 0.4rem 1rem;
+  margin: 0 0 1.5rem;
+  background-color: #fff;
+  box-shadow: none;
+  color: var(--purple-dark, #320870);
+  line-height: 1;
+  height: 4rem;
+  width: auto;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  border: 2px solid #dcd4e6;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border 0.3s;
+  font-family: inherit;
+  font-size: 1.7rem;
+}
+
+textarea {
+  min-height: 65px;
+  height: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow: auto;
+  resize: vertical;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 2px solid var(--purple, #4f2683);
+  outline: 0;
+}
+
+/* Purple bordered form box — contact, prayer, intercessor, ESN, etc. */
+.form-general {
+  border: 2px solid var(--purple, #4f2683);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  box-sizing: content-box;
+}
+
+.form-general p {
+  margin: 0 0 1.5rem;
+}
+
+.form-general .row {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.form-general .row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-general label {
+  display: block;
+  margin: 0 0 0.25rem;
+}
+
+.form-general input[type="text"],
+.form-general input[type="email"],
+.form-general input[type="tel"],
+.form-general input[type="date"],
+.form-general select,
+.form-general textarea {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+}
+
+.form-general input[type="submit"] {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.form-general .check-input {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-general input[type="checkbox"] {
+  margin: 5px 0.5rem 0 0;
+  width: auto;
+  height: auto;
+  border: none;
+  appearance: auto;
+  -webkit-appearance: auto;
+}
+
+.form-general .check-input label {
+  flex: 2 1 0%;
+}
+
+.form-general .fc-error {
+  border: 0;
+  margin: 0;
+  padding: 1rem 0;
+  display: block;
+  background: none;
+}
+
+.form-general .fc-error p {
+  margin: 0;
+  color: #c00;
+  line-height: 1;
+}
+
 /* ---------- Header ---------- */
 .site-header {
   position: fixed;
@@ -1712,21 +1865,140 @@ body:not(.page-home) main {
   padding-right: 0;
 }
 
-/* Two-column rows only (e.g. donate page) — not 3/4-col program tables */
+/* Two-column rows only (e.g. donate page) — not 3/4-col program tables.
+   Prefer natural / inline widths (e.g. contact side col width:300px) over forced 50%. */
 .page-content table tr:has(> td:nth-child(2):last-child) > td {
-  width: 50%;
-  padding: 1rem 2rem 2rem 0;
+  padding: 0 2rem 2rem 0;
+  vertical-align: top;
 }
 
 .page-content table tr:has(> td:nth-child(2):last-child) > td:first-child {
   padding-left: 0;
+  width: auto;
+}
+
+.page-content table tr:has(> td:nth-child(2):last-child) > td:last-child {
+  padding-right: 0;
 }
 
 @media (max-width: 900px) {
-  .page-content table td {
+  .page-content table:not(.events-list) td {
     display: block;
     width: 100% !important;
     padding: 0.5rem 0 1rem;
+  }
+}
+
+/*
+ * Itinerary / events list — match live skeleton:
+ *   flex rows, grey hairline under each event, 48×32 flags.
+ * Flyer images keep CMS inline height/width (override the flag size).
+ */
+.page-content table.events-list {
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: auto;
+}
+
+.page-content table.events-list h3 {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.page-content table.events-list tr {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.page-content table.events-list td {
+  padding: 1rem 0 !important;
+  margin: 0;
+  width: auto !important;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.page-content table.events-list td:first-child {
+  flex: 0 0 auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.page-content table.events-list td:last-child {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-right: 0 !important;
+}
+
+/* Flags default; flyers use inline height/width from CMS */
+.page-content table.events-list td img {
+  display: inline-block;
+  border-radius: 0;
+  margin: 1rem 2rem 0 0;
+  width: 48px;
+  height: 32px;
+  max-width: none;
+  object-fit: contain;
+  vertical-align: top;
+}
+
+/* Flyer / poster images (CMS height or width attrs) keep their size */
+.page-content table.events-list td img[height],
+.page-content table.events-list td img[style*="height"],
+.page-content table.events-list td img[style*="width: 200"],
+.page-content table.events-list td img[width="200"] {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin: 0.5rem 1rem 0.5rem 0;
+  border-radius: 0;
+}
+
+.page-content table.events-list td img[height="200"],
+.page-content table.events-list td img[style*="height: 200"] {
+  height: 200px !important;
+  width: auto !important;
+  max-width: 100%;
+}
+
+.page-content table.events-list td img[height="100"],
+.page-content table.events-list td img[style*="height: 100"] {
+  height: 100px !important;
+  width: auto !important;
+  max-width: 100%;
+}
+
+.page-content table.events-list td img[width="200"],
+.page-content table.events-list td img[style*="width: 200"] {
+  width: 200px !important;
+  height: auto !important;
+  max-width: 100%;
+}
+
+.page-content table.events-list td p {
+  margin: 0 0 0.75rem;
+}
+
+.page-content table.events-list td p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .page-content table.events-list tr {
+    flex-wrap: wrap;
+  }
+
+  .page-content table.events-list td:first-child {
+    width: 100% !important;
+  }
+
+  .page-content table.events-list td img {
+    margin-right: 1rem;
   }
 }
 
@@ -1931,4 +2203,260 @@ body:not(.page-home) main {
   margin: 0 0 1rem;
   font-size: 1.8rem;
   color: var(--purple);
+}
+
+/*
+ * Podcast platform grid (radio-stations page) — match live skeleton.
+ * Markup is a table of one-cell rows; CSS turns tbody into a flex wrap grid.
+ */
+.page-content table.podcast-table {
+  background: #1e1d22;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 1.5rem 0 3rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: auto;
+}
+
+.page-content table.podcast-table tbody {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.page-content table.podcast-table tr {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: auto !important;
+}
+
+@media (min-width: 800px) {
+  .page-content table.podcast-table tr {
+    flex: 1 0 33.333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-content table.podcast-table tr {
+    flex: 1 0 25%;
+  }
+}
+
+.page-content table.podcast-table td {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem !important;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100% !important;
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+}
+
+.page-content table.podcast-table td p {
+  margin: 0;
+}
+
+.page-content table.podcast-table td h5 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: #fff;
+}
+
+.page-content table.podcast-table td a {
+  color: #fff;
+  text-decoration: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.page-content table.podcast-table td a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.page-content table.podcast-table td img {
+  display: block;
+  max-width: 80%;
+  min-width: 100px;
+  width: auto;
+  height: 50px !important;
+  margin: 0 auto;
+  border-radius: 0;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* Override generic 2-col / mobile table stacking for this grid */
+@media (max-width: 900px) {
+  .page-content table.podcast-table td {
+    display: flex !important;
+    width: 100% !important;
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-content table.podcast-table tr {
+    flex: 1 0 100%;
+  }
+}
+
+/*
+ * Page view stats widget (interim; not on every page).
+ * Opt-in mount: <div id="counterBox" class="page-stats" data-page="donate"></div>
+ * Intentionally quiet so visitors barely notice; click opens admin detail modal.
+ */
+#counterBox,
+.page-stats {
+  color: #ccc;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: center;
+  margin: 4rem auto 1rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  user-select: none;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+#counterBox:hover,
+.page-stats:hover {
+  color: #999;
+}
+
+#counterBox.is-busy,
+.page-stats.is-busy {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+#counterBox:focus-visible,
+.page-stats:focus-visible {
+  outline: 1px dashed #bbb;
+  outline-offset: 4px;
+  color: #999;
+}
+
+/* Modal shell (injected by js/page-stats.js if missing) */
+.page-stats-overlay,
+#statsModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.page-stats-overlay:not([hidden]),
+#statsModalOverlay:not([hidden]) {
+  display: flex;
+}
+
+.page-stats-modal,
+#statsModal {
+  background: #fff;
+  border-radius: 1rem;
+  width: min(900px, 92vw);
+  max-height: 85vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #1e1d22;
+}
+
+.page-stats-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.page-stats-modal-title {
+  font: 600 1.4rem/1.2 system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+.page-stats-modal-close,
+#statsModalCloseBtn {
+  border: 0;
+  background: transparent;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+  color: #444;
+}
+
+.page-stats-modal-body {
+  padding: 1.2rem 1.4rem;
+  overflow: auto;
+}
+
+.page-stats-modal-content,
+#statsModalContent {
+  white-space: pre;
+  overflow: auto;
+  font: 1.2rem/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  max-height: 65vh;
+  color: #1e1d22;
+  margin: 0;
+}
+
+.page-stats-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  border-top: 1px solid #e6e6e6;
+}
+
+.page-stats-modal-btn,
+#statsModalCopyBtn,
+#statsModalOkBtn {
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font: 600 1.2rem system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  color: #1e1d22;
+  height: auto;
+  text-transform: none;
+}
+
+.page-stats-modal-btn-primary,
+#statsModalOkBtn {
+  border-color: #999;
+  background: #eee;
+  font-weight: 700;
+}
+
+.page-stats-modal-btn:hover,
+#statsModalCopyBtn:hover,
+#statsModalOkBtn:hover {
+  background: #eaeaea;
+  border-color: #888;
+  color: #1e1d22;
 }

@@ -1,0 +1,119 @@
+{
+  "$schema_note": "Hand-maintained legacy URL map for Cloudflare cutover. Solo editor: add a row whenever you rename or retire a path. See docs/LEGACY_URLS.md.",
+  "version": 1,
+  "status": 301,
+  "canonicalExtension": ".html",
+  "notes": [
+    "Targets use .html to match files on disk today. When clean (extensionless) URLs ship, strip .html from 'to' (or generate at deploy).",
+    "Resolution order at the edge: (1) exact 'redirects' / 'queryRedirects', (2) same-stem for .aspx/.htm/.html, (3) pretty path serve, (4) 404.",
+    "Do not merge wmi-orientation and wmi-orientation-2 — different nav branches."
+  ],
+  "sameStem": {
+    "enabled": true,
+    "fromExtensions": [".aspx", ".htm", ".html", ".ASPX", ".HTM", ".HTML"],
+    "description": "If path is /foo.aspx and no explicit redirect, try /foo.html (or /foo once clean URLs exist)."
+  },
+  "renames": [
+    {
+      "from": "/compassion-in-action.aspx",
+      "to": "/the-dorcas-fund.html",
+      "note": "Dorcas Fund hub (slug change)"
+    },
+    {
+      "from": "/wmi-school-of-theology.aspx",
+      "to": "/bible-college.html",
+      "note": "Bible College (slug change)"
+    },
+    {
+      "from": "/prayer-3.aspx",
+      "to": "/prayer.html",
+      "note": "Prayer hub (CMS slug prayer-3)"
+    },
+    {
+      "from": "/intercessor-application-form.aspx",
+      "to": "/intercessor-application.html",
+      "note": "Shorter local slug"
+    },
+    {
+      "from": "/all-prophecies.aspx",
+      "to": "/prophecies.html",
+      "note": "Prophecies listing"
+    },
+    {
+      "from": "/eagles-saving-nations-membership.aspx",
+      "to": "/eagles-saving-nations.html",
+      "note": "ESN main/membership page"
+    },
+    {
+      "from": "/prayform-frame.htm",
+      "to": "/prayer-requests.html",
+      "note": "Very old prayer-request frame URL"
+    }
+  ],
+  "queryRedirects": [
+    {
+      "from": "/reading.aspx",
+      "query": { "cat": "520" },
+      "to": "/benevolence.html",
+      "note": "Live nav Benevolence used reading.aspx?cat=520"
+    },
+    {
+      "from": "/reading.aspx",
+      "queryContains": { "cat": "520" },
+      "to": "/benevolence.html",
+      "note": "Same mapping if other params present"
+    }
+  ],
+  "redirects": [
+    { "from": "/about.aspx", "to": "/about.html" },
+    { "from": "/contact.aspx", "to": "/contact.html" },
+    { "from": "/donate.aspx", "to": "/donate.html" },
+    { "from": "/dr-hansens-bio.aspx", "to": "/dr-hansens-bio.html" },
+    { "from": "/statement-of-faith.aspx", "to": "/statement-of-faith.html" },
+    { "from": "/standards-of-conduct.aspx", "to": "/standards-of-conduct.html" },
+    { "from": "/testimonials.aspx", "to": "/testimonials.html" },
+    { "from": "/compassion-in-action.aspx", "to": "/the-dorcas-fund.html", "rename": true },
+    { "from": "/wmi-school-of-theology.aspx", "to": "/bible-college.html", "rename": true },
+    { "from": "/prayer-3.aspx", "to": "/prayer.html", "rename": true },
+    { "from": "/prayer-requests.aspx", "to": "/prayer-requests.html" },
+    { "from": "/intercessors.aspx", "to": "/intercessors.html" },
+    { "from": "/intercessor-application-form.aspx", "to": "/intercessor-application.html", "rename": true },
+    { "from": "/wmi-orientation.aspx", "to": "/wmi-orientation.html", "note": "Warning TV branch Orientation" },
+    { "from": "/wmi-orientation-2.aspx", "to": "/wmi-orientation-2.html", "note": "About branch Orientation — do not merge with wmi-orientation" },
+    { "from": "/all-prophecies.aspx", "to": "/prophecies.html", "rename": true },
+    { "from": "/eagles-saving-nations-membership.aspx", "to": "/eagles-saving-nations.html", "rename": true },
+    { "from": "/eagles-saving-nations-vision.aspx", "to": "/eagles-saving-nations-vision.html" },
+    { "from": "/eagles-saving-nations-mission.aspx", "to": "/eagles-saving-nations-mission.html" },
+    { "from": "/esn-statement-of-faith.aspx", "to": "/esn-statement-of-faith.html" },
+    { "from": "/watch-warning.aspx", "to": "/watch-warning.html" },
+    { "from": "/the-overcoming-women.aspx", "to": "/the-overcoming-women.html" },
+    { "from": "/tv-broadcasts.aspx", "to": "/tv-broadcasts.html" },
+    { "from": "/tv-channels.aspx", "to": "/tv-channels.html" },
+    { "from": "/listen-to-warning.aspx", "to": "/listen-to-warning.html" },
+    { "from": "/radio-broadcasts.aspx", "to": "/radio-broadcasts.html" },
+    { "from": "/shortwave-broadcasts.aspx", "to": "/shortwave-broadcasts.html" },
+    { "from": "/radio-stations.aspx", "to": "/radio-stations.html" },
+    { "from": "/reading.aspx", "to": "/reading.html" },
+    { "from": "/soldiers-of-the-cross.aspx", "to": "/soldiers-of-the-cross.html" },
+    { "from": "/thought-for-the-day.aspx", "to": "/thought-for-the-day.html" },
+    { "from": "/the-dorcas-fund-articles.aspx", "to": "/the-dorcas-fund-articles.html" },
+    { "from": "/events.aspx", "to": "/events.html" },
+    { "from": "/united-states-itinerary.aspx", "to": "/united-states-itinerary.html" },
+    { "from": "/international-itinerary.aspx", "to": "/international-itinerary.html" },
+    { "from": "/what-is-a-prophet.aspx", "to": "/what-is-a-prophet.html" },
+    { "from": "/prayform-frame.htm", "to": "/prayer-requests.html", "rename": true },
+
+    { "from": "/the-dorcas-fund.aspx", "to": "/the-dorcas-fund.html", "note": "If old CMS also used this stem" },
+    { "from": "/bible-college.aspx", "to": "/bible-college.html" },
+    { "from": "/prayer.aspx", "to": "/prayer.html" },
+    { "from": "/prophecies.aspx", "to": "/prophecies.html" },
+    { "from": "/eagles-saving-nations.aspx", "to": "/eagles-saving-nations.html" },
+    { "from": "/intercessor-application.aspx", "to": "/intercessor-application.html" },
+    { "from": "/benevolence.aspx", "to": "/benevolence.html" },
+    { "from": "/missions.aspx", "to": "/missions.html" },
+    { "from": "/tv-guests.aspx", "to": "/tv-guests.html" },
+    { "from": "/radio-guests.aspx", "to": "/radio-guests.html" },
+    { "from": "/attributes-of-eagles.aspx", "to": "/attributes-of-eagles.html" },
+    { "from": "/pastoral-articles.aspx", "to": "/pastoral-articles.html" }
+  ]
+}

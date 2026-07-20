@@ -92,10 +92,12 @@ PAGES: dict[str, dict] = {
     "donate.html": {
         "ref": "donate.html",
         "description": "Support World Ministries International.",
+        "page_stats": "donate",
     },
     "watch-warning.html": {
         "ref": "watch-warning.html",
         "description": "Watch Warning with Dr. Jonathan Hansen.",
+        "page_stats": "watch-warning",
     },
     "the-overcoming-women.html": {
         "ref": "the-overcoming-women.html",
@@ -178,6 +180,7 @@ PAGES: dict[str, dict] = {
         "ref": "reading.html",
         "description": "Reading — articles from World Ministries International.",
         "trim_listing": True,
+        "page_stats": "reading",
     },
     "pastoral-articles.html": {
         "ref": None,
@@ -263,9 +266,45 @@ def extract(html: str) -> tuple[str, str, str]:
 
 def clean_body(body: str, trim_listing: bool = False) -> str:
     # Remove ASP.NET / CMS noise
-    body = re.sub(r'<div class="specDivVSM"[^>]*>.*?</div>', "", body, flags=re.S | re.I)
-    body = re.sub(r'<div id="counterBox">[\s\S]*?</div>', "", body, flags=re.I)
-    body = re.sub(r'<div id="statsModalOverlay">[\s\S]*?</div>\s*</div>\s*</div>', "", body, flags=re.I)
+    # class may appear after style= etc.; match class token anywhere on the div
+    body = re.sub(
+        r'<div\b[^>]*\bclass="[^"]*\bspecDivVSM\b[^"]*"[^>]*>[\s\S]*?</div>',
+        "",
+        body,
+        flags=re.I,
+    )
+    body = re.sub(
+        r"<div\b[^>]*\bclass='[^']*\bspecDivVSM\b[^']*'[^>]*>[\s\S]*?</div>",
+        "",
+        body,
+        flags=re.I,
+    )
+    # Page-stats widget: strip CMS/inline version; re-inject clean mount later if PAGE_ID known
+    body = re.sub(
+        r'<div\b[^>]*\bid=["\']counterBox["\'][^>]*>[\s\S]*?</div>',
+        "",
+        body,
+        flags=re.I,
+    )
+    body = re.sub(
+        r'<div\b[^>]*\bid=["\']statsModalOverlay["\'][^>]*>[\s\S]*?</div>\s*</div>\s*</div>',
+        "",
+        body,
+        flags=re.I,
+    )
+    # Also drop leftover modal fragments if nested match failed
+    body = re.sub(
+        r'<div\b[^>]*\bid=["\']statsModalOverlay["\'][^>]*>[\s\S]*?</div>',
+        "",
+        body,
+        flags=re.I,
+    )
+    body = re.sub(
+        r'<div\b[^>]*\bid=["\']statsModal["\'][^>]*>[\s\S]*?</div>',
+        "",
+        body,
+        flags=re.I,
+    )
 
     # Preserve embeds + carousels that work on localhost via CDN
     kept_scripts: list[str] = []
@@ -625,9 +664,27 @@ PAGE_SHELL = """<!DOCTYPE html>
   <script src="js/nav-data.js"></script>
   <script src="js/site-chrome.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/page-stats.js"></script>
 </body>
 </html>
 """
+
+# Clean opt-in mount for the interim view-count widget (see js/page-stats.js)
+PAGE_STATS_MOUNT = (
+    '<div id="counterBox" class="page-stats" data-page="{page_id}" '
+    'role="button" tabindex="0" title="Page view stats (click for details)">'
+    "Loading stats…</div>\n"
+)
+
+
+def extract_page_stats_id(html: str) -> str | None:
+    """Pull PAGE_ID from the old inline stats script if present."""
+    m = re.search(
+        r"""PAGE_ID\s*=\s*["']([a-z0-9_-]+)["']""",
+        html,
+        flags=re.I,
+    )
+    return m.group(1) if m else None
 
 
 def esc(s: str) -> str:
@@ -640,12 +697,15 @@ def esc(s: str) -> str:
 
 
 def build_one(dest: str, meta: dict) -> None:
+    page_stats_id = meta.get("page_stats")  # explicit opt-in: "donate", "reading", …
     if meta.get("ref"):
         src = REF / meta["ref"]
         if not src.exists():
             print(f"  SKIP missing ref {src}")
             return
         raw = src.read_text(encoding="utf-8", errors="replace")
+        if not page_stats_id:
+            page_stats_id = extract_page_stats_id(raw)
         title, h1, body = extract(raw)
         if meta.get("title"):
             title = meta["title"]
@@ -658,6 +718,10 @@ def build_one(dest: str, meta: dict) -> None:
         title = meta["title"]
         h1 = meta["h1"]
         body = placeholder_body(meta)
+
+    # Re-attach clean stats mount when this page uses the interim counter
+    if page_stats_id and 'id="counterBox"' not in body:
+        body = body.rstrip() + "\n" + PAGE_STATS_MOUNT.format(page_id=page_stats_id)
 
     # Prefer full titles
     if len(title) < 8 and h1:
@@ -672,7 +736,7 @@ def build_one(dest: str, meta: dict) -> None:
     )
     out_path = OUT / dest
     out_path.write_text(html, encoding="utf-8")
-    print(f"  wrote {dest} ({len(html)} bytes)")
+    print(f"  wrote {dest} ({len(html)} bytes)" + (f" [stats={page_stats_id}]" if page_stats_id else ""))
 
 
 def main() -> None:
