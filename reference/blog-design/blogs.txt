@@ -1,0 +1,6 @@
+Name	Allow Comments	 rss url
+Pastoral Articles	False	http://www.worldministries.org/blog135rss.xml
+Prophecies	False	http://www.worldministries.org/blog138rss.xml
+Soldiers of the Cross	False	http://www.worldministries.org/blog160rss.xml
+The Dorcas Fund Articles	False	http://www.worldministries.org/blog165rss.xml
+Thought For The Day	False	http://www.worldministries.org/blog137rss.xml

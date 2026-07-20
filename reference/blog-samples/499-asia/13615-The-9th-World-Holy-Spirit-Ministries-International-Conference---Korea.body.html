@@ -1,0 +1,546 @@
+<div>
+<div style="height: 500; width: 850px; position: absolute; background-color: #b5cde1; text-align: center; font-size: 9pt; font-family: trebuchet ms;" class="specDivVSM" unselectable="on">Blog: <strong>Blog</strong></div>
+<input type="hidden" name="hdnBlogId" id="hdnBlogId" />
+                                <input type="hidden" name="hdnSiteId" id="hdnSiteId" />
+                                
+
+
+<div class="blog-top row">
+    <div class="blog-search">
+        <input type='text' id='txtSearch'><input type='button' onclick='searchBlog()' value='Search'>
+        <a href="reading.aspx" class="button back-button">View All</a>
+    </div>
+    <!-- end blog search -->
+    
+    <div class="blog-filters row">
+        
+        <div class="blog-select-wrap blog-year-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogyear">
+            <label for="blogyear" class="select-label">Filter Year</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog year -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-month-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogmonth">
+            <label for="blogmonth" class="select-label">Filter Month</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog month -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-cat-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogcat">
+            <label for="blogcat" class="select-label">Category</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?cat=491'>Radio Guests</a></li><li><a href='/reading.aspx?cat=492'>TV Guests</a></li><li><a href='/reading.aspx?cat=493'>Pastoral Articles</a></li><li><a href='/reading.aspx?cat=494'>Mission Trips</a></li><li><a href='/reading.aspx?cat=496'>Africa</a></li><li><a href='/reading.aspx?cat=497'>Caribbean</a></li><li><a href='/reading.aspx?cat=498'>Middle East</a></li><li><a href='/reading.aspx?cat=499'>Asia</a></li><li><a href='/reading.aspx?cat=500'>Central America</a></li><li><a href='/reading.aspx?cat=501'>North America</a></li><li><a href='/reading.aspx?cat=502'>Australia/Oceania</a></li><li><a href='/reading.aspx?cat=503'>Europe</a></li><li><a href='/reading.aspx?cat=504'>South America</a></li><li><a href='/reading.aspx?cat=505'>Bible Teaching</a></li><li><a href='/reading.aspx?cat=506'>Israel</a></li><li><a href='/reading.aspx?cat=513'>New World Order</a></li><li><a href='/reading.aspx?cat=514'>United States of America</a></li><li><a href='/reading.aspx?cat=520'>Benevolence</a></li><li><a href='/reading.aspx?cat=523'>Eagles Saving Nations</a></li><li><a href='/reading.aspx?cat=550'>Prophecies</a></li><li><a href='/reading.aspx?cat=590'>Soldiers of the Cross</a></li></ul>
+            </div>
+            <!-- end blog categories -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+    </div>
+    <!-- end date filters -->
+</div>
+<!-- end row -->
+
+
+<div class="blog-content-wrap row">
+    
+    <div class="blog-single row">
+        
+        <meta property='og:title' content="The 9th World Holy Spirit Ministries International Conference - Korea"/>
+        <meta property='og:image' content=""/>
+        <meta property='og:description' content="On the 29th of September 2025, seven members of my esteemed WMI team embarked on a flight from Sea Tac, WA., to Incheon, South Korea, arriving at precisely 4:30 pm on the following day. I selected fiv..."/>
+    
+        <h1 class="post-title">The 9th World Holy Spirit Ministries International Conference - Korea</h1>
+        
+    	<div class="meta row">
+    		<div class="post-date">1/6/2026</div>
+    		<div class="post-categories"><a href='/reading.aspx?cat=493'>Pastoral Articles</a>, <a href='/reading.aspx?cat=494'>Mission Trips</a>, <a href='/reading.aspx?cat=499'>Asia</a></div>
+    	</div>
+    	<!-- end meta -->
+    
+        <div class="post-content row">
+            <div class="post-featured-image"></div>
+            <p>On the 29th of September 2025, seven members of my esteemed WMI team embarked on a flight from Sea Tac, WA., to Incheon, South Korea, arriving at precisely 4:30 pm on the following day. I selected five of my dedicated staff to join me as speakers at The 9th World Holy Spirit Ministry International Conference in Buchun City, South Korea. The conference spanned from October 1st to the 3rd, featuring approximately 50 international speakers and worship singers who flew into minister. The majority of speakers conducted breakout sessions, while a select few addressed the General Session.</p>
+<p>Upon our arrival, once all the participants had gathered, we boarded a team bus that transported us to a restaurant for dinner, before finally checking into our hotel around 11pm. We commenced our days by leaving the hotel promptly at 8 am on Wednesday mornings for breakfast at the church, a routine we followed daily. The conference officially commenced at 9 am each day and continued until approximately 9 to 10 pm every night. Mornings were dedicated to worship and the general session until noon, followed by lunch, and then breakout sessions from 2 to 5 pm, allowing attendees to choose their preferred class. Dinner was served from 5 to 7 pm, and the evening services were filled with worship, singers, dancers, and a keynote speaker. Despite the long days, the experience was immensely gratifying, with a strong focus on the Holy Spirit and an abundance of worship during each service, rejuvenating us with the power of the Holy Spirit.</p>
+<p>Saturday, October 4th, was a well-deserved day off, during which we engaged in a tour. On Sunday, October 5th, I delivered a speech at the Gloria Church led by Senior Pastor Young-Kwang Shin, with my WMI team, the Hawaii team, and my wife participating. Later that evening, we flew back to Seattle, while the Hawaii team returned to Honolulu. All the other speakers and singers departed from Korea on Saturday evening, as attested by the Korean Church below. I urge you to read this testimony and extend your support as | journey across nations to forewarn, prepare, and safeguard Christ's bride.</p>
+<p>To the Korean Church: I bring you greetings from Drs. Jonathan and Adalia Hansen. The need for the believer to be filled and led daily by the Holy Spirit is greater now than ever before. I warned prophetically at the beginning of 2025 that this year is going to be a very prophetic dangerous year where the believer needs to be very sensitive and flexible to the leading of the Holy Spirit. I started traveling each month to different locations. On January 14, 2025 we were at Mar-a-Lago, Florida with the Jerusalem Prayer Breakfast (JPB) to pray for President Donald Trump. One week later on January 21, 2025 we attended the 119<sup>th</sup> US Congress for the Israel Allies Foundation as l am a member of the Knesset Christian Allies Caucus (KCAC). In Washington D.C., | visited with various political leaders from the Senate and House of Representatives of America as well as with leaders from around the world.</p>
+<p>In February and March we were in Kenya, East Africa, and in April in Norway. In May in Africa again. In June, we were on our way to Israel to attend the KCAC when Israel bombed Iran's Nuclear Sites and Israeli Air Space and their airport was shut down and our airplane from New York to Tel Aviv was cancelled.</p>
+<p>Other nations we visited in 2025 were Liberia, Malawi, Columbia, Israel, the Philippines and here in South Korea. In each nation I addressed the need for a National Repentance and warned about the tyranny that is sweeping the nations, taking away the freedoms of individuals. I warned that their plan is to destroy the Old Order and bring us all into the New World Order (NWO).</p>
+<p>The only power that can stop the evil plans in each nation is the baptism of the Holy Spirit as Jesus commanded his disciples in Acts 2: 1-4 to make disciples in every nation through His power!</p>
+<p>I have clearly warned if the church doesn't arise and do more than pray, the church will lose its freedom. We were commanded by the Lord when He ascended to make disciples of every nation. This Holy Spirit Conference is critical.</p>
+<p>Blessings, Rev. Dr. Jonathan Hansen<br />Founder &amp; President of World Ministries International &amp; Eagles Saving Nations<br />B.A. Liberal Arts, B.A.Th., M. Th., M. Div., D. Min., D. Th., and Honorary D. Div.<br />worldministries.org</p>
+<p style="text-align: center;" align="center"><img id="Picture 1" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image001.jpg" alt="A group of people posing for a photo" /><br /> WMI Team lands in Incheon, Korea</p>
+<p style="text-align: center;" align="center"><img id="Picture 2" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image002.jpg" alt="A group of people posing for a photo" /><br />International Conference Participants meet at the Incheon Airport</p>
+<p style="text-align: center;" align="center"><img id="Picture 3" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image004.jpg" alt="A group of people in a bus" /><br />Michael Hansen is ever the attraction</p>
+<p style="text-align: center;" align="center"><img id="Picture 4" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image003.jpg" alt="A group of people with flowers around their neck" /><br /> Bishop Tobias Nyamwaya &amp; Dr. Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 5" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image005.jpg" alt="A person and a child taking a selfie" /><br /> Dr. Adalia and Michael</p>
+<p style="text-align: center;" align="center"><img id="Picture 6" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image006.jpg" alt="A group of people eating at a restaurant" /><br /> First meal in Korea</p>
+<p style="text-align: center;" align="center"><img id="Picture 7" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image007.jpg" alt="A plate of food next to a plate of fried food" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 8" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image008.jpg" alt="A group of people sitting at a table eating food" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 9" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image009.jpg" alt="Two women smiling at the camera" /><br /> Drs. Hansen, Dr. Jackie Hornsby &amp; Dr. Michael Hyodo</p>
+<p style="text-align: center;" align="center"><img id="Picture 10" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image010.jpg" alt="A sign with a couple of cars parked in front of it" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 11" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image011.jpg" alt="A building with a cross on the top" /><br />Happy Church (Haeang Bok Han Church) Buchun City, Korea</p>
+<p style="text-align: center;" align="center"><img id="Picture 12" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image012.jpg" alt="Two men sitting at a table" /><br />Dr. Hansen &amp; Dr. Jae Won Kim</p>
+<p style="text-align: center;" align="center"><img id="Picture 13" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image013.jpg" alt="A person and person sitting at a table with food" /><br /> Dr. EJ Buckardt &amp; his wife Karen</p>
+<p style="text-align: center;" align="center"><img id="Picture 14" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image014.jpg" alt="A group of people singing on stage" /><br />Korean Worship Leaders</p>
+<p style="text-align: center;" align="center"><img id="Picture 15" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image015.jpg" alt="A group of women singing" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 16" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image016.jpg" alt="A group of people standing around a person playing a guitar" /><br /> Hawaii Worship Team</p>
+<p style="text-align: center;" align="center"><img id="Picture 17" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image017.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 18" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image018.jpg" alt="A group of people in a church" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 19" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image019.jpg" alt="A person standing at a podium" /><br /> Host Senior Pastor Rev Kwan Mi-Sun Happy Church (Haeng Bok Han Church) Buchun City, Korea</p>
+<p style="text-align: center;" align="center"><img id="Picture 21" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image020.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 20" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image021.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 22" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image022.jpg" alt="A person in a suit speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 23" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image023.jpg" alt="A person wearing a flower crown" /><br /> Pastor Gordean Yoshhi</p>
+<p style="text-align: center;" align="center"><img id="Picture 24" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image024.jpg" alt="A group of people in a room" /><br /> Korean Worship Dancers</p>
+<p style="text-align: center;" align="center"><img id="Picture 25" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image025.jpg" alt="A person in a suit holding a microphone and a book" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 26" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image026.jpg" alt="A person speaking into a microphone" /><br /> Dr. Kim &amp; Dr. Michael McKinney</p>
+<p style="text-align: center;" align="center"><img id="Picture 27" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image027.jpg" alt="Two men holding microphones in front of a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 28" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image028.jpg" alt="A person and person standing in front of a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 29" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image029.jpg" alt="A group of people standing on a stage" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 30" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image030.jpg" alt="A person holding a microphone and speaking to another person" /><br /> Dr. Buckardt leads in prayer</p>
+<p style="text-align: center;" align="center"><img id="Picture 31" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image031.jpg" alt="A group of people standing together" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 32" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image032.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 33" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image033.jpg" alt="A child looking at a tablet" /><br /> My son MJ was in every service</p>
+<p style="text-align: center;" align="center"><img id="Picture 34" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image034.jpg" alt="A person and person in graduation gowns and cap and gowns" /><br />Dr. Jackie Hornsby &amp; Dr. Jae Won Kim, Promise Christian University</p>
+<p style="text-align: center;" align="center"><img id="Picture 35" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image035.jpg" alt="A person and person in graduation gowns" /><br /> Dr. McKinney presents certificate to a graduate</p>
+<p style="text-align: center;" align="center"><img id="Picture 36" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image036.jpg" alt="A group of people in graduation gowns holding flowers" /><br /> Promise Christian University</p>
+<p style="text-align: center;" align="center"><img id="Picture 37" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image037.jpg" alt="Two men standing together smiling" /><br />Bishop Nyamwaya &amp; Dr. Hyodo</p>
+<p style="text-align: center;" align="center"><img id="Picture 38" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image038.jpg" alt="A person standing at a podium" /><br /> Dr. Emanuel Ansah from Ghana in a breakout class</p>
+<p style="text-align: center;" align="center"><img id="Picture 39" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image039.jpg" alt="A person and person standing at a podium" /><br />Minister Fran Kanelo &amp; Pastor Elder Gordon Kanelo</p>
+<p style="text-align: center;" align="center"><img id="Picture 40" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image040.jpg" alt="A person and person standing at a podium" /><br /> Dr. Robert Grant</p>
+<p style="text-align: center;" align="center"><img id="Picture 41" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image041.jpg" alt="A group of people clapping" /><br /> Pastor Gordean teaching Hula to the Korean Hula team during a Breakout Session</p>
+<p style="text-align: center;" align="center"><img id="Picture 42" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image042.jpg" alt="A person standing at a podium" /><br /> Dr. Buckardt shares in a Breakout Session</p>
+<p style="text-align: center;" align="center"><img id="Picture 43" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image043.jpg" alt="A person standing at a podium" /><br /> Dr. Hyodo leads in a Breakout Session</p>
+<p style="text-align: center;" align="center"><img id="Picture 46" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image044.jpg" alt="A group of people singing in front of a microphone" /><br /> Happy faces at meal time</p>
+<p style="text-align: center;" align="center"><img id="Picture 47" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image046.jpg" alt="A group of people in a church" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 48" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image047.jpg" alt="A group of people sitting at a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 49" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image048.jpg" alt="A person in purple dress with her hands up in front of a person" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 50" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image049.jpg" alt="A group of women in dresses" /><br />Korean Dancers</p>
+<p style="text-align: center;" align="center"><img id="Picture 51" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image050.jpg" alt="A person taking a picture of a group of women" /><br />Korean Worship Dancers</p>
+<p style="text-align: center;" align="center"><img id="Picture 52" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image051.jpg" alt="A group of women in red dresses performing on stage" /><br />Korean Dancers</p>
+<p style="text-align: center;" align="center"><img id="Picture 53" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image052.jpg" alt="A person in a suit and tie speaking to a person in a suit and tie" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 54" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image053.jpg" alt="A group of women in red dresses on a stage" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 55" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image054.jpg" alt="A person sitting at a podium" /><br />Pastor Geumbi Lee (Dir. Religious Education, Professor King David University, Napo-ri Church Pastor)</p>
+<p style="text-align: center;" align="center"><img id="Picture 56" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image055.jpg" alt="A group of people standing in front of a stage" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 57" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image056.jpg" alt="A person speaking at a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 58" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image057.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 59" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image058.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 60" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image059.jpg" alt="A group of people singing in front of a large screen" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 61" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image060.jpg" alt="A group of women holding colorful fans" /><br /> Korean Worship Dancers</p>
+<p style="text-align: center;" align="center"><img id="Picture 62" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image061.jpg" alt="A group of women in dresses holding fans" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 63" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image062.jpg" alt="A group of people playing an accordion" /><br /> Korean Accordion Worshipers</p>
+<p style="text-align: center;" align="center"><img id="Picture 64" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image063.jpg" alt="A person and person standing at a podium" /><br /> Dr. Hansen speaking in a General Session</p>
+<p style="text-align: center;" align="center"><img id="Picture 65" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image064.jpg" alt="A person standing at a podium holding a microphone" /><br /> Dr. Adalia Hansen in a Breakout Teaching</p>
+<p style="text-align: center;" align="center"><img id="Picture 66" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image065.jpg" alt="A person and person standing at a podium" /><br /> Pastor Peter Kealoha &ndash; Breakout Session</p>
+<p style="text-align: center;" align="center"><img id="Picture 67" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image066.jpg" alt="A person standing at a podium" /><br /> Dr. Michael McKinney</p>
+<p style="text-align: center;" align="center"><img id="Picture 68" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image067.jpg" alt="A person speaking into a microphone" /><br /> Dr. Hansen shares in a Breakout Session</p>
+<p style="text-align: center;" align="center"><img id="Picture 69" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image068.jpg" alt="A group of people standing together" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 70" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image069.jpg" alt="Two men in suits and ties" /><br /> Dr. Hansen and his interpreter</p>
+<p style="text-align: center;" align="center"><img id="Picture 71" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image070.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 72" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image071.jpg" alt="A person touching a person's forehead" /><br /> The WMI Team - Ministry in prayer</p>
+<p style="text-align: center;" align="center"><img id="Picture 73" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image072.jpg" alt="A group of people standing in a room" /><br /> Karen Buckardt interceding</p>
+<p style="text-align: center;" align="center"><img id="Picture 74" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image073.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 75" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image074.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 76" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image075.jpg" alt="A person touching a person's forehead" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 77" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image076.jpg" alt="A person lying on the floor" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 78" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image077.jpg" alt="A person lying on the floor with a child" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 79" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image078.jpg" alt="A person touching her forehead with her hand" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 80" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image079.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 81" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image080.jpg" alt="A person touching a person's head" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 82" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image081.jpg" alt="A group of people standing on a stage" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 83" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image082.jpg" alt="A group of people performing on stage" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 84" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image083.jpg" alt="Two men standing in front of a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 85" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image084.jpg" alt="A person standing in front of a group of people" /><br />Hawaiian Worshipers</p>
+<p style="text-align: center;" align="center"><img id="Picture 86" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image085.jpg" alt="A group of people sitting in a room" /><br /> Worship played on traditional Korean instruments</p>
+<p style="text-align: center;" align="center"><img id="Picture 87" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image086.jpg" alt="A person standing at a podium" /><br /> Pastor Peter Kealoha in a Breakout Teaching</p>
+<p style="text-align: center;" align="center"><img id="Picture 88" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image087.jpg" alt="A person standing at a podium with a microphone" /><br /> Dr. Kaua Kwan - Breakout Session</p>
+<p style="text-align: center;" align="center"><img id="Picture 89" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image088.jpg" alt="A group of people singing on a stage" /><br />Hawaii Worship Team</p>
+<p style="text-align: center;" align="center"><img id="Picture 90" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image089.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 91" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image090.jpg" alt="A group of people in a room" /><br /> Altar prayer</p>
+<p style="text-align: center;" align="center"><img id="Picture 92" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image091.jpg" alt="A group of people in a room" /><br /> Praying for people</p>
+<p style="text-align: center;" align="center"><img id="Picture 93" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image092.jpg" alt="A group of people standing in a line" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 94" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image093.jpg" alt="A person looking at a person's head" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 95" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image094.jpg" alt="A person looking at a cellphone" /><br /> Dr. Adalia prophetically praying</p>
+<p style="text-align: center;" align="center"><img id="Picture 96" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image095.jpg" alt="A person holding a person's forehead" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 97" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image096.jpg" alt="A person touching another person's shoulder" /><br /> Minister Fred Christian ministering in prayer</p>
+<p style="text-align: center;" align="center"><img id="Picture 98" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image097.jpg" alt="A person looking at a person lying on the floor" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 99" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image098.jpg" alt="A group of people sitting around a table eating food" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 100" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image099.jpg" alt="Two men in suits smiling" /><br /> Dr. Hansen &amp; Dr. McKinney</p>
+<p style="text-align: center;" align="center"><img id="Picture 101" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image100.jpg" alt="A group of people singing in front of a screen" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 102" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image101.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 103" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image102.jpg" alt="A group of people at a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 104" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image103.jpg" alt="A person standing at a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 105" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image104.jpg" alt="A group of women in white dresses with pink and blue wings" /><br /> Korean Worship Dancers</p>
+<p style="text-align: center;" align="center"><img id="Picture 106" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image105.jpg" alt="A group of women performing in front of a group of people" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 107" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image106.jpg" alt="A person and person speaking into microphones" /><br /> Rev. Kwan Mi-Sun</p>
+<p style="text-align: center;" align="center"><img id="Picture 108" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image107.jpg" alt="A group of women in white dresses" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 109" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image108.jpg" alt="A group of women in a blue dress" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 110" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image109.jpg" alt="A group of women in pink dresses dancing" /><br /> Korean Worship Dancers</p>
+<p style="text-align: center;" align="center"><img id="Picture 111" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image110.jpg" alt="A person standing at a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 112" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image111.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 113" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image112.jpg" alt="A person standing on a stage with a red and white cloth" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 114" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image113.jpg" alt="A group of men standing at a podium" /><br /> Dr. Jae Won Kim &amp; Dr. Michael McKinney</p>
+<p style="text-align: center;" align="center"><img id="Picture 115" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image114.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 116" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image115.jpg" alt="A person touching a person's shoulder" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 117" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image116.jpg" alt="A person in a suit sitting in a room with a group of people" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 118" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image117.jpg" alt="A group of people in a circle" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 119" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image118.jpg" alt="A person in a suit holding a person's shoulder" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 120" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image119.jpg" alt="A person standing at a podium with a microphone" /><br /> Dr. EJ Buckardt</p>
+<p style="text-align: center;" align="center"><img id="Picture 121" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image120.jpg" alt="A person standing at a podium" /><br /> Bishop Tobias Nyamwaya &ndash; Breakout Message</p>
+<p style="text-align: center;" align="center"><img id="Picture 122" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image121.jpg" alt="A person standing behind a podium" /><br /> Minister Fred Christian teaching at a Breakout Session</p>
+<p style="text-align: center;" align="center"><img id="Picture 123" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image122.jpg" alt="A group of people eating at a table" /><br /> Another meal break</p>
+<p style="text-align: center;" align="center"><img id="Picture 124" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image123.jpg" alt="A group of people singing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 125" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image124.jpg" alt="A person and person standing in front of microphones" /><br /> Dr. Jackie Hornsby</p>
+<p style="text-align: center;" align="center"><img id="Picture 126" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image125.jpg" alt="A person in purple dress with her arms up" /><br /> Pastor Gordean Yoshhi</p>
+<p style="text-align: center;" align="center"><img id="Picture 127" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image126.jpg" alt="A group of people playing instruments" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 128" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image127.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 129" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image128.jpg" alt="A group of people in a church" /><br /> Pastor Gordean leads the Korean Hula team</p>
+<p style="text-align: center;" align="center"><img id="Picture 130" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image129.jpg" alt="A person holding a microphone and talking to another person" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 131" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image130.jpg" alt="A group of people on a stage" /><br /> Shofar Team</p>
+<p style="text-align: center;" align="center"><img id="Picture 132" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image131.jpg" alt="A person holding a microphone" /><br /> Dr. Adalia Hansen singing</p>
+<p style="text-align: center;" align="center"><img id="Picture 133" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image132.jpg" alt="A group of people in a church" /><br /> More Korean Worshipers and Dancers</p>
+<p style="text-align: center;" align="center"><img id="Picture 134" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image133.jpg" alt="A group of people sitting in a church" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 135" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image134.jpg" alt="A person and person talking at a podium" /><br /> Dr. Kim interprets for Dr. Evelyn Ansah</p>
+<p style="text-align: center;" align="center"><img id="Picture 136" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image135.jpg" alt="A person speaking into a microphone" /><br /> Dr. Kim interprets for Dr. Emmanuel Ansah</p>
+<p style="text-align: center;" align="center"><img id="Picture 137" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image136.jpg" alt="A person standing behind a podium with a microphone" /><br /> Dr. Kim interprets for Bishop Tobias Nyamwaya</p>
+<p style="text-align: center;" align="center"><img id="Picture 138" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image137.jpg" alt="A group of men sitting at a podium" /><br /> Dr. Kim interprets for Dr. Michael Hyodo</p>
+<p style="text-align: center;" align="center"><img id="Picture 139" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image138.jpg" alt="A group of people standing around a podium" /><br /> Dr. Kim &amp; Dr. Hansen acknowledge Rev. Kim In-Ja Korea Chairman &amp; Organizer, Hosting Church</p>
+<p style="text-align: center;" align="center"><img id="Picture 140" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image139.jpg" alt="A person in a suit speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 141" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image140.jpg" alt="Two men in suits giving a thumbs up" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 142" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image141.jpg" alt="A person and person shaking hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 143" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image142.jpg" alt="A person in a blue dress standing in front of a microphone" /><br /> Korean Soloist</p>
+<p style="text-align: center;" align="center"><img id="Picture 144" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image143.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 145" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image144.jpg" alt="A person taking a picture of a person holding a certificate" /><br /> Dr. McKinney and wife being honored</p>
+<p style="text-align: center;" align="center"><img id="Picture 146" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image145.jpg" alt="A person holding a blue box with a person standing in front of him" /><br /> Drs. Jonathan &amp; Adalia being honored</p>
+<p style="text-align: center;" align="center"><img id="Picture 147" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image146.jpg" alt="A group of people holding a certificate" /><br /> Dr. Kim presents a plaque of appreciation to Dr. Jonathan &amp; Dr. Adalia Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 148" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image147.jpg" alt="A person in a suit talking to a person in a crowd" /><br /> Rev. Kwan Mi-Sun, Rev. Kang Sung-Hee, Rev. Kim In-Ja</p>
+<p style="text-align: center;" align="center"><img id="Picture 149" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image148.jpg" alt="A group of women wearing pink and white dresses" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 150" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image149.jpg" alt="A group of people on stage" /><br /> Korean Worshipers in Dance</p>
+<p style="text-align: center;" align="center"><img id="Picture 151" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image150.jpg" alt="A group of children in white shirts and blue jeans" /><br /> Korean Children in Worship</p>
+<p style="text-align: center;" align="center"><img id="Picture 152" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image151.jpg" alt="A group of people performing on a stage" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 153" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image152.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 154" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image153.jpg" alt="A person and person holding microphones" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 155" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image154.jpg" alt="A person singing into microphones" /><br /> Rev. Kim In-Ja</p>
+<p style="text-align: center;" align="center"><img id="Picture 156" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image155.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 157" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image156.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 158" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image157.jpg" alt="A person hugging another person" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 159" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image158.jpg" alt="A group of people sitting in a bus" /><br /> On the team bus again</p>
+<p style="text-align: center;" align="center"><img id="Picture 160" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image159.jpg" alt="A group of people in a bus" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 161" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image160.jpg" alt="A bridge over water with a city in the background" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 162" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image161.jpg" alt="A group of people in blue uniforms holding flags" /><br /> Traditional Royal Guards</p>
+<p style="text-align: center;" align="center"><img id="Picture 163" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image162.jpg" alt="A group of people standing in front of a gate" /><br /> The team visited the Royal Palace</p>
+<p style="text-align: center;" align="center"><img id="Picture 164" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image163.jpg" alt="A person and a child posing for a picture" /><br /> Dr. Adalia</p>
+<p style="text-align: center;" align="center"><img id="Picture 165" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image164.jpg" alt="A group of people posing for a photo" /><br /> The WMI team at the Palace</p>
+<p style="text-align: center;" align="center"><img id="Picture 206" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image165.jpg" alt="A stone sculpture of a lion" /><br /> A demon guardian</p>
+<p style="text-align: center;" align="center"><img id="Picture 167" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image166.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 168" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image167.jpg" /><br /> Carved demons on the rooftops</p>
+<p style="text-align: center;" align="center"><img id="Picture 169" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image168.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 170" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image169.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 171" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image170.jpg" /><br /> The WMI Team with a Korean Guard</p>
+<p style="text-align: center;" align="center"><img id="Picture 172" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image171.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 173" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image172.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 174" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image173.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 175" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image174.jpg" /><br /> Dr. Mike with his Papa</p>
+<p style="text-align: center;" align="center"><img id="Picture 176" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image175.jpg" /><br /> Seoul, Korea</p>
+<p style="text-align: center;" align="center"><img id="Picture 177" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image176.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 178" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image177.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 179" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image178.jpg" /><br /> A visit to the market streets</p>
+<p style="text-align: center;" align="center"><img id="Picture 180" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image179.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 181" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image180.jpg" /><br /> Young Michael attended every event, from early in the morning to late at night</p>
+<p style="text-align: center;" align="center"><img id="Picture 182" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image181.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 183" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image182.jpg" /><br /> Sunday church service</p>
+<p style="text-align: center;" align="center"><img id="Picture 184" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image183.jpg" /><br /> Blowing of the shofars</p>
+<p style="text-align: center;" align="center"><img id="Picture 185" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image184.jpg" /><br /> Hawaii Worship Team</p>
+<p style="text-align: center;" align="center"><img id="Picture 186" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image185.jpg" /><br /> Pastor Gordean Yoshhi</p>
+<p style="text-align: center;" align="center"><img id="Picture 187" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image186.jpg" /><br /> Praise (Harmonica, Guitar) Special Song - Kim Young Jin</p>
+<p style="text-align: center;" align="center"><img id="Picture 188" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image187.jpg" /><br /> Senior Pastor Young-Kwang Shin Gloria Church</p>
+<p style="text-align: center;" align="center"><img id="Picture 189" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image188.jpg" /><br /> Dr. Hyodo leads in prayer</p>
+<p style="text-align: center;" align="center"><img id="Picture 190" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image189.jpg" /><br /> Gloria Church Praise Team</p>
+<p style="text-align: center;" align="center"><img id="Picture 191" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image190.jpg" /><br /> Dr. Adalia sings a special song</p>
+<p style="text-align: center;" align="center"><img id="Picture 192" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image191.jpg" /><br /> Bishop Tobias Nyamwaya</p>
+<p style="text-align: center;" align="center"><img id="Picture 193" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image192.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 194" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image193.jpg" /><br /> Dr. Hansen gives the message at the Sunday service</p>
+<p style="text-align: center;" align="center"><img id="Picture 195" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image194.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 196" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image195.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 197" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image196.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 198" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image197.jpg" /><br /> Dr. EJ Buckardt leads the benediction prayer</p>
+<p style="text-align: center;" align="center"><img id="Picture 199" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image198.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 200" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image199.jpg" /><br /> Michael, his mama &amp; Dr. Hyodo</p>
+<p style="text-align: center;" align="center"><img id="Picture 201" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image200.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 202" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image201.jpg" /><br /> Dr. EJ &amp; Karen Buckardt and Dr. Hyodo</p>
+<p style="text-align: center;" align="center"><img id="Picture 203" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image202.jpg" /><br /> &ldquo;Passenger Michael Hansen, please come to the cockpit.&rdquo;</p>
+<p style="text-align: center;" align="center"><img id="Picture 204" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image203.jpg" /><br /> Grandpa EJ Buckardt, retired senior NW Airlines pilot, arranged for a private visit to the cockpit</p>
+<p style="text-align: center;" align="center"><img id="Picture 205" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-10-Korea/image204.jpg" /></p>
+<p style="text-align: justify;">Remember, we need your support to continue sounding the alarm and warning the church in every nation of the plans of the New World Order to control their nation. Help me lead a National Repentance in every nation.</p>
+        </div>
+        <!-- end post content -->
+    
+    </div>
+    <!-- end blog single -->
+    
+</div>
+
+<input type="hidden" name="ucBlog135bo243$hdnSiteId" id="ucBlog135bo243_hdnSiteId" value="566" />
+<input type="hidden" name="ucBlog135bo243$hdnBlogId" id="ucBlog135bo243_hdnBlogId" value="135" />
+<input type="hidden" name="ucBlog135bo243$hdnPostId" id="ucBlog135bo243_hdnPostId" />
+<input type="hidden" name="ucBlog135bo243$hdnHomeTemplateId" id="ucBlog135bo243_hdnHomeTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnPostTemplateId" id="ucBlog135bo243_hdnPostTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnAuthorTemplateId" id="ucBlog135bo243_hdnAuthorTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnCategoryTemplateId" id="ucBlog135bo243_hdnCategoryTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnSearchTemplateId" id="ucBlog135bo243_hdnSearchTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnTagTemplateId" id="ucBlog135bo243_hdnTagTemplateId" />
+
+<input type="hidden" name="ucBlog135bo243$hdnBlogPage" id="ucBlog135bo243_hdnBlogPage" /></div>
+<div id="counterBox" style="color: #ccc; font-size: 12px; text-align: center; margin-top: 40px; cursor: pointer;">Loading stats...</div>
+<div id="statsModalOverlay" style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 999999;">
+<div id="statsModal" style="background: #fff; border-radius: 10px; width: min(900px, 92vw); max-height: 85vh; box-shadow: 0 10px 30px rgba(0,0,0,0.35); display: flex; flex-direction: column; overflow: hidden;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #e6e6e6;">
+<div style="font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Arial;">Page stats (last 60 days)</div>
+<button id="statsModalCloseBtn" type="button" style="border: 0; background: transparent; font-size: 22px; line-height: 1; cursor: pointer; padding: 2px 6px;" aria-label="Close">&times;</button></div>
+<div style="padding: 12px 14px;">
+<div id="statsModalContent" style="white-space: pre; overflow: auto; font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; max-height: 65vh;"></div>
+</div>
+<div style="display: flex; justify-content: flex-end; gap: 10px; padding: 12px 14px; border-top: 1px solid #e6e6e6;"><button id="statsModalCopyBtn" type="button" style="border: 1px solid #ccc; background: #f7f7f7; border-radius: 6px; padding: 8px 10px; cursor: pointer; font: 600 12px system-ui;"> Copy </button> <button id="statsModalOkBtn" type="button" style="border: 1px solid #999; background: #eee; border-radius: 6px; padding: 8px 12px; cursor: pointer; font: 700 12px system-ui;"> OK </button></div>
+</div>
+</div>

@@ -1,0 +1,448 @@
+<div>
+<div style="height: 500; width: 850px; position: absolute; background-color: #b5cde1; text-align: center; font-size: 9pt; font-family: trebuchet ms;" class="specDivVSM" unselectable="on">Blog: <strong>Blog</strong></div>
+<input type="hidden" name="hdnBlogId" id="hdnBlogId" />
+                                <input type="hidden" name="hdnSiteId" id="hdnSiteId" />
+                                
+
+
+<div class="blog-top row">
+    <div class="blog-search">
+        <input type='text' id='txtSearch'><input type='button' onclick='searchBlog()' value='Search'>
+        <a href="reading.aspx" class="button back-button">View All</a>
+    </div>
+    <!-- end blog search -->
+    
+    <div class="blog-filters row">
+        
+        <div class="blog-select-wrap blog-year-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogyear">
+            <label for="blogyear" class="select-label">Filter Year</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog year -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-month-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogmonth">
+            <label for="blogmonth" class="select-label">Filter Month</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog month -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-cat-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogcat">
+            <label for="blogcat" class="select-label">Category</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?cat=491'>Radio Guests</a></li><li><a href='/reading.aspx?cat=492'>TV Guests</a></li><li><a href='/reading.aspx?cat=493'>Pastoral Articles</a></li><li><a href='/reading.aspx?cat=494'>Mission Trips</a></li><li><a href='/reading.aspx?cat=496'>Africa</a></li><li><a href='/reading.aspx?cat=497'>Caribbean</a></li><li><a href='/reading.aspx?cat=498'>Middle East</a></li><li><a href='/reading.aspx?cat=499'>Asia</a></li><li><a href='/reading.aspx?cat=500'>Central America</a></li><li><a href='/reading.aspx?cat=501'>North America</a></li><li><a href='/reading.aspx?cat=502'>Australia/Oceania</a></li><li><a href='/reading.aspx?cat=503'>Europe</a></li><li><a href='/reading.aspx?cat=504'>South America</a></li><li><a href='/reading.aspx?cat=505'>Bible Teaching</a></li><li><a href='/reading.aspx?cat=506'>Israel</a></li><li><a href='/reading.aspx?cat=513'>New World Order</a></li><li><a href='/reading.aspx?cat=514'>United States of America</a></li><li><a href='/reading.aspx?cat=520'>Benevolence</a></li><li><a href='/reading.aspx?cat=523'>Eagles Saving Nations</a></li><li><a href='/reading.aspx?cat=550'>Prophecies</a></li><li><a href='/reading.aspx?cat=590'>Soldiers of the Cross</a></li></ul>
+            </div>
+            <!-- end blog categories -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+    </div>
+    <!-- end date filters -->
+</div>
+<!-- end row -->
+
+
+<div class="blog-content-wrap row">
+    
+    <div class="blog-single row">
+        
+        <meta property='og:title' content="Kenya Mission Trip May 19-31, 2025"/>
+        <meta property='og:image' content=""/>
+        <meta property='og:description' content="We flew from Sea Tac International Airport on May 19, 2025 and arrived at our lodging in Nairobi, Kenya at 0200hrs, on May 21, 2025. This mission trip was for leadership both, political and church, in..."/>
+    
+        <h1 class="post-title">Kenya Mission Trip May 19-31, 2025</h1>
+        
+    	<div class="meta row">
+    		<div class="post-date">8/12/2025</div>
+    		<div class="post-categories"><a href='/reading.aspx?cat=493'>Pastoral Articles</a>, <a href='/reading.aspx?cat=494'>Mission Trips</a>, <a href='/reading.aspx?cat=496'>Africa</a>, <a href='/reading.aspx?cat=523'>Eagles Saving Nations</a></div>
+    	</div>
+    	<!-- end meta -->
+    
+        <div class="post-content row">
+            <div class="post-featured-image"></div>
+            <p>We flew from Sea Tac International Airport on May 19, 2025 and arrived at our lodging in Nairobi, Kenya at 0200hrs, on May 21, 2025. This mission trip was for leadership both, political and church, including international leaders. Leadership is responsible for the blessing or deterioration of a nation. I counseled and prayed with numerous people and warned about my prophecy I gave President Moi for Kenya in 1992 which is still coming to pass; and they are on the last point. May 22, 2025 we attended 'The Night to Honor Israel&rsquo;s Independence' and then throughout the next two weeks, we met daily with different leaders where I always counsel and pray with them. I was also the special guest of the former Vice President Stephen Kalonzo Musyoka at a large celebration gathering and prayed for him.</p>
+<p><img src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image001.jpg" /></p>
+<p><img id="Picture 2" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image002.jpg" alt="A group of people sitting at a table" /></p>
+<p><img id="Picture 3" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image003.jpg" alt="A person and child smiling" /></p>
+<p><img id="Picture 4" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image004.jpg" alt="Two men in suits smiling" /> <br />Hon. Dennis Mutuku</p>
+<p><img id="Picture 5" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image005.jpg" alt="A group of people posing for a photo" /> <br /> Dr. Adalia Hansen with the Israeli Ambassador&rsquo;s wife, Yahel Lotem</p>
+<p><img id="Picture 6" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image006.jpg" alt="A group of people posing for a photo" /> <br />Drs. Jonathan &amp; Adalia Hansen with Bishop Joshua and Mrs. Mulinge</p>
+<p><img id="Picture 8" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image007.jpg" alt="A group of people in a room" /> <br />Food and fellowship at the Israeli Independence Celebration with many Kenyan and International Dignitaries in attendance.</p>
+<p><img id="Picture 9" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image008.jpg" alt="A group of people standing around a table" /></p>
+<p><img id="Picture 10" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image009.jpg" alt="A group of people in a room" /></p>
+<p><img id="Picture 11" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image010.jpg" alt="A group of people at a party" /></p>
+<p><img id="Picture 12" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image011.jpg" alt="A group of people standing around a table" /></p>
+<p><img id="Picture 13" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image012.jpg" alt="A group of men smiling for a photo" /></p>
+<p><img id="Picture 14" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image013.jpg" alt="A group of people in a room" /></p>
+<p><img id="Picture 15" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image014.jpg" alt="A person and person looking at each other" /></p>
+<p><img id="Picture 16" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image015.jpg" alt="Two men in suits and ties" /> <br />Dr. Hansen &amp; the American Ambassador to Kenya</p>
+<p><img id="Picture 17" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image016.jpg" alt="A group of people around a table" /></p>
+<p><img id="Picture 18" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image017.jpg" alt="A person and person smiling for the camera" /> <br />Ariel Arviv; Deputy Israeli Ambassador to Kenya</p>
+<p><img id="Picture 19" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image018.jpg" alt="Two men posing for a picture" /></p>
+<p><img id="Picture 20" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image019.jpg" alt="A group of people in a room" /></p>
+<p><img id="Picture 21" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image020.jpg" alt="A person and person standing in front of a podium" /></p>
+<p><img id="Picture 22" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image021.jpg" alt="A person standing at a podium with a light on" /></p>
+<p><img id="Picture 23" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image022.jpg" alt="Two men in suits and glasses" /></p>
+<p><img id="Picture 24" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image023.jpg" alt="A person and person standing at a podium" /></p>
+<p><img id="Picture 25" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image024.jpg" alt="A person standing in front of a podium" /></p>
+<p><img id="Picture 26" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image025.jpg" alt="A person in a suit standing in front of a flag" /></p>
+<p><img id="Picture 27" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image026.jpg" alt="A person in a suit and tie" /> <br />Israeli Ambassador to Kenya; Michael Lotem</p>
+<p><img id="Picture 28" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image027.jpg" alt="A group of people posing for a photo" /></p>
+<p><img id="Picture 29" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image028.jpg" alt="Two men standing together smiling" /> <br />Joshua Tabah; Canadian Ambassador to Kenya</p>
+<p><img id="Picture 30" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image029.jpg" alt="A person smiling next to another person" /></p>
+<p><img id="Picture 31" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image030.jpg" alt="A group of people posing for a photo" /></p>
+<p><img id="Picture 32" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image031.jpg" alt="A group of people sitting at a table" /></p>
+<p><img id="Picture 33" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image032.jpg" alt="A person holding a child" /></p>
+<p><img id="Picture 34" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image033.jpg" alt="Two men standing in front of a window" /> <br />Met with Bishop Michael Adipo</p>
+<p><img id="Picture 35" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image034.jpg" alt="Two men standing in front of a window" /> <br />Met with Bishop Tobias Nyamwaya</p>
+<p><img id="Picture 36" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image035.jpg" alt="A group of people sitting around a table" /></p>
+<p><img id="Picture 37" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image036.jpg" alt="A group of men sitting at a table" /></p>
+<p><img id="Picture 38" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image037.jpg" /></p>
+<p><img id="Picture 39" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image038.jpg" /></p>
+<p><img id="Picture 40" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image039.jpg" /></p>
+<p><img id="Picture 41" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image040.jpg" alt="A group of people and giraffes on a path" /></p>
+<p><img id="Picture 42" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image041.jpg" /></p>
+<p><img id="Picture 43" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image042.jpg" alt="A group of people posing for a photo" /> <br />Israeli Ambassador Michael Lotem and his wife Yahel</p>
+<p><img id="Picture 44" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image043.jpg" /></p>
+<p><img id="Picture 45" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image044.jpg" alt="A table with a group of objects on it" /> <br />We used this board room for very important meetings</p>
+<p><img id="Picture 46" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image045.jpg" alt="A child playing in a ball pit" /> <br />Took my son to play at this indoor play area</p>
+<p><img id="Picture 47" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image046.jpg" alt="A child running on a trampoline" /></p>
+<p><img id="Picture 48" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image047.jpg" alt="Two men in a car" /></p>
+<p><img id="Picture 49" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image048.jpg" /> <br />Tilapia</p>
+<p><img id="Picture 50" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image049.jpg" alt="A building with a sign on it" /></p>
+<p><img id="Picture 51" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image050.jpg" alt="Two men sitting at a table" /> <br />Upcountry with Former Kenyan Vice President Stephen Kalonzo Musyoka</p>
+<p><img id="Picture 53" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image051.jpg" alt="A group of people sitting at a table" /> <br />I was Vice President Kalonzo&rsquo;s special guest at his celebration rally with thousands of people, political leaders and members of the clergy</p>
+<p><img id="Picture 54" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image052.jpg" alt="Two men taking a selfie in front of a house" /></p>
+<p><img id="Picture 55" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image053.jpg" alt="A group of men smiling" /></p>
+<p><img id="Picture 56" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image054.jpg" alt="Two men taking a selfie" /></p>
+<p><img id="Picture 57" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image055.jpg" alt="A portrait of a person" /></p>
+<p><img id="Picture 58" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image056.jpg" alt="A group of men standing under a tent" /></p>
+<p><img id="Picture 59" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image057.jpg" alt="A group of men standing together in a tent" /></p>
+<p><img id="Picture 60" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image058.jpg" alt="Two men taking a selfie" /></p>
+<p><img id="Picture 61" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image059.jpg" alt="A group of men smiling for a photo" /></p>
+<p><img id="Picture 62" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image060.jpg" alt="A group of men in a room with tables and chairs" /></p>
+<p><img id="Picture 63" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image061.jpg" alt="A group of people smiling for the camera" /></p>
+<p><img id="Picture 64" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image062.jpg" alt="Two men taking a selfie" /></p>
+<p><img id="Picture 65" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image063.jpg" alt="Two men taking a selfie" /></p>
+<p><img id="Picture 66" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image064.jpg" alt="A person in a suit and tie smiling at the camera" /></p>
+<p><img id="Picture 67" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image065.jpg" /></p>
+<p><img id="Picture 68" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image066.jpg" alt="A group of men standing together" /></p>
+<p><img id="Picture 69" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image067.jpg" alt="A group of people in a tent" /></p>
+<p><img id="Picture 70" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image068.jpg" /></p>
+<p><img id="Picture 71" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image069.jpg" /></p>
+<p><img id="Picture 72" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image070.jpg" /></p>
+<p><img id="Picture 73" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image071.jpg" alt="A person on a stage" /></p>
+<p><img id="Picture 74" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image072.jpg" alt="Two men taking a selfie" /></p>
+<p><img id="Picture 75" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image073.jpg" /></p>
+<p><img id="Picture 76" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image074.jpg" /></p>
+<p><img id="Picture 77" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image075.jpg" alt="A group of people in orange outfits" /></p>
+<p><img id="Picture 78" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image076.jpg" /></p>
+<p><img id="Picture 79" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image077.jpg" /></p>
+<p><img id="Picture 80" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image078.jpg" /></p>
+<p><img id="Picture 81" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image079.jpg" /></p>
+<p><img id="Picture 82" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image080.jpg" alt="A group of people in orange outfits" /></p>
+<p><img id="Picture 83" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image081.jpg" alt="A group of people singing in a tent" /></p>
+<p><img id="Picture 84" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image082.jpg" alt="A person and person smiling for a selfie" /></p>
+<p><img id="Picture 85" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image083.jpg" alt="A group of people on a stage" /></p>
+<p><img id="Picture 86" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image084.jpg" alt="A person in a hat and glasses" /> <br />Vice President Kalonzo, who is a candidate for the Presidency of Kenya in 2027</p>
+<p><img id="Picture 87" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image085.jpg" alt="A group of people holding cameras" /></p>
+<p><img id="Picture 88" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image086.jpg" alt="A group of people on a stage" /></p>
+<p><img id="Picture 89" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image087.jpg" alt="A person walking on a red stage" /></p>
+<p><img id="Picture 90" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image088.jpg" alt="A group of people standing in a tent" /></p>
+<p><img id="Picture 91" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image089.jpg" alt="A group of people sitting in chairs under a canopy" /></p>
+<p><img id="Picture 92" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image090.jpg" alt="A group of people sitting in chairs" /></p>
+<p><img id="Picture 93" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image091.jpg" alt="A person in glasses and a person in a black shirt" /></p>
+<p><img id="Picture 94" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image092.jpg" alt="A group of people standing in front of a large crowd" /></p>
+<p><img id="Picture 95" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image093.jpg" alt="A group of people on a stage" /></p>
+<p><img id="Picture 96" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image094.jpg" alt="A group of people on a stage" /> <br />I did pray for V.P. Kalonzo at this gathering</p>
+<p><img id="Picture 97" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image095.jpg" alt="A person standing on a stage with a microphone in front of a crowd of people" /></p>
+<p><img id="Picture 98" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image096.jpg" alt="A group of people standing together" /></p>
+<p><img id="Picture 99" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image097.jpg" alt="A group of men sitting at a table" /></p>
+<p><img id="Picture 100" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image098.jpg" alt="Two men standing next to each other" /></p>
+<p><img id="Picture 101" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image099.jpg" alt="A group of men standing in front of a car" /></p>
+<p><img id="Picture 102" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image100.jpg" alt="Two men smiling at the camera" /></p>
+<p><img id="Picture 103" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image101.jpg" alt="A group of people standing together" /> <br />Former Vice Presidents Stephen Kalonzo Musyoka and Rigathi Gachagua and his wife Pastor Dorcas Rigathi</p>
+<p><img id="Picture 104" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image102.jpg" alt="A table with plates and water bottles on it" /></p>
+<p><img id="Picture 105" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image103.jpg" alt="A person smiling at the camera" /></p>
+<p><img id="Picture 106" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image104.jpg" alt="Two men taking a selfie" /></p>
+<p><img id="Picture 107" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image105.jpg" alt="A person and person posing for a picture" /></p>
+<p><img id="Picture 108" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image106.jpg" alt="Two men standing in front of a window" /></p>
+<p><img id="Picture 109" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image107.jpg" alt="A group of people posing for a photo" /> <br />Leaving Kenya for the long trip back to America. We flew from Kenya to Amsterdam and then back to Seattle, arriving June 1, 2025.</p>
+<p><img id="Picture 111" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image108.jpg" alt="A child wearing headphones and drinking from a cup" /></p>
+<p><img id="Picture 112" src="https://www.worldministries.org/Userfiles/Blog-Images/2025-05-Kenya/image109.jpg" alt="A child sleeping on a couch" /></p>
+<p>This trip was critical as Kenya is very dangerous; currently with riots, people disappearing, and many people found dead. I have been calling for a National Repentance where the Covenant Breaking Spirit is destroying the nation. Every President and most every member of the different parliaments throughout the world have been covenant/promise breakers.</p>
+<p>The clergy also has many promise breakers and abusers of money and power. The Nation is falling under the laws of The Science of Judgment. Please help me to go back to Kenya to lead a National Repentance. Send me your very best mission love offering and order my book, The Science of Judgment at worldministries.org.</p>
+<p>You can donate at worldministries.org and click Donate. It is setup to receive Visa, Master Card, Discover, PayPal and Zelle. Use our email, <a href="mailto:warning@worldministries.org,">warning@worldministries.org,</a> as the reference for Zelle.</p>
+<p>I am an ambassador of Jesus Christ, a peacemaker. I will meet with all political parties to discuss the things of God, point out sin that brings judgment on a nation and pray with the president and all others. I do this in every nation.</p>
+<p>God has shown me that in Kenya, the heated rhetoric must stop. This is only fanning the flames of violence and possible civil war. Some politicians have a spirit of hate that must be repented of and broken. They must focus on the issues and let the citizens vote for the candidate representing the issues, values and morality of Jesus Christ.</p>
+        </div>
+        <!-- end post content -->
+    
+    </div>
+    <!-- end blog single -->
+    
+</div>
+
+<input type="hidden" name="ucBlog135bo243$hdnSiteId" id="ucBlog135bo243_hdnSiteId" value="566" />
+<input type="hidden" name="ucBlog135bo243$hdnBlogId" id="ucBlog135bo243_hdnBlogId" value="135" />
+<input type="hidden" name="ucBlog135bo243$hdnPostId" id="ucBlog135bo243_hdnPostId" />
+<input type="hidden" name="ucBlog135bo243$hdnHomeTemplateId" id="ucBlog135bo243_hdnHomeTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnPostTemplateId" id="ucBlog135bo243_hdnPostTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnAuthorTemplateId" id="ucBlog135bo243_hdnAuthorTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnCategoryTemplateId" id="ucBlog135bo243_hdnCategoryTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnSearchTemplateId" id="ucBlog135bo243_hdnSearchTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnTagTemplateId" id="ucBlog135bo243_hdnTagTemplateId" />
+
+<input type="hidden" name="ucBlog135bo243$hdnBlogPage" id="ucBlog135bo243_hdnBlogPage" /></div>
+<div id="counterBox" style="color: #ccc; font-size: 12px; text-align: center; margin-top: 40px; cursor: pointer;">Loading stats...</div>
+<div id="statsModalOverlay" style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 999999;">
+<div id="statsModal" style="background: #fff; border-radius: 10px; width: min(900px, 92vw); max-height: 85vh; box-shadow: 0 10px 30px rgba(0,0,0,0.35); display: flex; flex-direction: column; overflow: hidden;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #e6e6e6;">
+<div style="font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Arial;">Page stats (last 60 days)</div>
+<button id="statsModalCloseBtn" type="button" style="border: 0; background: transparent; font-size: 22px; line-height: 1; cursor: pointer; padding: 2px 6px;" aria-label="Close">&times;</button></div>
+<div style="padding: 12px 14px;">
+<div id="statsModalContent" style="white-space: pre; overflow: auto; font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; max-height: 65vh;"></div>
+</div>
+<div style="display: flex; justify-content: flex-end; gap: 10px; padding: 12px 14px; border-top: 1px solid #e6e6e6;"><button id="statsModalCopyBtn" type="button" style="border: 1px solid #ccc; background: #f7f7f7; border-radius: 6px; padding: 8px 10px; cursor: pointer; font: 600 12px system-ui;"> Copy </button> <button id="statsModalOkBtn" type="button" style="border: 1px solid #999; background: #eee; border-radius: 6px; padding: 8px 12px; cursor: pointer; font: 700 12px system-ui;"> OK </button></div>
+</div>
+</div>

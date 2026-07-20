@@ -219,9 +219,10 @@ Not a schedule — a possible order that **does not block** public site cutover:
 2. **Rich region + toolbar** — One constrained rich body.  
 3. **Save + lock** — Working tree or store; page lock; login.  
 4. **Publish** — Path to git/Cloudflare that editors or dev can run safely.  
-5. **Blog-oriented UX** — If static markers aren’t enough for daily article work.  
+5. **Blog-oriented UX** — If static markers aren’t enough for daily long-form work.  
+6. **Thought For The Day** — Prefer a **row/DB admin** on the Mini ([BLOG_PUBLISHING.md](./BLOG_PUBLISHING.md)), not in-page Word-like editing.
 
-Ship the ministry site without waiting for (1)–(5).
+Ship the ministry site without waiting for the editor or TFTD admin.
 
 ---
 

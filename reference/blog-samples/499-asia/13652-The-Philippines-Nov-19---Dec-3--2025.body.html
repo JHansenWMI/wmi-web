@@ -1,0 +1,582 @@
+<div>
+<div style="height: 500; width: 850px; position: absolute; background-color: #b5cde1; text-align: center; font-size: 9pt; font-family: trebuchet ms;" class="specDivVSM" unselectable="on">Blog: <strong>Blog</strong></div>
+<input type="hidden" name="hdnBlogId" id="hdnBlogId" />
+                                <input type="hidden" name="hdnSiteId" id="hdnSiteId" />
+                                
+
+
+<div class="blog-top row">
+    <div class="blog-search">
+        <input type='text' id='txtSearch'><input type='button' onclick='searchBlog()' value='Search'>
+        <a href="reading.aspx" class="button back-button">View All</a>
+    </div>
+    <!-- end blog search -->
+    
+    <div class="blog-filters row">
+        
+        <div class="blog-select-wrap blog-year-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogyear">
+            <label for="blogyear" class="select-label">Filter Year</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog year -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-month-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogmonth">
+            <label for="blogmonth" class="select-label">Filter Month</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog month -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-cat-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogcat">
+            <label for="blogcat" class="select-label">Category</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?cat=491'>Radio Guests</a></li><li><a href='/reading.aspx?cat=492'>TV Guests</a></li><li><a href='/reading.aspx?cat=493'>Pastoral Articles</a></li><li><a href='/reading.aspx?cat=494'>Mission Trips</a></li><li><a href='/reading.aspx?cat=496'>Africa</a></li><li><a href='/reading.aspx?cat=497'>Caribbean</a></li><li><a href='/reading.aspx?cat=498'>Middle East</a></li><li><a href='/reading.aspx?cat=499'>Asia</a></li><li><a href='/reading.aspx?cat=500'>Central America</a></li><li><a href='/reading.aspx?cat=501'>North America</a></li><li><a href='/reading.aspx?cat=502'>Australia/Oceania</a></li><li><a href='/reading.aspx?cat=503'>Europe</a></li><li><a href='/reading.aspx?cat=504'>South America</a></li><li><a href='/reading.aspx?cat=505'>Bible Teaching</a></li><li><a href='/reading.aspx?cat=506'>Israel</a></li><li><a href='/reading.aspx?cat=513'>New World Order</a></li><li><a href='/reading.aspx?cat=514'>United States of America</a></li><li><a href='/reading.aspx?cat=520'>Benevolence</a></li><li><a href='/reading.aspx?cat=523'>Eagles Saving Nations</a></li><li><a href='/reading.aspx?cat=550'>Prophecies</a></li><li><a href='/reading.aspx?cat=590'>Soldiers of the Cross</a></li></ul>
+            </div>
+            <!-- end blog categories -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+    </div>
+    <!-- end date filters -->
+</div>
+<!-- end row -->
+
+
+<div class="blog-content-wrap row">
+    
+    <div class="blog-single row">
+        
+        <meta property='og:title' content="The Philippines Nov 19 - Dec 3, 2025"/>
+        <meta property='og:image' content=""/>
+        <meta property='og:description' content="We departed from Seattle on November 19, 2025 and landed in the Philippines on the 20th. Our journey involved a flight from Seattle to Korea, followed by a layover before reaching the Philippines. Int..."/>
+    
+        <h1 class="post-title">The Philippines Nov 19 - Dec 3, 2025</h1>
+        
+    	<div class="meta row">
+    		<div class="post-date">1/30/2026</div>
+    		<div class="post-categories"><a href='/reading.aspx?cat=493'>Pastoral Articles</a>, <a href='/reading.aspx?cat=494'>Mission Trips</a>, <a href='/reading.aspx?cat=499'>Asia</a></div>
+    	</div>
+    	<!-- end meta -->
+    
+        <div class="post-content row">
+            <div class="post-featured-image"></div>
+            <p>We departed from Seattle on November 19, 2025 and landed in the Philippines on the 20<sup>th</sup>. Our journey involved a flight from Seattle to Korea, followed by a layover before reaching the Philippines. International travel is indeed quite tiring. My World Ministries International (WMI) team included my wife, Dr. Adalia Hansen, my son MJ, and Dr. Mike Hyodo. Bishop Israel Sanoy of Love Fellowship Church International (LFCI) and others welcomed us at the airport with a lovely sign.</p>
+<p>On Friday, November 21<sup>st</sup>, we embarked on a four-hour car ride to Palayan, where we shared a meal with Pastors Susan Cabrera, MC Gabriel, and their family. The following day, the 22<sup>nd</sup>, we participated in an inauguration and dedication ceremony for the Palayan branch of LFCI, during which I delivered a message. After the service, we dined at the retreat center and later held an open-air crusade focused on salvation and healing. I spoke on the topic of "It's Supernatural and God is real." We distributed food, shoes, and other essentials, with games available for children as well. It was a remarkable experience, with many people accepting Christ and receiving healing.</p>
+<p>On Sunday, the 23<sup>rd</sup>, we traveled to the LFCI Cabanatuan, Nueva Ecija branch, where I addressed the Church's Responsibility to save the Philippines. My wife offered prayers, resulting in many healings. Following the service, we were hosted at a member's house, where we were served balut, a hard-boiled duck egg with feathers inside the shell. It was quite an experience, as they considered it a rite of passage to becoming Filipino. We then dedicated the Rizal LFCI branch, prayed for the neighbors, and visited entrepreneur Edwin Canlas, interviewing him and Bishop Sanoy for my television program.</p>
+<p>On November 25<sup>th</sup>, we navigated canoes to the flooded areas, a result of corruption, and ministered at the Meysulao LFCI branch, which had been relocated to the second floor due to flooding. I preached, leading to many conversions, while Adalia's prayers resulted in numerous healings. We provided them with much needed food relief, learning later that the water was over ten feet deep and infested with alligators, pythons, and sharks, unbeknownst to us at the time.</p>
+<p>On the 27<sup>th</sup>, Bishop Sanoy, myself, and other LFCI team members visited the Pampanga Maximum Security Prison. I delivered a sermon, prayed for the sick inmates, and witnessed many prisoners accepting Jesus and sharing testimonies of their healings. We distributed packages containing personal items and shared a meal with some prisoners in their cell.</p>
+<p>Saturday, November 29<sup>th</sup>, we addressed the nationwide conference for all pastors and workers of LFCI led by Bishop Israel Sanoy. Both Adalia and I spoke in the morning and afternoon sessions, witnessing many miraculous healings. The service was so powerful that they struggled to bring it to a close due to the overwhelming presence of the Holy Spirit.</p>
+<p>On Sunday, November 30<sup>th</sup>, we both spoke at the LFCI Calumpt Church, experiencing another profound move of God with many healings and individuals being overcome by the spirit. On December 1<sup>st</sup>, we celebrated Bishop Israel Sanoy's 40th Ministry Anniversary, followed by teaching at the pastors' convention of LFCI on December 2<sup>nd</sup>.</p>
+<p>That evening, we enjoyed a victory dinner at a Korean restaurant before flying back to Seattle, returning home on December 3, 2025.</p>
+<p style="text-align: center;" align="center"><img id="Picture 1" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines001.jpg" alt="A person and a child sleeping on an airplane" /><br /> International travel is exhausting, from Seattle to Korea, and finally the Philippines</p>
+<p style="text-align: center;" align="center"><img id="Picture 2" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines002.jpg" alt="A group of people standing together" /><br /> Bishop Sanoy meeting us at the airport</p>
+<p style="text-align: center;" align="center"><img id="Picture 3" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines003.jpg" alt="A group of people holding a sign" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 4" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines004.jpg" alt="A group of people posing for a photo" /><br /> Bishop Israel &amp; Edna Sanoy with my family and Dr. Hyodo</p>
+<p style="text-align: center;" align="center"><img id="Picture 6" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines005.jpg" alt="A group of people sitting at a table with food" /><br /> Dinner with Pastor Susan Cabrera and her pastoral planning team, November 21<sup>st</sup><br /> for the crusade and the following two days of meetings</p>
+<p style="text-align: center;" align="center"><img id="Picture 7" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines006.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 9" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines007.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 10" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines008.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 11" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines009.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 12" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines010.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 13" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines011.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 14" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines012.jpg" /><br /> Dr. Hansen preaching at the Palayan LFCI with Bishop Sanoy interpreting</p>
+<p style="text-align: center;" align="center"><img id="Picture 15" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines013.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 16" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines014.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 17" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines015.jpg" /><br /> Saturday Nueva Ecija &ndash; Palayan Inauguration,<br /> Love Fellowship Church International (LFCI)<br /> November 22<sup>nd</sup></p>
+<p style="text-align: center;" align="center"><img id="Picture 19" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines016.jpg" /><br /> Leadership team eating between services</p>
+<p style="text-align: center;" align="center"><img id="Picture 21" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines017.jpg" /><br /> Evangelistic crusade</p>
+<p style="text-align: center;" align="center"><img id="Picture 23" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines018.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 24" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines019.jpg" /><br /> Dr. Hansen &ldquo;It&rsquo;s Supernatural &ndash; God is Real&rdquo;<br /> Many people accepted Christ and many were healed</p>
+<p style="text-align: center;" align="center"><img id="Picture 25" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines020.jpg" /><br /> Dr. Hyodo gave his testimony at the crusade</p>
+<p style="text-align: center;" align="center"><img id="Picture 26" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines021.jpg" /><br /> Dr. Adalia Hansen praying and prophesying over hundreds of people</p>
+<p style="text-align: center;" align="center"><img id="Picture 27" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines022.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 28" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines023.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 29" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines024.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 31" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines025.jpg" /><br /> All that attended were fed a hot meal</p>
+<p style="text-align: center;" align="center"><img id="Picture 32" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines026.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 33" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines027.jpg" /><br /> A woman testifying of her healing</p>
+<p style="text-align: center;" align="center"><img id="Picture 34" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines028.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 35" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines029.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 36" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines030.jpg" /><br /> We gave away many shoes</p>
+<p style="text-align: center;" align="center"><img id="Picture 37" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines031.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 39" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines032.jpg" /><br /> Groceries were given to take home</p>
+<p style="text-align: center;" align="center"><img id="Picture 40" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines033.jpg" /><br /> Shoes were given to children</p>
+<p style="text-align: center;" align="center"><img id="Picture 41" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines034.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 42" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines035.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 45" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines036.jpg" /><br /> Dr. Adalia praying for a boy</p>
+<p style="text-align: center;" align="center"><img id="Picture 47" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines037.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 49" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines038.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 50" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines039.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 51" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines040.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 52" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines041.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 53" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines042.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 55" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines043.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 56" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines044.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 57" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines045.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 58" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines046.jpg" /><br /> This is my wife&rsquo;s joy, ministering to widows and orphans</p>
+<p style="text-align: center;" align="center"><img id="Picture 59" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines047.jpg" /><br /> Our son, Michael Jonathan Jedidiah Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 60" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines048.jpg" /><br /> After they ate a hot meal, groceries and shoes etc., were given provided by Dr. Adalia&rsquo;s Dorcas Fund, World Ministries International (WMI) then there were games for the children</p>
+<p style="text-align: center;" align="center"><img id="Picture 61" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines049.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 62" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines050.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 63" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines051.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 66" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines052.jpg" /><br /> Dr. Adalia loving on the children</p>
+<p style="text-align: center;" align="center"><img id="Picture 67" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines053.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 68" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines054.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 69" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines055.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 70" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines056.jpg" /><br /> There were many games including a pinata</p>
+<p style="text-align: center;" align="center"><img id="Picture 71" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines057.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 72" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines058.jpg" /><br /> When the Crusade was over, we were all happy for the countless salvations and healings as well as the food, clothing, shoes and games we provided for these precious people in need. It is truly more blessed to give than to receive.&nbsp; Please continue helping WMI through the Dorcas Fund and our Benevolence Ministry to meet the needs of the poor and suffering worldwide.</p>
+<p style="text-align: center;" align="center"><img id="Picture 75" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines059.jpg" /><br /> Sunday, November 23<sup>rd</sup> service in Cabanatuan, Nueva Ecija for Love Fellowship Church International (LFCI)</p>
+<p style="text-align: center;" align="center"><img id="Picture 76" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines060.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 77" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines061.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 78" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines062.jpg" /><br /> Bishop Israel Sanoy</p>
+<p style="text-align: center;" align="center"><img id="Picture 79" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines063.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 80" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines064.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 81" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines065.jpg" /><br /> Dr. Hansen preaching &ldquo;Only the Holy Spirit led church can save the Philippines&rdquo;</p>
+<p style="text-align: center;" align="center"><img id="Picture 82" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines066.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 83" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines067.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 84" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines068.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 85" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines069.jpg" /><br /> Dr. Adalia Hansen prayed for and prophesied over many in the church</p>
+<p style="text-align: center;" align="center"><img id="Picture 86" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines070.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 87" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines071.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 88" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines072.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 89" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines073.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 90" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines074.jpg" /><br /> Dr. Hansen prophesying and praying over a couple who want a baby</p>
+<p style="text-align: center;" align="center"><img id="Picture 92" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines075.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 93" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines076.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 94" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines077.jpg" /><br /> We ate lunch at this family&rsquo;s home and their delicacy was hard-boiled duck eggs with feathers in them.<br /> Would you eat them?<br /> This is a right of passage. If you eat them, you&rsquo;re a Filapino.</p>
+<p style="text-align: center;" align="center"><img id="Picture 95" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines078.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 97" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines079.jpg" /></p>
+<p style="text-align: center;" align="center">Sunday, November 23<sup>rd</sup>, Dr. Hansen dedicated and blessed Rizal Branch; LFCI</p>
+<p style="text-align: center;" align="center"><img id="Picture 98" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines080.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 99" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines081.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 100" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines082.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 101" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines083.jpg" /><br /> After the service, we walked across the street to witness and lead people to the Lord</p>
+<p style="text-align: center;" align="center"><img id="Picture 102" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines084.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 103" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines085.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 104" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines086.jpg" /><br /> Typical Philippine traffic</p>
+<p style="text-align: center;" align="center"><img id="Picture 105" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines087.jpg" /><br /> Sunday evening Dr. Hansen interviewed businessman Edwin Canlas on the &ldquo;Warning&rdquo; program. Tremendous testimony of how God saved his life and made him very prosperous.</p>
+<p style="text-align: center;" align="center"><img id="Picture 106" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines088.jpg" /><br /> Dr. Hyodo praying for a member of the Canlas home</p>
+<p style="text-align: center;" align="center"><img id="Picture 107" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines089.jpg" /><br /> Edwin Canlas</p>
+<p style="text-align: center;" align="center"><img id="Picture 108" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines090.jpg" /></p>
+<p style="text-align: center;" align="center">&nbsp;</p>
+<p style="text-align: center;" align="center"><img id="Picture 109" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines091.jpg" alt="A group of people sitting at a table with food" /><br /> Monday, November 24<sup>th</sup>, Bishop Sanoy took the team to lunch</p>
+<p style="text-align: center;" align="center"><img id="Picture 110" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines092.jpg" /><br /> Tuesday, November 25<sup>th</sup> at the Meysulao flood zone.<br /> We traveled in canoes to the flooded areas</p>
+<p style="text-align: center;" align="center"><img id="Picture 111" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines093.jpg" /><br /> Drs. Jonathan &amp; Adalia Hansen with their son MJ</p>
+<p style="text-align: center;" align="center"><img id="Picture 112" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines094.jpg" /><br /> Traveling in a canoe in the flooded areas</p>
+<p style="text-align: center;" align="center"><img id="Picture 113" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines095.jpg" /><br /> How would you like to walk down this path where pythons lived?</p>
+<p style="text-align: center;" align="center"><img id="Picture 114" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines096.jpg" /><br /> After we arrived at the church where we held a service on the second floor because of the flooding on the first floor, I was told that the water was ten to fifteen feet deep with alligators, pythons and small sharks living in the water.</p>
+<p style="text-align: center;" align="center"><img id="Picture 115" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines097.jpg" /><br /> Food relief delivered to flood victims</p>
+<p style="text-align: center;" align="center"><img id="Picture 116" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines098.jpg" /><br /> Our beautiful son</p>
+<p style="text-align: center;" align="center"><img id="Picture 118" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines099.jpg" /><br /> Dr. Mike Hyodo; WMI Benevolence Director walking in after his canoe ride</p>
+<p style="text-align: center;" align="center"><img id="Picture 120" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines100.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 121" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines101.jpg" /><br /> Pastor Ryan, who we gave a shirt to, opened in prayer. This was his church.</p>
+<p style="text-align: center;" align="center"><img id="Picture 122" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines102.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 123" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines103.jpg" /><br /> Bishop Israel Sanoy</p>
+<p style="text-align: center;" align="center"><img id="Picture 124" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines104.jpg" /><br /> Dr. Hansen preached a message titled &ldquo;We Serve a Living God&rdquo; and once again many people accepted Christ and were healed</p>
+<p style="text-align: center;" align="center"><img id="Picture 125" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines105.jpg" /><br /> Adalia praying for people</p>
+<p style="text-align: center;" align="center"><img id="Picture 126" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines106.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 127" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines107.jpg" /><br /> We passed out food for these victims of a corrupt government that caused the flooded areas</p>
+<p style="text-align: center;" align="center"><img id="Picture 128" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines108.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 130" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines109.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 132" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines110.jpg" /><br /> Passing out food for these poor people to take home</p>
+<p style="text-align: center;" align="center"><img id="Picture 136" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines111.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 137" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines112.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 138" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines113.jpg" /><br /> Not only did we pass out food packages for them to take home, we also provided them a hot meal to eat before they left</p>
+<p style="text-align: center;" align="center"><img id="Picture 141" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines114.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 142" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines115.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 144" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines116.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 146" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines117.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 147" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines118.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 149" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines119.jpg" /><br /> Passing out food packages</p>
+<p style="text-align: center;" align="center"><img id="Picture 151" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines120.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 152" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines121.jpg" /><br /> Dr. Adalia always praying for people</p>
+<p style="text-align: center;" align="center"><img id="Picture 153" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines122.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 154" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines123.jpg" /><br /> Bishop Sanoy, Pastor Ryan and the rest of our team.</p>
+<p style="text-align: center;" align="center"><img id="Picture 155" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines124.jpg" /><br /> The team in the flood area who helped us minister to the people in the Word, prayer and food relief</p>
+<p style="text-align: center;" align="center"><img id="Picture 156" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines125.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 158" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines126.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 159" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines127.jpg" /><br /> Walking on the dike, as the area was flooded.</p>
+<p style="text-align: center;" align="center"><img id="Picture 161" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines128.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 163" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines129.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 164" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines130.jpg" /><br /> Finance Meeting at Bishop Sanoy&rsquo;s home</p>
+<p style="text-align: center;" align="center"><img id="Picture 165" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines131.jpg" alt="A group of men posing for a picture" /><br /> I went with Bishop Sanoy three times to the gym to work out.&nbsp; He motivated me to get back into shape.</p>
+<p style="text-align: center;" align="center"><img id="Picture 166" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines132.jpg" alt="A group of men sitting at a table" /><br /> Eating after our workout at one of many chicken restaurants</p>
+<p style="text-align: center;" align="center"><img id="Picture 167" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines133.jpg" alt="A group of people performing in a room" /><br /> On November 27<sup>th</sup>, I spoke at the Pampanga Maximum Security Prison</p>
+<p style="text-align: center;" align="center"><img id="Picture 168" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines134.jpg" alt="A group of people posing for a photo" /><br /> Bishop Sanoy, myself and JV inside the prison</p>
+<p style="text-align: center;" align="center"><img id="Picture 169" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines135.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 170" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines136.jpg" alt="A person holding a microphone" /><br /> I preached and Bishop Sanoy interpreted. My message was: &ldquo;All the Heroes of the Bible made mistakes - God Can Use You - You have a Destiny"</p>
+<p style="text-align: center;" align="center"><img id="Picture 171" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines137.jpg" alt="A group of people in orange shirts" /><br /> Multitudes accepted Christ and many were healed.</p>
+<p style="text-align: center;" align="center"><img id="Picture 172" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines138.jpg" alt="A person holding a microphone to another person" /><br /> Bishop Sanoy taking the testimonies of prisoners that were healed</p>
+<p style="text-align: center;" align="center"><img id="Picture 173" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines139.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 174" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines140.jpg" alt="A group of people posing for a photo" /><br /> Not only did we preach and prayed for the prisoners but we passed out care packages to each person</p>
+<p style="text-align: center;" align="center"><img id="Picture 175" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines141.jpg" alt="Several boxes of food and trash Description automatically generated with medium confidence" /><br /> Boxes full of materialistic needs that our WMI Benevolence and LFCI brought for the prisoners</p>
+<p style="text-align: center;" align="center"><img id="Picture 176" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines142.jpg" alt="A group of people sitting at a table" /><br /> We ate in one of the private cell blocks where prisoners with money can purchase a space where two can sleep, sharing one bed instead of the floor</p>
+<p style="text-align: center;" align="center"><img id="Picture 177" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines143.jpg" alt="A group of people posing for a photo" /><br /> A prisoner who is a pastor.&nbsp; He made a mistake but God is now using him in the prison</p>
+<p style="text-align: center;" align="center"><img id="Picture 178" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines144.jpg" alt="A group of people on motorcycles" /><br /> Traffic</p>
+<p style="text-align: center;" align="center"><img id="Picture 179" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines145.jpg" alt="A person and person smiling at camera" /><br /> Another day in the gym</p>
+<p style="text-align: center;" align="center"><img id="Picture 180" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines146.jpg" /><br /> November 29<sup>th</sup>, all Pastoral Workers Conference at Calumpt; LFCI</p>
+<p style="text-align: center;" align="center"><img id="Picture 181" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines147.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 183" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines148.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 184" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines149.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 185" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines150.jpg" alt="A group of men playing instruments" /><br /> Bishop Israel Sanoy sharing before we did</p>
+<p style="text-align: center;" align="center"><img id="Picture 186" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines151.jpg" /><br /> Bishop Israel and Edna Sanoy</p>
+<p style="text-align: center;" align="center"><img id="Picture 216" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines152.jpg" alt="A person standing at a podium" /><br /> I preached in both, the morning and afternoon and so did my wife.&nbsp; My message, &ldquo;Spiritual Warfare - We will Save Our Nation through the Holy Spirit"</p>
+<p style="text-align: center;" align="center"><img id="Picture 188" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines153.jpg" alt="A person standing at a podium" /><br /> Dr. Adalia preaching, prophesying and praying for people</p>
+<p style="text-align: center;" align="center"><img id="Picture 190" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines154.jpg" alt="A person speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 191" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines155.jpg" alt="A group of people standing in a circle" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 192" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines156.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 194" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines157.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 198" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines158.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 200" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines159.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 187" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines160.jpg" alt="A person standing on a podium with a microphone" /><br /> I sweated so much preaching in the morning message that my entire shirt was soaked, so they provided me this blue shirt</p>
+<p style="text-align: center;" align="center"><img id="Picture 201" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines161.jpg" alt="A person speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 204" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines162.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 206" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines163.jpg" alt="A person holding his head in front of a crowd" /><br /> Dr. Adalia prophesying and praying over people</p>
+<p style="text-align: center;" align="center"><img id="Picture 207" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines164.jpg" alt="A group of people standing in a circle" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 208" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines165.jpg" alt="A group of people sitting on the floor" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 209" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines166.jpg" alt="A person and a child posing for a picture" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 210" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines167.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 211" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines168.jpg" alt="A view of a river from a balcony" /><br /> The church was surrounded by water because of corruption-caused flooding</p>
+<p style="text-align: center;" align="center"><img id="Picture 212" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines169.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 213" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines170.jpg" alt="A person and child taking a selfie" /><br /> Two Hansen&rsquo;s</p>
+<p style="text-align: center;" align="center"><img id="Picture 214" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines171.jpg" alt="A group of people posing for a photo" /><br /> My family with Bishop Israel and Edna Sanoy</p>
+<p style="text-align: center;" align="center"><img id="Picture 215" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines172.jpg" alt="A road with cars and people on it" /><br /> Water surrounding the church including under it.</p>
+<p style="text-align: center;" align="center"><img id="Picture 217" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines173.jpg" alt="A group of people in a room" /><br /> November 29<sup>th </sup>Sunday service, where once again both myself and my wife spoke and ministered</p>
+<p style="text-align: center;" align="center"><img id="Picture 218" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines174.jpg" alt="A group of people standing on a stage" /><br /> JV proposing to his now fianc&eacute; Rejoice Marcelino (Gwapita), before I spoke</p>
+<p style="text-align: center;" align="center"><img id="Picture 219" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines175.jpg" alt="A person holding a microphone" /><br /> Bishop Israel Sanoy speaking</p>
+<p style="text-align: center;" align="center"><img id="Picture 220" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines176.jpg" alt="A person standing at a podium" /><br /> Dr. Hansen preaching on this Sunday morning service.&nbsp; His sermon, &ldquo;I am a Debtor&rdquo;</p>
+<p style="text-align: center;" align="center"><img id="Picture 221" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines177.jpg" alt="A person standing at a podium with a microphone" /><br /> Dr. Adalia preaching</p>
+<p style="text-align: center;" align="center"><img id="Picture 222" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines178.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 223" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines179.jpg" alt="A group of people in a room" /><br /> Dr. Adalia always praying for people</p>
+<p style="text-align: center;" align="center"><img id="Picture 224" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines180.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 225" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines181.jpg" alt="A person and child posing for a selfie" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 226" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines182.jpg" alt="A group of people posing for a photo" /><br /> Here is the happy couple, now engaged</p>
+<p style="text-align: center;" align="center"><img id="Picture 227" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines183.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 228" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines184.jpg" alt="A long table with food on it" /><br /> Eating on banana leaves after the Sunday Service</p>
+<p style="text-align: center;" align="center"><img id="Picture 229" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines185.jpg" alt="A white car parked in front of a sign" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 230" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines186.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 231" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines187.jpg" alt="A person and child wearing a crown" /><br /> My son said, &ldquo;Now I am the King of the Philippines&rdquo;</p>
+<p style="text-align: center;" align="center"><img id="Picture 232" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines188.jpg" alt="A person and person holding hands" /><br /> Celebrating their engagement at a restaurant</p>
+<p style="text-align: center;" align="center"><img id="Picture 233" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines189.jpg" alt="A group of women in a restaurant" /><br /> Even at the restaurant, people had Adalia pray for them</p>
+<p style="text-align: center;" align="center"><img id="Picture 234" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines190.jpg" alt="A group of people posing for a photo" /><br /> The third time Bishop Sanoy and I, with five other young men, at the gym</p>
+<p style="text-align: center;" align="center"><img id="Picture 235" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines191.jpg" alt="A group of people around a table" /></p>
+<p style="text-align: center;" align="center">I prayed for the family brothers etc., of Bishop Israel Sanoy</p>
+<p style="text-align: center;" align="center"><img id="Picture 240" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines192.jpg" alt="A sign with a picture of two people" /><br /> December 1<sup>st</sup>, we celebrated the 40<sup>th</sup> anniversary of Bishop Sanoy in ministry</p>
+<p style="text-align: center;" align="center"><img id="Picture 236" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines193.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 237" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines194.jpg" alt="A group of women posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 238" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines195.jpg" alt="Two women standing next to each other" /><br /> Edna Cruz Sanoy and Adalia Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 239" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines196.jpg" alt="A group of people posing for a photo" /><br /> The Hansen&rsquo;s with Edna Sanoy&rsquo;s parents</p>
+<p style="text-align: center;" align="center"><img id="Picture 242" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines197.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 243" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines198.jpg" alt="Two men taking a selfie" /><br /> Edna Sanoy&rsquo;s father</p>
+<p style="text-align: center;" align="center"><img id="Picture 244" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines199.jpg" alt="A person holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 245" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines200.jpg" alt="A person holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 246" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines201.jpg" alt="A person speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 248" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines202.jpg" alt="A person standing at a podium holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 247" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines203.jpg" alt="A person standing at a podium with a microphone" /><br /> I spoke, prayed and prophesied for Bishop Sanoy at his 40<sup>th</sup> Ministry Anniversary</p>
+<p style="text-align: center;" align="center"><img id="Picture 250" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines204.jpg" alt="A person taking a selfie with another person" /><br /> A crippled Church Apostle in the Philippines</p>
+<p style="text-align: center;" align="center"><img id="Picture 251" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines205.jpg" alt="A child sitting in a chair" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 252" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines206.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 253" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines207.jpg" alt="A person and child wearing crowns" /><br /> Bishop Sanoy and Michael Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 254" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines208.jpg" alt="A person sitting in a chair" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 255" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines209.jpg" alt="A group of people posing for a photo" /><br /> The Hansen&rsquo;s with JV and Rejoice<br /><br /></p>
+<p style="text-align: center;" align="center"><img id="Picture 256" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines210.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 258" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines211.jpg" alt="A group of people posing for a picture" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 259" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines212.jpg" alt="A person standing at a podium" /><br /> December 2<sup>nd</sup>, I spoke at the LFCI Pastors Convention on &ldquo;Eagles Guard the Sheep from Wolves&rdquo;</p>
+<p style="text-align: center;" align="center"><img id="Picture 260" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines213.jpg" alt="A person speaking into a microphone" /><br /> Dr. Adalia teaching</p>
+<p style="text-align: center;" align="center"><img id="Picture 261" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines214.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 262" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines215.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 263" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines216.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 264" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines217.jpg" alt="A person speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 265" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines218.jpg" alt="A group of women standing in a room" /><br /> As always, Dr. Adalia ministering to pastors in prayer and prophecy</p>
+<p style="text-align: center;" align="center"><img id="Picture 274" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines219.jpg" alt="A group of people standing together" /><br /> Both of us praying for this pastor</p>
+<p style="text-align: center;" align="center"><img id="Picture 268" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines220.jpg" alt="A person touching a person's head" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 272" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines221.jpg" alt="A group of people posing for a photo" /><br /> Pastor Susan Cabrera</p>
+<p style="text-align: center;" align="center"><img id="Picture 267" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines222.jpg" alt="A group of people posing for a photo" /><br /> Pastor Susan and Pastor Gabriel</p>
+<p style="text-align: center;" align="center"><img id="Picture 269" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines223.jpg" alt="A bus parked on the street" /><br /> Public form of transportation</p>
+<p style="text-align: center;" align="center"><img id="Picture 270" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines224.jpg" alt="A spiral staircase in front of a building" /><br /> Provincial Capital Bulacan</p>
+<p style="text-align: center;" align="center"><img id="Picture 271" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines225.jpg" alt="A building with trees and a flag" /><br /> Malolos City Hall</p>
+<p style="text-align: center;" align="center"><img id="Picture 275" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines226.jpg" alt="A group of people sitting at a table with food on it" /><br /> Our farewell dinner at a Korean Restaurant</p>
+<p style="text-align: center;" align="center"><img id="Picture 276" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines227.jpg" alt="Two men holding a package" /><br /> Another pastor who received a shirt</p>
+<p style="text-align: center;" align="center"><img id="Picture 277" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines228.jpg" alt="A person and a child sitting on a couch" /><br /> Jocycee, who is a university student, took care of Michael at the church so Adalia and I could minister to people</p>
+<p style="text-align: center;" align="center"><img id="Picture 278" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines229.jpg" alt="A person and a child smiling" /><br /> Ann and Michael.&nbsp; She made pancakes for Michael to eat everyday&nbsp;</p>
+<p style="text-align: center;" align="center"><img id="Picture 279" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines230.jpg" alt="Cars driving on a highway with a city in the background" /><br /> Manila</p>
+<p style="text-align: center;" align="center"><img id="Picture 280" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines231.jpg" alt="A city with buildings in the background" /><br /> Manila skyscrapers surrounded by extreme poverty</p>
+<p style="text-align: center;" align="center"><img id="Picture 281" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines232.jpg" alt="A road with a city in the background" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 282" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines233.jpg" alt="A building with many houses in the background" /><br /> See the shanty homes surrounding this modern skyscraper</p>
+<p style="text-align: center;" align="center"><img id="Picture 283" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-01-Philippines/philippines234.jpg" alt="A group of people standing together" /><br /> The Sanoys saying goodbye at the Philippines International Airport</p>
+<p>Please help us return to the Philippines. As you can see, we helped widows, orphans, prisoners and the poor starving in flooded areas, along with ministering to pastors and churches.</p>
+<p>The Philippines is suffering because of corruption at the highest levels and the people are being exploited.</p>
+<p>Please become a part of the solution by helping to send us back. We need to continue in calling for a National Repentance and help the poor with food, clothes, shoes, etc. It is truly more blessed to give than to receive.&nbsp; Help us help them.</p>
+<p>Blessings, Jonathan Hansen</p>
+        </div>
+        <!-- end post content -->
+    
+    </div>
+    <!-- end blog single -->
+    
+</div>
+
+<input type="hidden" name="ucBlog135bo243$hdnSiteId" id="ucBlog135bo243_hdnSiteId" value="566" />
+<input type="hidden" name="ucBlog135bo243$hdnBlogId" id="ucBlog135bo243_hdnBlogId" value="135" />
+<input type="hidden" name="ucBlog135bo243$hdnPostId" id="ucBlog135bo243_hdnPostId" />
+<input type="hidden" name="ucBlog135bo243$hdnHomeTemplateId" id="ucBlog135bo243_hdnHomeTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnPostTemplateId" id="ucBlog135bo243_hdnPostTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnAuthorTemplateId" id="ucBlog135bo243_hdnAuthorTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnCategoryTemplateId" id="ucBlog135bo243_hdnCategoryTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnSearchTemplateId" id="ucBlog135bo243_hdnSearchTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnTagTemplateId" id="ucBlog135bo243_hdnTagTemplateId" />
+
+<input type="hidden" name="ucBlog135bo243$hdnBlogPage" id="ucBlog135bo243_hdnBlogPage" /></div>
+<div id="counterBox" style="color: #ccc; font-size: 12px; text-align: center; margin-top: 40px; cursor: pointer;">Loading stats...</div>
+<div id="statsModalOverlay" style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 999999;">
+<div id="statsModal" style="background: #fff; border-radius: 10px; width: min(900px, 92vw); max-height: 85vh; box-shadow: 0 10px 30px rgba(0,0,0,0.35); display: flex; flex-direction: column; overflow: hidden;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #e6e6e6;">
+<div style="font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Arial;">Page stats (last 60 days)</div>
+<button id="statsModalCloseBtn" type="button" style="border: 0; background: transparent; font-size: 22px; line-height: 1; cursor: pointer; padding: 2px 6px;" aria-label="Close">&times;</button></div>
+<div style="padding: 12px 14px;">
+<div id="statsModalContent" style="white-space: pre; overflow: auto; font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; max-height: 65vh;"></div>
+</div>
+<div style="display: flex; justify-content: flex-end; gap: 10px; padding: 12px 14px; border-top: 1px solid #e6e6e6;"><button id="statsModalCopyBtn" type="button" style="border: 1px solid #ccc; background: #f7f7f7; border-radius: 6px; padding: 8px 10px; cursor: pointer; font: 600 12px system-ui;"> Copy </button> <button id="statsModalOkBtn" type="button" style="border: 1px solid #999; background: #eee; border-radius: 6px; padding: 8px 12px; cursor: pointer; font: 700 12px system-ui;"> OK </button></div>
+</div>
+</div>

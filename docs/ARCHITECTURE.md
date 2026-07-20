@@ -10,6 +10,7 @@ Static site for Cloudflare Pages. Shared chrome is **data-driven in JavaScript**
 | [VISUAL_COMPARE.md](./VISUAL_COMPARE.md) | Screenshot workflow |
 | [LEGACY_URLS.md](./LEGACY_URLS.md) | Bookmarks / email links / `.aspx` redirects after cutover |
 | [INLINE_EDITOR.md](./INLINE_EDITOR.md) | Intranet in-page content editing (design thought, not shipped) |
+| [BLOG_PUBLISHING.md](./BLOG_PUBLISHING.md) | Word → Mini preview → approve → live (design thought) |
 
 **Legacy redirects (data):** [`legacy-redirects.json`](../legacy-redirects.json) — hand-maintained map; no full-site rescan required (solo editor tracks renames).
 

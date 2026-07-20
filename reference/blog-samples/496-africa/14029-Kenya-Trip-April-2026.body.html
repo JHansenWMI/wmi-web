@@ -1,0 +1,722 @@
+<div>
+<div style="height: 500; width: 850px; position: absolute; background-color: #b5cde1; text-align: center; font-size: 9pt; font-family: trebuchet ms;" class="specDivVSM" unselectable="on">Blog: <strong>Blog</strong></div>
+<input type="hidden" name="hdnBlogId" id="hdnBlogId" />
+                                <input type="hidden" name="hdnSiteId" id="hdnSiteId" />
+                                
+
+
+<div class="blog-top row">
+    <div class="blog-search">
+        <input type='text' id='txtSearch'><input type='button' onclick='searchBlog()' value='Search'>
+        <a href="reading.aspx" class="button back-button">View All</a>
+    </div>
+    <!-- end blog search -->
+    
+    <div class="blog-filters row">
+        
+        <div class="blog-select-wrap blog-year-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogyear">
+            <label for="blogyear" class="select-label">Filter Year</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog year -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-month-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogmonth">
+            <label for="blogmonth" class="select-label">Filter Month</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog month -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-cat-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogcat">
+            <label for="blogcat" class="select-label">Category</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?cat=491'>Radio Guests</a></li><li><a href='/reading.aspx?cat=492'>TV Guests</a></li><li><a href='/reading.aspx?cat=493'>Pastoral Articles</a></li><li><a href='/reading.aspx?cat=494'>Mission Trips</a></li><li><a href='/reading.aspx?cat=496'>Africa</a></li><li><a href='/reading.aspx?cat=497'>Caribbean</a></li><li><a href='/reading.aspx?cat=498'>Middle East</a></li><li><a href='/reading.aspx?cat=499'>Asia</a></li><li><a href='/reading.aspx?cat=500'>Central America</a></li><li><a href='/reading.aspx?cat=501'>North America</a></li><li><a href='/reading.aspx?cat=502'>Australia/Oceania</a></li><li><a href='/reading.aspx?cat=503'>Europe</a></li><li><a href='/reading.aspx?cat=504'>South America</a></li><li><a href='/reading.aspx?cat=505'>Bible Teaching</a></li><li><a href='/reading.aspx?cat=506'>Israel</a></li><li><a href='/reading.aspx?cat=513'>New World Order</a></li><li><a href='/reading.aspx?cat=514'>United States of America</a></li><li><a href='/reading.aspx?cat=520'>Benevolence</a></li><li><a href='/reading.aspx?cat=523'>Eagles Saving Nations</a></li><li><a href='/reading.aspx?cat=550'>Prophecies</a></li><li><a href='/reading.aspx?cat=590'>Soldiers of the Cross</a></li></ul>
+            </div>
+            <!-- end blog categories -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+    </div>
+    <!-- end date filters -->
+</div>
+<!-- end row -->
+
+
+<div class="blog-content-wrap row">
+    
+    <div class="blog-single row">
+        
+        <meta property='og:title' content="Kenya Trip April 2026"/>
+        <meta property='og:image' content=""/>
+        <meta property='og:description' content="April 1, 2026, my family and I arrived in Nairobi, Kenya at 9:55 pm. Bishop Geoffrey Njuguna graciously picked us up at the airport and took us to his home, where we stayed for three nights before mov..."/>
+    
+        <h1 class="post-title">Kenya Trip April 2026</h1>
+        
+    	<div class="meta row">
+    		<div class="post-date">6/11/2026</div>
+    		<div class="post-categories"><a href='/reading.aspx?cat=493'>Pastoral Articles</a>, <a href='/reading.aspx?cat=494'>Mission Trips</a>, <a href='/reading.aspx?cat=496'>Africa</a></div>
+    	</div>
+    	<!-- end meta -->
+    
+        <div class="post-content row">
+            <div class="post-featured-image"></div>
+            <p>April 1, 2026, my family and I arrived in Nairobi, Kenya at 9:55 pm. Bishop Geoffrey Njuguna graciously picked us up at the airport and took us to his home, where we stayed for three nights before moving into Nairobi.</p>
+<p>This 27-day mission trip was both important and busy. Each day was dedicated to various forms of ministry, ranging from conferences to church services and individual meetings. We focused on extending the Kingdom of God and discussing ways to continue expanding God&rsquo;s Kingdom.</p>
+<p>On April 2, I had an opportunity to pray for Rev. Dr. Judy Mbugua at her home, after which we visited and prayed for Pastor Elizabeth Njuguna&rsquo;s mother. The following day, April 3, Bishop Njuguna and I spoke at Deliverance Ignite International Conference, and I later held a private meeting with a leader that evening.</p>
+<p>On April 4th, in addition to meeting with Bishop Geoffrey Njuguna in the morning, I met with Bishop Mike Adipo and later with Apostle Joe Mwaniki. Each of these meetings dealt with Kenya and the nations, and what the church leaders must do to bring salvation and transformation rather than tyranny and judgement.</p>
+<p>On Sunday, April 5, my wife Dr. Adalia and I had the privilege of ministering at Langata Deliverance Church in Nairobi, pastored by Bishop Geoffrey Njuguna. The service was notably attended by the former Vice President of Kenya and 2027 Kenyan Presidential candidate Stephen Kalonzo Musuyoka (SKM), along with approximately 50 members of parliament. During my sermon I focused on Resurrection Day and the question, &ldquo;What DNA are you?&rdquo; My wife also actively participated by praying for many individuals and a powerful moment occurred when a lady was delivered from a demon at the feet of Hon. Musyoka. The service was impactful as I called for a national repentance to save Kenya from tyranny and to ensure the integrity of the elections.</p>
+<p>On April 6, we met with Prophet Paul and Prophetess Janet Songo to discuss the current situation in Kenya and to strategize on the necessary steps to bring about salvation for the nation.</p>
+<p>On the following day, April 7th, I spoke at the gathering of the Kenya Coalition of Church Alliances &amp; Ministers. The top church leaders, including archbishops, were in attendance. I spoke on the need for National Repentance and highlighted how the New World Order (NWO) Elite have chosen their leaders in the nations and emphasized that only the church can protect the integrity of elections. The elite invest heavily in candidates so they become puppets, forcing the people to become slaves and take a mark/chip so they cannot buy or sell without it. Christians must ensure that men and women of Christian morality are elected to leadership so that nations remain under God&rsquo;s principles and not the NWO and tyranny.</p>
+<p>That evening, I met with Bishop Dr. Constantine Mwadime and the Hon. Dennis Mutuku, to discuss the importance of National Repentance and practical economic solutions that can help both people and nations.</p>
+<p>On April 8th, we met with Bishop Eliphas Mitugo and that evening had dinner with SKM at his residence with the Hon Stephen Mule, MP. We discussed the need for National Repentance among other things.</p>
+<p>From April 9-11, I met with various leaders, continually discussing the situation in Kenya and the need for National Repentance.</p>
+<p>On Sunday, April 12, we ministered at Bishop Thomas Muthee&rsquo;s church, Word of Faith, in Kiambu, Kenya. Rev. Phyllis Muthee MC&rsquo;d the services while Bishop Thomas was away, dedicating a newly built church. In the first service, I spoke on &ldquo;I am a Debtor,&rdquo; and in the second service, I ministered on &ldquo;Moses Rod &amp; Eagles Arise.&rdquo;</p>
+<p>From Monday through Friday, April 13th&mdash;17th, Bishop Muthee&rsquo;s Church hosted the Rebecca Arise Women&rsquo;s International Conference, where my wife was one of the speakers. Bishop Muthee and I took part in both the opening Monday service and closing Friday service. What a tremendous conference!</p>
+<p>Sunday, April 19, we ministered at Tabernacle of Grace City of Hope Church; pastored by Prophet Paul and Prophetess Janet Songo. It was a powerful meeting marked by a strong manifestation of the Holy Spirit.</p>
+<p>On April 20th, we continued meeting with leaders. Tuesday the 21st , I met with Bishop Paul Karanja, followed by meetings with Bishop Dennis Nthumbi and that evening with Apostle Joe Mwaniki. My wife met with Christina Shusho a very well-known gospel singer. They discussed helping the poor in Tanzania while I continued to talk to the leaders about National Repentance in the nations and the responsibilities of the Church Leaders.</p>
+<p>On Wednesday April 22nd, I recorded three television programs at Prayer TV Kiambu, Kenya. Later in the day, I met with Pastor Joshua and Esther Muthee, followed by Hon. Mutuku.</p>
+<p>On Thursday, the 23rd, in addition to breakfast and dinner with leaders, we ministered for Rev. Dr. Judy Mbugua at Homecare Spiritual Fellowship. Dr. Judy is doing a tremendous work among women and children in the slums. Bishop Michael Wafula and Hon. Mutuku also attended this meeting. Besides a summary of the need for National Repentance, I spoke on &ldquo;Don&rsquo;t Lose Hope&rdquo;. The Holy Spirit specifically tailored this message to minister to the women present.</p>
+<p>On Friday, the 24th, we again held meetings throughout the day. In between, we met with the Malawi High Commissioner, discussing a return trip to Malawi to meet with the government officials and the initiative to help meet the needs of the poor.</p>
+<p>April 25th, I conducted a staff meeting and led a devotional at the WMI Bible College. Later, Bishop Dr. Tobias Nyamwaya, WMI Bible College Director, took Dr. Adalia and me out for lunch.</p>
+<p>On Sunday, April 26, we ministered at Kitengela Deliverance Church under Bishop Mohammed Kamwaro. Once again, we had a tremendous service. The remainder of the day was spent meeting with various leaders.</p>
+<p>On my final day in Kenya, April 27th, before flying out close to midnight, I continued meeting with different leaders, including another with SKM, the 2027 Kenya Presidential Candidate.</p>
+<p>This was a highly productive and impactful mission trip. We believe it is important to return this year to continue the work of pushing for National Repentance and strengthening relationships with church and national leaders.</p>
+<p>Please prayerfully consider helping us return through your generous mission love offering. Thank you for your prayers, support, and partnership in advancing the Kingdom of God.</p>
+<p style="text-align: center;" align="center">&nbsp;</p>
+<p style="text-align: center;" align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image001.jpg" alt="A group of people posing for a photo" /><br /> Apostle/Prophet Dr. Jonathan Hansen, Dr. Adalia Hansen and Bishop Dr. Geoffrey Njuguna prayed for Rev. Dr. Judy Mbugua at her home on April 2.</p>
+<p style="text-align: center;" align="center"><img id="Picture 4" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image002.jpg" alt="A group of people posing for a photo" /><br />We prayed for Bishop Elizabeth Njuguna&rsquo;s mother with some family members present.</p>
+<p style="text-align: center;" align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image003.jpg" alt="A group of people singing in a room" /><br /> April 3, we were at the Good Friday Service at Lang&rsquo;ata Deliverance Church</p>
+<p style="text-align: center;" align="center"><img id="Picture 3" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image004.jpg" alt="A person speaking into a microphone" /><br /> Rev. Stephen Miano</p>
+<p style="text-align: center;" align="center"><img id="Picture 6" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image005.jpg" alt="A magazine cover with a group of people" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 8" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image006.jpg" alt="A person in a suit holding a microphone" /><br /> April 3 - Bishop Njuguna speaking at the Ignite Conference</p>
+<p style="text-align: center;" align="center"><img id="Picture 5" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image007.jpg" alt="A person in a suit holding a microphone" /><br /> Dr. Hansen speaking at the Ignite Conference</p>
+<p style="text-align: center;" align="center"><img id="Picture 9" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image008.jpg" alt="A group of people clapping in a tent" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 7" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image009.jpg" alt="A group of people eating at a table" /><br /> The conference speakers green room</p>
+<p style="text-align: center;" align="center"><img id="Picture 10" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image010.jpg" alt="A group of people standing on a red carpet" /><br />Rev. Julius Gunda, host; Bishop Joshua Kisamu, Rev. Peter Muriuki, Rev. Daniel Otigo, Dr. Hansen &amp; Bishop Njuguna</p>
+<p style="text-align: center;" align="center"><img id="Picture 11" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image011.jpg" alt="A person standing at a podium with a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 12" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image012.jpg" alt="A group of people sitting at a table with food" /><br /> Bishop Njuguna having a meal with Dr. Hansen and his family</p>
+<p style="text-align: center;" align="center"><img id="Picture 13" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image013.jpg" alt="Two men sitting at a table" /><br /> George Njuguna</p>
+<p style="text-align: center;" align="center"><img id="Picture 14" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image014.jpg" alt="A group of people posing for a photo" /><br /> April 4 - Bishop Geoffrey, Pastor Elizabeth Njuguna and their grandchildren</p>
+<p style="text-align: center;" align="center"><img id="Picture 15" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image015.jpg" alt="A group of people sitting at a table" /><br /> Dr. Hansen and his spiritual son Bishop Mike Adipo</p>
+<p style="text-align: center;" align="center"><img id="Picture 16" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image016.jpg" alt="A group of people posing for a photo" /><br /> Apostle Joe Mwaniki and his wife Bentanora</p>
+<p style="text-align: center;" align="center"><img id="Picture 17" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image017.jpg" alt="A person sitting at a table with a person in a blue dress" /><br /> The Hansens and the Mwanikis discussing national repentance for Kenya</p>
+<p style="text-align: center;" align="center"><img id="Picture 18" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image018.jpg" alt="A person in a suit and tie" /><br /> April 5</p>
+<p style="text-align: center;" align="center"><img id="Picture 19" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image019.jpg" alt="A person hugging another person" /><br /> Dr. Hansen &amp; Former Vice President / 2027 Presidential Candidate Stephen Kolonzo Musyoka (SKM) greet each other outside the church</p>
+<p style="text-align: center;" align="center"><img id="Picture 20" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image020.jpg" alt="A couple of men in suits" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 21" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image021.jpg" alt="A group of men in suits and ties" /><br /> Wiper leader SKM greeting Dr. Adalia Hansen and son Michael</p>
+<p style="text-align: center;" align="center"><img id="Picture 22" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image022.jpg" alt="A group of people sitting in a room" /><br /> Dr. Hansen and SKM in Bishop Njuguna&rsquo;s office</p>
+<p style="text-align: center;" align="center"><img id="Picture 23" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image023.jpg" /><br /> Dr. Hansen greets Klein Kolonzo</p>
+<p style="text-align: center;" align="center"><img id="Picture 24" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image024.jpg" alt="A person in a suit and tie" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 25" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image025.jpg" alt="A person in a suit and tie sitting in a chair" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 26" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image026.jpg" alt="A person in a suit holding a microphone" /><br /> Dr. Hansen preaching on the New World Order taking over the nations and how only the church can stop it through a National Repentance as per Dr. Hansen's Prophetic warning to President Moi and the Nation in 1992</p>
+<p style="text-align: center;" align="center"><img id="Picture 27" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image027.jpg" alt="A person holding a child" /><br /> Michael Hansen with SKM at the church service</p>
+<p style="text-align: center;" align="center"><img id="Picture 28" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image028.jpg" alt="A group of people standing around a child" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 29" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image029.jpg" alt="A person with eyes closed standing in front of a crowd" /><br /> MP Senator Agness Muthama</p>
+<p style="text-align: center;" align="center"><img id="Picture 30" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image030.jpg" alt="A group of people praying" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 31" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image031.jpg" alt="A group of people praying" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 32" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image032.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 33" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image033.jpg" alt="A person in a suit holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 34" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image034.jpg" alt="A person in a suit and tie standing at a podium" /><br /> Drs. Jonathan &amp; Adalia Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 35" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image035.jpg" alt="A person speaking into a microphone" /><br /> Dr. Adalia Hansen shares a word at the service</p>
+<p style="text-align: center;" align="center"><img id="Picture 36" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image036.jpg" alt="A group of people standing in a room with a red carpet" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 37" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image037.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 38" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image038.jpg" alt="A person reading a book" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 39" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image039.jpg" alt="A person and person sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 40" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image040.jpg" alt="A close-up of a person in a suit" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 41" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image041.jpg" alt="A person in a suit holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 42" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image042.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 43" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image043.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 44" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image044.jpg" alt="A group of people standing in a circle" /><br /> Dr. Adalia Hansen praying for people and casting a demon out of a lady</p>
+<p style="text-align: center;" align="center"><img id="Picture 45" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image045.jpg" alt="A group of people clapping" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 46" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image046.jpg" alt="A person in a suit laughing at a person in a suit" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 47" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image047.jpg" alt="A person in a suit and tie speaking into microphones" /><br /> SKM greeting the congregation</p>
+<p style="text-align: center;" align="center"><img id="Picture 48" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image048.jpg" /><br /> SKM holding a press conference outside the church</p>
+<p style="text-align: center;" align="center"><img id="Picture 49" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image049.jpg" alt="A person in a suit holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 50" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image050.jpg" alt="Two men standing together smiling" /><br /> April 6 - Dr. Hansen in a meeting with Prophet Paul Songo</p>
+<p style="text-align: center;" align="center"><img id="Picture 51" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image051.jpg" alt="A group of people posing for a photo" /><br /> Prophet Paul and his wife Prophetess Janet Songo</p>
+<p style="text-align: center;" align="center"><img id="Picture 52" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image052.jpg" alt="A group of people posing for a photo" /><br /> The Hon. Dennis Mutuku joins the meeting with Prophet Songo and Dr. Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 53" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image053.jpg" alt="A group of people posing for a photo" /><br /> The Hon. Mutuku and family join the Hansens at the Village Market to let their children play</p>
+<p style="text-align: center;" align="center"><img id="Picture 54" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image054.jpg" alt="A group of men posing for a picture" /><br /> Dr. Hansen with WMI Minister Paul Amakobe and friend</p>
+<p style="text-align: center;" align="center"><img id="Picture 55" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image055.jpg" alt="Two men sitting at a table" /><br /> Dr. Hansen &amp; MattyJ from South Africa</p>
+<p style="text-align: center;" align="center"><img id="Picture 56" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image056.jpg" alt="A person sitting on a chair with another person in a suit" /><br /> April 7 - Dr. Hansen with The Kenya Coalition of Church Alliances &amp; Ministries (KCCM) Chairman Kepha Omae. Dr. Hansen is the special speaker to the Arch Bishops of Kenya on what must be done to save Kenya from tyranny.</p>
+<p style="text-align: center;" align="center"><img id="Picture 57" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image057.jpg" alt="A person in a suit holding a paper" /><br /> Bishop Omae, Dr. Hansen &amp; Bishop Jessie Irei James; National Prayer Committee Chairman</p>
+<p style="text-align: center;" align="center"><img id="Picture 58" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image058.jpg" alt="Two men in a room with red chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 59" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image059.jpg" alt="A person in a suit and tie shaking hands with another person in a room with chairs" /><br /> Arch Bishop William Tuimising, Dr. Hansen &amp; Bishop Armstrong Cheggeh</p>
+<p style="text-align: center;" align="center"><img id="Picture 60" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image060.jpg" alt="A group of men in suits" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 61" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image061.jpg" alt="A group of men in suits" /><br /> Bishop Omae, Bishop Wilson Mamboleo, Dr. Hansen &amp; Bishop Jessie Irei James</p>
+<p style="text-align: center;" align="center"><img id="Picture 62" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image062.jpg" alt="A group of men standing in front of a podium" /><br /> Bishop Kepha Omae, Dr. Hansen &amp; Bishop Armstrong Cheggeh</p>
+<p style="text-align: center;" align="center"><img id="Picture 63" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image063.jpg" alt="A person in a striped shirt" /><br />Rev. Dr. Samuel Kobia</p>
+<p style="text-align: center;" align="center"><img id="Picture 64" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image064.jpg" alt="A group of men in suits" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 65" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image065.jpg" alt="A group of men in suits" /><br /> Arch Bishop William Tuimising</p>
+<p style="text-align: center;" align="center"><img id="Picture 66" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image066.jpg" alt="A group of men in suits" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 67" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image067.jpg" alt="A group of men in suits" /><br /> Dr. Hansen &amp; Bishop Geoffrey Njuguna; KCCM Treasurer</p>
+<p style="text-align: center;" align="center"><img id="Picture 68" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image068.jpg" alt="Two men in suits hugging" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 69" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image069.jpg" alt="A group of men smiling" /><br /> Bishop Wilson Mamboleo, Dr. Hansen &amp; Bishop Armstrong Cheggeh</p>
+<p style="text-align: center;" align="center"><img id="Picture 70" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image070.jpg" alt="A group of men in suits" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 71" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image071.jpg" alt="A group of men in suits" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 72" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image072.jpg" alt="Two men in suits talking" /><br /> Apostle David Juma</p>
+<p style="text-align: center;" align="center"><img id="Picture 73" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image073.jpg" alt="Two men in suits talking" /><br /> Bishop Dr. Stanley Michuki</p>
+<p style="text-align: center;" align="center"><img id="Picture 74" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image074.jpg" alt="A group of men sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 75" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image075.jpg" alt="A group of men standing together" /><br /> Bishop Omae, Bishop Mamboleo &amp; Dr. Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 76" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image076.jpg" alt="A person and person sitting at a table" /><br /> Dr. Hansen, Hon. Dennis Mutuku &amp; Dr. Constantine Mwadime</p>
+<p style="text-align: center;" align="center"><img id="Picture 77" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image077.jpg" alt="A group of people posing for a photo" /><br /> April 8 - Drs. Jonathan &amp; Adalia Hansen with Bishop Eliphas Mitugo</p>
+<p style="text-align: center;" align="center"><img id="Picture 78" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image078.jpg" alt="A group of people sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 84" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image079.jpg" alt="A person and child standing next to a pond" /><br /> The Hansen&rsquo;s visit SKM at his home where the Presidential Candidate takes Michael to feed his fish</p>
+<p style="text-align: center;" align="center"><img id="Picture 85" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image080.jpg" alt="A person and child looking at a pond" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 86" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image081.jpg" alt="A person holding a child" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 87" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image082.jpg" alt="A person taking a selfie with another person" /><br /> Dr. Hansen, SKM &amp; Hon. Stephen Mule MP</p>
+<p style="text-align: center;" align="center"><img id="Picture 88" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image083.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 89" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image084.jpg" alt="A group of men standing together" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 90" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image085.jpg" alt="Two men sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 91" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image086.jpg" alt="A person holding his head with another person in the background" /><br /> The Hansens praying for MP Stephen Mule</p>
+<p style="text-align: center;" align="center"><img id="Picture 92" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image087.jpg" alt="Two men sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 93" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image088.jpg" alt="Two men sitting together smiling" /><br /> Klein Kolonzo</p>
+<p style="text-align: center;" align="center"><img id="Picture 94" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image089.jpg" alt="A person and a child sitting on a couch" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 95" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image090.jpg" alt="A person and person sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 96" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image091.jpg" alt="Two men in suits sitting in a chair" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 97" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image092.jpg" alt="Two men standing together smiling" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 98" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image093.jpg" alt="A group of men sitting at a table with fruit" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 99" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image094.jpg" alt="A person and a child eating at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 100" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image095.jpg" alt="A person and person sitting in chairs and a vase of red flowers" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 101" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image096.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 102" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image097.jpg" alt="A person and a child with a dog" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 103" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image098.jpg" alt="A person and person sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 79" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image099.jpg" alt="A person and person sitting at a table with food" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 81" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image100.jpg" alt="A group of people sitting at a table" /><br /> April 9 - The Hansens ate dinner with the Mwanikis</p>
+<p style="text-align: center;" align="center"><img id="Picture 80" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image101.jpg" alt="A person with his arm around another person" /><br />April 10 - The Hansens &amp; the Mwanikis had an early morning ministry meeting</p>
+<p style="text-align: center;" align="center"><img id="Picture 82" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image102.jpg" alt="Two men sitting in a room" /><br /> April 10 - Dr. Hansen &amp; Bishop Njuguna discuss National Repentance for Kenya</p>
+<p style="text-align: center;" align="center"><img id="Picture 83" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image103.jpg" alt="A group of men smiling and taking a selfie" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 104" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image104.jpg" alt="A person standing around a birthday cake with a child in the background" /><br /> April 11 - The Hansens attend The Hon. Mutuku&rsquo;s son&rsquo;s birthday party</p>
+<p style="text-align: center;" align="center"><img id="Picture 105" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image105.jpg" alt="A couple of boys standing in a hallway" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 106" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image106.jpg" alt="A person and child posing for a picture" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 107" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image107.jpg" alt="A group of people around a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 108" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image108.jpg" alt="A group of people around a cake" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 109" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image109.jpg" alt="A group of people sitting on a couch" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 110" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image110.jpg" alt="A group of men sitting on a couch" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 111" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image111.jpg" alt="A group of people in a room with hats" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 112" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image112.jpg" alt="A person speaking into a microphone" /><br /> April 12 - Dr. Hansen spoke on &ldquo;I Am a Debtor&rdquo; in the 1<sup>st</sup> service &amp; in the 2<sup>nd</sup> service he spoke on "Moses' Rod/Eagles Saving Nations&rdquo; at Word of Faith Church in Kiambu for Bishop Thomas Muthee</p>
+<p style="text-align: center;" align="center"><img id="Picture 113" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image113.jpg" alt="A person hugging another person" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 114" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image114.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 115" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image115.jpg" alt="A person smiling at a group of people" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 116" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image116.jpg" alt="A person with glasses and a leopard print shirt" /><br /> Rev. Phyllis Muthee</p>
+<p style="text-align: center;" align="center"><img id="Picture 117" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image117.jpg" alt="A person singing into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 118" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image118.jpg" alt="A person hugging another person" /><br /> Apostle Marti Landis (USA)</p>
+<p style="text-align: center;" align="center"><img id="Picture 119" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image119.jpg" alt="A group of people singing into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 120" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image120.jpg" alt="A person speaking into a microphone" /><br /> Dr. Adalia Hansen praying for people</p>
+<p style="text-align: center;" align="center"><img id="Picture 121" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image121.jpg" alt="A person holding a microphone and another person holding her hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 122" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image122.jpg" alt="A person speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 123" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image123.jpg" alt="A group of people in a church" /><br /> Michael Hansen waving a banner during worship. His mother, Dr. Adalia Hansen, waving one as well</p>
+<p style="text-align: center;" align="center"><img id="Picture 124" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image124.jpg" alt="A person holding a tie dye fabric" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 125" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image125.jpg" alt="A person sitting in a chair shaking hands with a person in a suit" /><br /> Pastor Catherine K. Simukoko (Zambia)</p>
+<p style="text-align: center;" align="center"><img id="Picture 126" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image126.jpg" alt="A group of people singing into microphones" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 127" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image127.jpg" alt="A person holding a microphone and a person holding flowers" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 128" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image128.jpg" alt="A person on a stage with a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 129" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image129.jpg" alt="A person in a suit holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 130" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image130.jpg" alt="A person speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 131" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image131.jpg" alt="A person standing at a podium with a crowd of people" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 132" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image132.jpg" alt="A person standing on a podium holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 133" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image133.jpg" alt="A person speaking to a group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 134" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image134.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 135" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image135.jpg" alt="A person standing in front of a crowd of people" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 136" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image136.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 137" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image137.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 138" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image138.jpg" alt="A group of people sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 139" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image139.jpg" alt="A person standing at a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 140" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image140.jpg" alt="A person speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 141" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image141.jpg" alt="A person standing on a podium with a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 142" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image142.jpg" alt="A person in a suit holding a microphone" /><br /> April 13 - The first day of the Rebecca Arise Ladies Conference</p>
+<p style="text-align: center;" align="center"><img id="Picture 143" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image143.jpg" alt="A person standing in front of a podium with a colorful fabric" /><br /> Dr. Adalia waving banners in worship</p>
+<p style="text-align: center;" align="center"><img id="Picture 144" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image144.jpg" alt="A person walking on a red carpet" /><br /> Dr. Hansen kicking off the Rebecca Arise Conference</p>
+<p style="text-align: center;" align="center"><img id="Picture 145" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image145.jpg" alt="A group of people standing in front of a podium with flowers" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 146" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image146.jpg" alt="A group of people standing on a stage" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 147" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image147.jpg" alt="A person in a suit holding a microphone" /><br /> Bishop Thomas Muthee</p>
+<p style="text-align: center;" align="center"><img id="Picture 148" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image148.jpg" alt="A person holding her hands up" /><br /> Dr. Adalia Hansen worshipping</p>
+<p style="text-align: center;" align="center"><img id="Picture 149" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image149.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 150" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image150.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 151" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image151.jpg" alt="A group of women standing in a room with their hands up" /><br /> Some of the lady speakers</p>
+<p style="text-align: center;" align="center"><img id="Picture 152" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image152.jpg" alt="A person speaking into a microphone" /><br /> Rev. Phyllis Muthee</p>
+<p style="text-align: center;" align="center"><img id="Picture 153" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image153.jpg" alt="A group of people raising their hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 154" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image154.jpg" alt="A group of people raising their hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 155" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image155.jpg" alt="A group of people raising their hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 156" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image156.jpg" alt="A group of people raising their hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 157" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image157.jpg" alt="A group of people raising their hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 158" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image158.jpg" alt="A group of people standing in front of a podium" /><br /> Bishop Muthee &amp; Dr. Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 159" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image159.jpg" alt="A person standing in front of a group of people" /><br /> Dr. Hansen praying over the women</p>
+<p style="text-align: center;" align="center"><img id="Picture 160" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image160.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 161" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image161.jpg" alt="A large billboard with a group of people on it" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 162" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image162.jpg" alt="A sign on the side of a road" /><br /> Huge billboard entering Kiambu</p>
+<p style="text-align: center;" align="center"><img id="Picture 163" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image163.jpg" alt="A poster for a conference" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 164" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image164.jpg" alt="A person wearing a white jacket and black dress" /><br /> Bishop Jane Wekesa (Kenya)</p>
+<p style="text-align: center;" align="center"><img id="Picture 165" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image165.jpg" alt="A person in a white suit" /><br /> Apostle Marti Landis (USA)</p>
+<p style="text-align: center;" align="center"><img id="Picture 166" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image166.jpg" alt="A person wearing sunglasses and a white jacket" /><br /> Rev. Dr. Adalia Hansen (USA)</p>
+<p style="text-align: center;" align="center"><img id="Picture 167" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image167.jpg" alt="A person in a blue suit" /><br /> Pastor Catherine K. Simukoko (Zambia)</p>
+<p style="text-align: center;" align="center"><img id="Picture 168" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image168.jpg" alt="A person in a purple jacket" /><br /> Apostle Shirley Nadoo (South Africa)</p>
+<p style="text-align: center;" align="center"><img id="Picture 169" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image169.jpg" alt="A person wearing glasses and a pink dress" /><br /> Bishop Julia Nduyo (Kenya)</p>
+<p style="text-align: center;" align="center"><img id="Picture 170" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image170.jpg" alt="A person speaking into a microphone" /><br /> April 14 - Second day of the Rebecca Arise Conference</p>
+<p style="text-align: center;" align="center"><img id="Picture 171" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image171.jpg" alt="A person smiling with purple and white text" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 172" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image172.jpg" alt="A person speaking into a microphone" /><br /> Rev. Dr. Adalia Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 173" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image173.jpg" alt="A person wearing sunglasses and a white blazer" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 174" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image174.jpg" alt="A person holding a microphone" /><br /> Pastor Catherine K. Simukoko</p>
+<p style="text-align: center;" align="center"><img id="Picture 175" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image175.jpg" alt="A person holding a microphone" /><br /> Apostle Shirley Nadoo</p>
+<p style="text-align: center;" align="center"><img id="Picture 178" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image176.jpg" alt="A building with a sign on it" /><br /> April 15 - Bishop Muthee bought tea at this local plantation store</p>
+<p style="text-align: center;" align="center"><img id="Picture 179" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image177.jpg" alt="People working on a green field" /><br /> Workers picking tea</p>
+<p style="text-align: center;" align="center"><img id="Picture 176" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image178.jpg" alt="A group of men standing in front of a building" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 177" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image179.jpg" alt="A group of men standing together with a child in front of a landscape" /><br /> Dr. Hansen, Michael Hansen &amp; Bishop Muthee overlooking the Rift Valley</p>
+<p style="text-align: center;" align="center"><img id="Picture 2" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image180.jpg" alt="Two men standing in front of a pink octopus statue" /><br /> Dr. Hansen &amp; WMI Minister Paul Amakobe took Michael to play while his mother spoke at the Rebecca Arise Conference</p>
+<p style="text-align: center;" align="center"><img id="Picture 1" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image181.jpg" alt="A group of people walking in a room with a large display of octopus" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 180" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image182.jpg" alt="A person with her arms crossed" /><br /> April 15 - The third day of the Rebecca Arise Conference</p>
+<p style="text-align: center;" align="center"><img id="Picture 181" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image183.jpg" alt="A person speaking into a microphone" /><br /> Pastor Catherine Simukoko</p>
+<p style="text-align: center;" align="center"><img id="Picture 182" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image184.jpg" alt="A person smiling for a picture" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 183" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image185.jpg" alt="A person speaking into a microphone" /><br /> Bishop Jane Wawire</p>
+<p style="text-align: center;" align="center"><img id="Picture 184" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image186.jpg" alt="A person speaking into a microphone" /><br /> Rev. Dr. Adalia Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 185" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image187.jpg" alt="A person standing at a podium with a microphone" /><br /> Apostle Shirley Nadoo</p>
+<p style="text-align: center;" align="center"><img id="Picture 206" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image188.jpg" alt="A person in a pink shirt" /><br /> April 16 - The fourth day of the Rebecca Arise Conference</p>
+<p style="text-align: center;" align="center"><img id="Picture 207" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image189.jpg" alt="A person holding a microphone" /><br /> Bishop Julia Nduyo</p>
+<p style="text-align: center;" align="center"><img id="Picture 208" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image190.jpg" alt="A person with her arms crossed" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 209" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image191.jpg" alt="A person in a blue dress holding a microphone" /><br /> Pastor Catherine K. Simukoko</p>
+<p style="text-align: center;" align="center"><img id="Picture 210" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image192.jpg" alt="A person smiling for a picture" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 211" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image193.jpg" alt="A person on a stage" /><br /> Apostle Marti Landis</p>
+<p style="text-align: center;" align="center"><img id="Picture 212" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image194.jpg" alt="A person smiling for a picture" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 213" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image195.jpg" alt="A person holding a microphone" /><br /> Apostle Shirley Nadoo</p>
+<p style="text-align: center;" align="center"><img id="Picture 186" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image196.jpg" alt="A group of people sitting around a table" /><br /> April 16 &ndash; Israel Ambassador to Kenya, Gideon Behar and Malawi High Commissioner, Callister Mutharika</p>
+<p style="text-align: center;" align="center"><img id="Picture 187" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image197.jpg" alt="A person looking at a phone" /><br /> Dr. Adalia Hansen &amp; Malawi High Commissioner, Callister Mutharika</p>
+<p style="text-align: center;" align="center"><img id="Picture 188" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image198.jpg" alt="Two men sitting at a table" /><br /> Dr. Hansen &amp; Israel Ambassador to Kenya, Gideon Behar</p>
+<p style="text-align: center;" align="center"><img id="Picture 189" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image199.jpg" alt="A group of people standing together" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 190" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image200.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 191" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image201.jpg" alt="A person looking at a device" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 192" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image202.jpg" alt="Two men shaking hands in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 193" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image203.jpg" alt="A person and person sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 194" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image204.jpg" alt="A person looking at a book" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 195" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image205.jpg" alt="Two men sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 196" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image206.jpg" alt="A group of people sitting around a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 197" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image207.jpg" alt="A group of people sitting at a table" /><br /> Dr. Hansen discussing the situation in the world today</p>
+<p style="text-align: center;" align="center"><img id="Picture 198" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image208.jpg" alt="A couple of women looking at a device" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 199" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image209.jpg" alt="Two men sitting at a table" /><br /> Dr. Hansen discusses on television the war with Iran &amp; Hamas</p>
+<p style="text-align: center;" align="center"><img id="Picture 200" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image210.jpg" alt="Two men in suits shaking hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 201" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image211.jpg" alt="Two men sitting on a bench" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 202" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image212.jpg" alt="Two men shaking hands sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 203" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image213.jpg" alt="A couple of men sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 204" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image214.jpg" alt="A person sitting at a table with a newspaper" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 205" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image215.jpg" alt="A couple of women sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 214" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image216.jpg" alt="A person in a suit and tie smiling" /><br /> April 17 &ndash; Dr. Hansen &amp; Bishop Muthee at the final day of Rebecca Arise Conference where Dr. Hansen took part and Bishop Muthee spoke</p>
+<p style="text-align: center;" align="center"><img id="Picture 215" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image217.jpg" alt="A person and a child holding a rainbow colored fabric" /><br /> Dr. Adalia &amp; Michael Hansen waving banners in worship</p>
+<p style="text-align: center;" align="center"><img id="Picture 216" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image218.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 217" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image219.jpg" alt="A group of people standing in front of a podium" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 218" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image220.jpg" alt="A person in a suit speaking into a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 219" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image221.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 220" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image222.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 221" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image223.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 222" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image224.jpg" alt="A group of people sitting at a table" /><br /> The speakers celebrate at Bishop Muthee&rsquo;s home</p>
+<p style="text-align: center;" align="center"><img id="Picture 223" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image225.jpg" alt="A group of people standing together" /><br /> Rev. Phyllis Muthee, Drs. Adalia &amp; Jonathan Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 224" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image226.jpg" alt="A group of people standing under a tent" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 225" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image227.jpg" alt="A group of people standing together" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 226" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image228.jpg" alt="A person in a suit" /><br /> Dr. Hansen praying for the meal and over the speakers</p>
+<p style="text-align: center;" align="center"><img id="Picture 227" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image229.jpg" alt="A group of people standing in front of a building" /><br /> Group picture of all the speakers</p>
+<p style="text-align: center;" align="center"><img id="Picture 228" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image230.jpg" alt="A poster for a church service" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 229" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image231.jpg" alt="A person in a white robe" /><br /> April 19 &ndash; Prophet Paul Songo meets Dr. Hansen arriving at Tabernacle of Grace City of Hope church to preach</p>
+<p style="text-align: center;" align="center"><img id="Picture 230" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image232.jpg" alt="A group of people posing for a photo" /><br /> The Hansens &amp; the Songos</p>
+<p style="text-align: center;" align="center"><img id="Picture 231" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image233.jpg" alt="A person speaking into a microphone" /><br /> Dr. Hansen spoke on "Only the Church can Save the Nations and Save Kenya&rdquo;</p>
+<p style="text-align: center;" align="center"><img id="Picture 232" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image234.jpg" /><br /> Dr. Adalia ministering</p>
+<p style="text-align: center;" align="center"><img id="Picture 233" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image235.jpg" alt="A person in a suit and tie smiling" /><br /> Dr. Hansen &amp; Prophet Paul Songo</p>
+<p style="text-align: center;" align="center"><img id="Picture 234" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image236.jpg" alt="A couple of women smiling" /><br /> Dr. Adalia Hansen &amp; Prophetess Janet Songo</p>
+<p style="text-align: center;" align="center"><img id="Picture 235" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image237.jpg" alt="A group of people posing for a photo" /><br /> The Hansens, the Songos, Hon. Dennis Mutuku, and WMI Minister Paul Amakobe</p>
+<p style="text-align: center;" align="center"><img id="Picture 236" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image238.jpg" alt="Two men in suits and ties" /><br /> Dr. Hansen &amp; Hon. Dennis Mutuku</p>
+<p style="text-align: center;" align="center"><img id="Picture 237" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image239.jpg" alt="A person in a suit holding a microphone" /><br /> Worship Leader</p>
+<p style="text-align: center;" align="center"><img id="Picture 238" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image240.jpg" alt="A person in a suit and tie" /><br /> Dr. Hansen, Hon. Mutuku &amp; Minister Amakobe</p>
+<p style="text-align: center;" align="center"><img id="Picture 239" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image241.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 240" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image242.jpg" alt="A group of people in a room" /><br /> Church worshiping</p>
+<p style="text-align: center;" align="center"><img id="Picture 241" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image243.jpg" alt="A person in a purple dress kneeling on a chair" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 242" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image244.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 243" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image245.jpg" alt="A person holding a microphone to a person in a room with other people" /><br /> Dr. Adalia praying for people</p>
+<p style="text-align: center;" align="center"><img id="Picture 244" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image246.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 245" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image247.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 246" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image248.jpg" alt="A group of people standing around a person lying on the ground" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 247" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image249.jpg" alt="A person holding a microphone to a person" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 248" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image250.jpg" alt="A person holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 249" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image251.jpg" alt="A group of people standing in front of a golden staircase" /><br /> Bishops meeting cancelled because of street protests against the Ruto government</p>
+<p style="text-align: center;" align="center"><img id="Picture 250" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image252.jpg" alt="A person and person smiling" /><br /> April 20 &ndash; Morning meeting with Apostle Joe &amp; Bentanora Mwaniki</p>
+<p style="text-align: center;" align="center"><img id="Picture 251" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image253.jpg" alt="Two men sitting in a room" /><br /> Dinner meeting with George Njuguna</p>
+<p style="text-align: center;" align="center"><img id="Picture 252" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image254.jpg" alt="Two men standing together smiling" /><br /> April 21 &ndash; Bishop Karanja</p>
+<p style="text-align: center;" align="center"><img id="Picture 253" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image255.jpg" alt="Two men in suits smiling" /><br /> Bishop Dennis Nthumbi</p>
+<p style="text-align: center;" align="center"><img id="Picture 254" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image256.jpg" alt="A couple of women standing together" /><br /> Dr. Adalia with singer Christina Shusho</p>
+<p style="text-align: center;" align="center"><img id="Picture 255" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image257.jpg" alt="A couple of women smiling for a picture" /><br /> Dr. Adalia &amp; Pastor Bentanora Mwaniki</p>
+<p style="text-align: center;" align="center"><img id="Picture 256" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image258.jpg" alt="A group of people sitting at a table" /><br />The Hansens &amp; the Mwanikis at dinner</p>
+<p style="text-align: center;" align="center"><img id="Picture 257" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image259.jpg" alt="A person holding a skewer and another person holding a skewer" /><br /> Lots of meat, all you can eat</p>
+<p style="text-align: center;" align="center"><img id="Picture 258" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image260.jpg" alt="A person holding a skewer and a person sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 259" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image261.jpg" alt="A group of people posing for a photo" /><br /> April 22 &ndash; The Hansens &amp; the Muthees</p>
+<p style="text-align: center;" align="center"><img id="Picture 260" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image262.jpg" alt="Two women hugging each other" /><br /> Dr. Adalia &amp; Rev. Phyllis greeting each other warmly</p>
+<p style="text-align: center;" align="center"><img id="Picture 261" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image263.jpg" alt="Two men smiling at the camera" /><br /> Dr. Hansen &amp; Pastor Joshua Muthee</p>
+<p style="text-align: center;" align="center"><img id="Picture 262" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image264.jpg" alt="A person in a suit sitting at a table" /><br /> Dr. Hansen doing three programs at Prayer TV, Kiambu, Kenya</p>
+<p style="text-align: center;" align="center"><img id="Picture 263" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image265.jpg" alt="A person in a suit sitting at a desk" /><br /> Dr. Hansen spoke two programs on The Science of Judgment &amp; one on The Holy Spirit</p>
+<p style="text-align: center;" align="center"><img id="Picture 264" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image266.jpg" alt="Two men smiling at the camera" /><br /> TV Administrator</p>
+<p style="text-align: center;" align="center"><img id="Picture 265" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image267.jpg" alt="A person holding a child" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 266" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image268.jpg" alt="A person sitting on a couch with a child on the couch" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 267" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image269.jpg" alt="Two men in suits and ties" /><br /> Dr. Hansen &amp; Minister Amakobe</p>
+<p style="text-align: center;" align="center"><img id="Picture 268" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image270.jpg" alt="A child lying on a couch" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 269" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image271.jpg" alt="A group of women sitting on chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 270" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image272.jpg" alt="A group of people posing for a photo" /><br /> Dr. Hansen met with Pastor Joshua &amp; Esther Muthee for refreshments and ministry planning</p>
+<p style="text-align: center;" align="center"><img id="Picture 271" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image273.jpg" alt="A group of people posing for a photo" /><br /> The Hansens with Hon. Mutuku at dinner discussing how to save Kenya &amp; the nations</p>
+<p style="text-align: center;" align="center"><img id="Picture 272" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image274.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 273" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image275.jpg" alt="Two men standing together in front of a painting" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 274" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image276.jpg" alt="A group of people sitting on couches" /><br /> The discussion was not only about the spiritual salvation for the nations, but also economic relief</p>
+<p style="text-align: center;" align="center"><img id="Picture 275" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image277.jpg" alt="A person and person smiling for a selfie" /><br /> April 23 &ndash; Rev. Dr. Judy Mbugua</p>
+<p style="text-align: center;" align="center"><img id="Picture 276" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image278.jpg" alt="A group of people clapping" /><br /> Worshiping at Homecare Spiritual Fellowship</p>
+<p style="text-align: center;" align="center"><img id="Picture 277" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image279.jpg" alt="A group of people in a church" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 278" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image280.jpg" alt="A group of men in suits" /><br /> Dr. Hansen advising the Hon. Mutuku</p>
+<p style="text-align: center;" align="center"><img id="Picture 279" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image281.jpg" alt="A person and person standing next to each other" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 280" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image282.jpg" alt="A person in a suit holding a microphone" /><br /> Dr. Hansen spoke on &ldquo;Don&rsquo;t Lose Heart&rdquo;</p>
+<p style="text-align: center;" align="center"><img id="Picture 281" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image283.jpg" alt="A group of people singing in front of a cross" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 282" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image284.jpg" alt="A person holding a microphone and pointing at another person" /><br /> Dr. Adalia speaking</p>
+<p style="text-align: center;" align="center"><img id="Picture 283" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image285.jpg" alt="A person touching a person's face" /><br /> Dr. Adalia praying for the women</p>
+<p style="text-align: center;" align="center"><img id="Picture 284" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image286.jpg" alt="A person touching her head with her hand" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 285" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image287.jpg" alt="A group of people standing around a person lying on the floor" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 286" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image288.jpg" alt="A group of people standing around each other" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 287" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image289.jpg" alt="A person and person smiling at camera" /><br /> Drs. Jonathan &amp; Adalia Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 288" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image290.jpg" alt="A group of people standing together" /><br /> Hon. Mutuku, Rev. Mbugua, Dr. Hansen, Bishop Wafula and Minister Amakobe</p>
+<p style="text-align: center;" align="center"><img id="Picture 289" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image291.jpg" alt="A person smiling at camera" /><br /> Dr. Hansen &amp; Bishop Michael Wafula</p>
+<p style="text-align: center;" align="center"><img id="Picture 290" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image292.jpg" alt="A person and person sitting together" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 291" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image293.jpg" alt="A person and person sitting on a couch" /><br /> In her guest office after the service</p>
+<p style="text-align: center;" align="center"><img id="Picture 292" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image294.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 293" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image295.jpg" alt="A person and person shaking hands" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 294" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image296.jpg" alt="A group of people sitting at a table" /><br /> Dr. Mbugua&rsquo;s boardroom</p>
+<p style="text-align: center;" align="center"><img id="Picture 296" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image297.jpg" alt="A group of people posing for a photo" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 295" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image298.jpg" alt="A group of people sitting on a couch" /><br /> Dinner meeting with Hon. Dennis Mutuku</p>
+<p style="text-align: center;" align="center"><img id="Picture 297" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image299.jpg" alt="A group of men sitting on a couch" /><br /> Dr. Constantine Mwadime joined the meeting</p>
+<p style="text-align: center;" align="center"><img id="Picture 298" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image300.jpg" alt="A group of people posing for a photo" /><br /> The discussion was on how to lead the nations into national repentance, as well as economic relief<br />&nbsp;</p>
+<p style="text-align: center;" align="center"><img id="Picture 308" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image301.jpg" alt="Two men sitting at a table with food" /><br /> April 24 - Breakfast with Hon. Matuku</p>
+<p style="text-align: center;" align="center"><img id="Picture 304" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image302.jpg" alt="A group of people posing for a photo" /><br /> Another meeting with Malawi High Commissioner, Callister Mutharika discussing a return trip to Malawi to work with leadership and help the poor</p>
+<p style="text-align: center;" align="center"><img id="Picture 300" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image303.jpg" alt="A group of people posing for a photo" /><br /> Dr. Hansen &amp; Callister Mutharika</p>
+<p style="text-align: center;" align="center"><img id="Picture 301" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image304.jpg" alt="A group of people sitting at a table" /><br /> Malawi High Commissioner, Callister Mutharika &amp; Assistant Sarah Namagonya</p>
+<p style="text-align: center;" align="center"><img id="Picture 302" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image305.jpg" alt="A person and child smiling" /><br /> High Commissioner playing with Michael Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 303" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image306.jpg" alt="Two women smiling at the camera" /><br /> Dr. Adalia with Sarah Namagonya</p>
+<p style="text-align: center;" align="center"><img id="Picture 305" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image307.jpg" alt="A close-up of a couple of women" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 306" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image308.jpg" alt="A group of people sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 307" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image309.jpg" alt="A group of people sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 309" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image310.jpg" alt="A group of men posing for a picture" /><br /> Dr. Hansen &amp; Paul Amakobe</p>
+<p style="text-align: center;" align="center"><img id="Picture 310" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image311.jpg" alt="A plate of food on a table" /><br /> Delicious Tilapia</p>
+<p style="text-align: center;" align="center"><img id="Picture 311" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image312.jpg" alt="A group of people sitting at a table" /><br /> Eating at The Big Fish Restaurant in Nairobi</p>
+<p style="text-align: center;" align="center"><img id="Picture 312" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image313.jpg" alt="A group of women sitting on a couch" /><br /> Evening meeting with Dr. Adalia, Prophetess Janet &amp; the Hon. Mutuku&rsquo;s wife</p>
+<p style="text-align: center;" align="center"><img id="Picture 313" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image314.jpg" alt="A group of men sitting at a table with food" /><br /> April 25 &ndash; Breakfast meeting with Paul Amakobe</p>
+<p style="text-align: center;" align="center"><img id="Picture 314" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image315.jpg" alt="A person and person standing together" /><br /> Dr. Hansen with the WMI Bible School staff</p>
+<p style="text-align: center;" align="center"><img id="Picture 315" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image316.jpg" alt="A group of people sitting at a table" /><br /> Dr. Hansen chairing a WMI Bible College staff meeting and leading devotions</p>
+<p style="text-align: center;" align="center"><img id="Picture 316" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image317.jpg" alt="A group of people standing together" /><br /> Dr. Edward Shichende, Dr. Hansen, Dr. Tobias Nyamwaya, Dr. Irene Gachau, and Pastor Judy Nyamwaya</p>
+<p style="text-align: center;" align="center"><img id="Picture 317" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image318.jpg" alt="A group of men sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 318" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image319.jpg" alt="A person and person smiling" /><br /> Bishop Dr. Tobias &amp; Judy Nyamwaya</p>
+<p style="text-align: center;" align="center"><img id="Picture 319" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image320.jpg" alt="A group of people sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 320" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image321.jpg" alt="A person and person sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 321" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image322.jpg" alt="A person holding another person's hand" /><br /> Dr. Hansen viewing building construction</p>
+<p style="text-align: center;" align="center"><img id="Picture 322" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image323.jpg" alt="Two men standing in front of a building" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 323" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image324.jpg" alt="A group of people sitting at a table" /><br /> Lunch meeting at a Chinese restaurant hosted by Bishop Tobias Nyamwaya</p>
+<p style="text-align: center;" align="center"><img id="Picture 324" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image325.jpg" alt="A group of people sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 325" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image326.jpg" alt="A person and a child sitting at a table" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 326" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image327.jpg" alt="Two women smiling at the camera" /><br /> Dr. Adalia &amp; Maureen Taya Awino</p>
+<p style="text-align: center;" align="center"><img id="Picture 327" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image328.jpg" alt="Two men sitting outside smiling for the camera" /><br /> Dr. Hansen &amp; WMI Minister/Driver Paul Amakobe</p>
+<p style="text-align: center;" align="center"><img id="Picture 328" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image329.jpg" alt="A group of people on a playground" /><br /> Michael playing at the restaurant play yard</p>
+<p style="text-align: center;" align="center"><img id="Picture 329" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image330.jpg" alt="A group of people standing in a park" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 360" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image331.jpg" alt="A person and person standing next to a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 330" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image332.jpg" alt="Two men in suits smiling" /><br /> April 26 &ndash; Bishop Muhammed Kamwaro; Kitengela Deliverance Church, Kenya</p>
+<p style="text-align: center;" align="center"><img id="Picture 331" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image333.jpg" alt="A group of people posing for a photo" /><br /> The Hansens with Bishop Muhammed Kamwaro</p>
+<p style="text-align: center;" align="center"><img id="Picture 332" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image334.jpg" alt="A person in a suit" /><br /> Dr. Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 333" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image335.jpg" alt="A person in a pink robe holding a microphone" /><br /> Dr. Hansen calls Dr. Adalia to greet the church</p>
+<p style="text-align: center;" align="center"><img id="Picture 334" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image336.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 335" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image337.jpg" alt="A group of people sitting in chairs in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 336" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image338.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 337" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image339.jpg" alt="A group of people standing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 338" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image340.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 339" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image341.jpg" alt="A person in a suit speaking into microphones" /><br /> Dr. Hansen &amp; interpreter</p>
+<p style="text-align: center;" align="center"><img id="Picture 340" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image342.jpg" alt="A person with her hands together" /><br /> Intently listening</p>
+<p style="text-align: center;" align="center"><img id="Picture 341" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image343.jpg" alt="A large group of people sitting on couches" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 342" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image344.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 343" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image345.jpg" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 344" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image346.jpg" alt="A person in a black and white checked shirt" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 345" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image347.jpg" alt="A person in a suit holding a microphone" /><br /> Dr. Hansen speaking powerfully</p>
+<p style="text-align: center;" align="center"><img id="Picture 346" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image348.jpg" alt="A person in a suit holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 347" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image349.jpg" alt="A person laughing in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 348" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image350.jpg" alt="A person in a suit holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 349" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image351.jpg" alt="A person smiling at camera" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 350" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image352.jpg" alt="A group of people sitting in chairs" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 351" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image353.jpg" alt="A person sitting in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 352" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image354.jpg" alt="A person holding a microphone" /><br /> Rev. Dr. Jonathan Hansen</p>
+<p style="text-align: center;" align="center"><img id="Picture 353" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image355.jpg" alt="A person in a suit holding a microphone" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 354" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image356.jpg" alt="A person and person praying in a room with other people" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 355" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image357.jpg" alt="A person in a pink robe speaking into a microphone" /><br /> Dr. Adalia Hansen ministering</p>
+<p style="text-align: center;" align="center"><img id="Picture 356" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image358.jpg" alt="A person in a sweater" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 357" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image359.jpg" alt="A person in a red cape" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 358" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image360.jpg" alt="A group of people in a room" /></p>
+<p style="text-align: center;" align="center"><img id="Picture 359" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image361.jpg" alt="A person and person on a stage" /><br /> Dr. Adalia leading the church in intercessory prayer</p>
+<p style="text-align: center;" align="center"><img id="Picture 362" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image362.jpg" alt="Two men standing in front of a closet" /><br /> Impromptu meeting with Bernard Soi,&nbsp;<span class="ky2igmncmogjharherah">entrepreneur in sustainable agriculture, etc.</span></p>
+<p style="text-align: center;" align="center"><img id="Picture 361" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image363.jpg" alt="Two men in suits and ties" /><br /> April 27 &ndash; Early breakfast meeting with 2027 Kenya Presidential Candidate Stephen Kolonzo Musyoka</p>
+<p style="text-align: center;" align="center"><img id="Picture 364" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image364.jpg" alt="Two men standing together smiling" /><br /> Dr. Hansen &amp; The Hon. Dennis Mutuku meeting</p>
+<p style="text-align: center;" align="center"><img id="Picture 365" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image365.jpg" alt="A group of people posing for a photo" /><br /> The Hon. Mutuku, the Hansens &amp; Minister Amakobe final meeting</p>
+<p style="text-align: center;" align="center"><img id="Picture 366" src="https://www.worldministries.org/Userfiles/Blog-Images/2026-06-Kenya/image366.jpg" alt="A group of people posing for a photo" /><br /> Paul Amakobe drove the Hansens to the Jomo Kenyatta International Airport</p>
+        </div>
+        <!-- end post content -->
+    
+    </div>
+    <!-- end blog single -->
+    
+</div>
+
+<input type="hidden" name="ucBlog135bo243$hdnSiteId" id="ucBlog135bo243_hdnSiteId" value="566" />
+<input type="hidden" name="ucBlog135bo243$hdnBlogId" id="ucBlog135bo243_hdnBlogId" value="135" />
+<input type="hidden" name="ucBlog135bo243$hdnPostId" id="ucBlog135bo243_hdnPostId" />
+<input type="hidden" name="ucBlog135bo243$hdnHomeTemplateId" id="ucBlog135bo243_hdnHomeTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnPostTemplateId" id="ucBlog135bo243_hdnPostTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnAuthorTemplateId" id="ucBlog135bo243_hdnAuthorTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnCategoryTemplateId" id="ucBlog135bo243_hdnCategoryTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnSearchTemplateId" id="ucBlog135bo243_hdnSearchTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnTagTemplateId" id="ucBlog135bo243_hdnTagTemplateId" />
+
+<input type="hidden" name="ucBlog135bo243$hdnBlogPage" id="ucBlog135bo243_hdnBlogPage" /></div>
+<div id="counterBox" style="color: #ccc; font-size: 12px; text-align: center; margin-top: 40px; cursor: pointer;">Loading stats...</div>
+<div id="statsModalOverlay" style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 999999;">
+<div id="statsModal" style="background: #fff; border-radius: 10px; width: min(900px, 92vw); max-height: 85vh; box-shadow: 0 10px 30px rgba(0,0,0,0.35); display: flex; flex-direction: column; overflow: hidden;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #e6e6e6;">
+<div style="font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Arial;">Page stats (last 60 days)</div>
+<button id="statsModalCloseBtn" type="button" style="border: 0; background: transparent; font-size: 22px; line-height: 1; cursor: pointer; padding: 2px 6px;" aria-label="Close">&times;</button></div>
+<div style="padding: 12px 14px;">
+<div id="statsModalContent" style="white-space: pre; overflow: auto; font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; max-height: 65vh;"></div>
+</div>
+<div style="display: flex; justify-content: flex-end; gap: 10px; padding: 12px 14px; border-top: 1px solid #e6e6e6;"><button id="statsModalCopyBtn" type="button" style="border: 1px solid #ccc; background: #f7f7f7; border-radius: 6px; padding: 8px 10px; cursor: pointer; font: 600 12px system-ui;"> Copy </button> <button id="statsModalOkBtn" type="button" style="border: 1px solid #999; background: #eee; border-radius: 6px; padding: 8px 12px; cursor: pointer; font: 700 12px system-ui;"> OK </button></div>
+</div>
+</div>

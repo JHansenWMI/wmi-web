@@ -1,0 +1,544 @@
+<div>
+<div style="height: 500; width: 850px; position: absolute; background-color: #b5cde1; text-align: center; font-size: 9pt; font-family: trebuchet ms;" class="specDivVSM" unselectable="on">Blog: <strong>Blog</strong></div>
+<input type="hidden" name="hdnBlogId" id="hdnBlogId" />
+                                <input type="hidden" name="hdnSiteId" id="hdnSiteId" />
+                                
+
+
+<div class="blog-top row">
+    <div class="blog-search">
+        <input type='text' id='txtSearch'><input type='button' onclick='searchBlog()' value='Search'>
+        <a href="reading.aspx" class="button back-button">View All</a>
+    </div>
+    <!-- end blog search -->
+    
+    <div class="blog-filters row">
+        
+        <div class="blog-select-wrap blog-year-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogyear">
+            <label for="blogyear" class="select-label">Filter Year</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog year -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-month-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogmonth">
+            <label for="blogmonth" class="select-label">Filter Month</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?sdate=1/1/2025&edate=12/31/2025'>2025</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2025&edate=2/28/2025'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2024&edate=12/31/2024'>2024</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2024&edate=9/30/2024'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2024&edate=2/29/2024'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2022&edate=12/31/2022'>2022</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2022&edate=9/30/2022'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2022&edate=1/31/2022'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2021&edate=12/31/2021'>2021</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2021&edate=12/31/2021'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2021&edate=1/31/2021'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2020&edate=12/31/2020'>2020</a></li><ul><li><a href='/reading.aspx?sdate=9/1/2020&edate=9/30/2020'>September</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2020&edate=7/31/2020'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2020&edate=6/30/2020'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2020&edate=4/30/2020'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2020&edate=3/31/2020'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2015&edate=12/31/2015'>2015</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2015&edate=2/28/2015'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2014&edate=12/31/2014'>2014</a></li><ul><li><a href='/reading.aspx?sdate=7/1/2014&edate=7/31/2014'>July</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2014&edate=6/30/2014'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2014&edate=5/31/2014'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2014&edate=4/30/2014'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2014&edate=3/31/2014'>March</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2014&edate=2/28/2014'>February</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/2014&edate=1/31/2014'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2013&edate=12/31/2013'>2013</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2013&edate=12/31/2013'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/2013&edate=11/30/2013'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/2013&edate=9/30/2013'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2013&edate=5/31/2013'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2013&edate=3/31/2013'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2012&edate=12/31/2012'>2012</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2012&edate=12/31/2012'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2012&edate=10/31/2012'>October</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2012&edate=4/30/2012'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2011&edate=12/31/2011'>2011</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2011&edate=12/31/2011'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2010&edate=12/31/2010'>2010</a></li><ul><li><a href='/reading.aspx?sdate=10/1/2010&edate=10/31/2010'>October</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2010&edate=3/31/2010'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2009&edate=12/31/2009'>2009</a></li><ul><li><a href='/reading.aspx?sdate=2/1/2009&edate=2/28/2009'>February</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2008&edate=12/31/2008'>2008</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2008&edate=12/31/2008'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2007&edate=12/31/2007'>2007</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2007&edate=11/30/2007'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=10/1/2007&edate=10/31/2007'>October</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2004&edate=12/31/2004'>2004</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2004&edate=8/31/2004'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/2004&edate=7/31/2004'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/2004&edate=6/30/2004'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2004&edate=5/31/2004'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/2004&edate=2/29/2004'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2003&edate=12/31/2003'>2003</a></li><ul><li><a href='/reading.aspx?sdate=6/1/2003&edate=6/30/2003'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2003&edate=4/30/2003'>April</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2003&edate=3/31/2003'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2002&edate=12/31/2002'>2002</a></li><ul><li><a href='/reading.aspx?sdate=12/1/2002&edate=12/31/2002'>December</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2001&edate=12/31/2001'>2001</a></li><ul><li><a href='/reading.aspx?sdate=11/1/2001&edate=11/30/2001'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/2001&edate=3/31/2001'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/2000&edate=12/31/2000'>2000</a></li><ul><li><a href='/reading.aspx?sdate=8/1/2000&edate=8/31/2000'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/2000&edate=5/31/2000'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=4/1/2000&edate=4/30/2000'>April</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1999&edate=12/31/1999'>1999</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1999&edate=11/30/1999'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1999&edate=3/31/1999'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1998&edate=12/31/1998'>1998</a></li><ul><li><a href='/reading.aspx?sdate=8/1/1998&edate=8/31/1998'>August</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1998&edate=7/31/1998'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=3/1/1998&edate=3/31/1998'>March</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1997&edate=12/31/1997'>1997</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1997&edate=12/31/1997'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1997&edate=11/30/1997'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=8/1/1997&edate=8/31/1997'>August</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1996&edate=12/31/1996'>1996</a></li><ul><li><a href='/reading.aspx?sdate=11/1/1996&edate=11/30/1996'>November</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1996&edate=6/30/1996'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1996&edate=5/31/1996'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=2/1/1996&edate=2/29/1996'>February</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1995&edate=12/31/1995'>1995</a></li><ul><li><a href='/reading.aspx?sdate=12/1/1995&edate=12/31/1995'>December</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=11/1/1995&edate=11/30/1995'>November</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=9/1/1995&edate=9/30/1995'>September</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=7/1/1995&edate=7/31/1995'>July</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=6/1/1995&edate=6/30/1995'>June</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1995&edate=5/31/1995'>May</a></li>
+</ul><ul>
+<li><a href='/reading.aspx?sdate=1/1/1995&edate=1/31/1995'>January</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1994&edate=12/31/1994'>1994</a></li><ul><li><a href='/reading.aspx?sdate=10/1/1994&edate=10/31/1994'>October</a></li></ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1992&edate=12/31/1992'>1992</a></li><ul><li><a href='/reading.aspx?sdate=6/1/1992&edate=6/30/1992'>June</a></li></ul><ul>
+<li><a href='/reading.aspx?sdate=5/1/1992&edate=5/31/1992'>May</a></li>
+</ul></ul>
+<ul><li><a href='/reading.aspx?sdate=1/1/1985&edate=12/31/1985'>1985</a></li><ul><li><a href='/reading.aspx?sdate=3/1/1985&edate=3/31/1985'>March</a></li></ul></ul>
+            </div>
+            <!-- end blog month -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+        <div class="blog-select-wrap blog-cat-wrap">
+            <input type="checkbox" class="select-checkbox" id="blogcat">
+            <label for="blogcat" class="select-label">Category</label>
+            <div class="blog-select">
+                <ul><li><a href='/reading.aspx?cat=491'>Radio Guests</a></li><li><a href='/reading.aspx?cat=492'>TV Guests</a></li><li><a href='/reading.aspx?cat=493'>Pastoral Articles</a></li><li><a href='/reading.aspx?cat=494'>Mission Trips</a></li><li><a href='/reading.aspx?cat=496'>Africa</a></li><li><a href='/reading.aspx?cat=497'>Caribbean</a></li><li><a href='/reading.aspx?cat=498'>Middle East</a></li><li><a href='/reading.aspx?cat=499'>Asia</a></li><li><a href='/reading.aspx?cat=500'>Central America</a></li><li><a href='/reading.aspx?cat=501'>North America</a></li><li><a href='/reading.aspx?cat=502'>Australia/Oceania</a></li><li><a href='/reading.aspx?cat=503'>Europe</a></li><li><a href='/reading.aspx?cat=504'>South America</a></li><li><a href='/reading.aspx?cat=505'>Bible Teaching</a></li><li><a href='/reading.aspx?cat=506'>Israel</a></li><li><a href='/reading.aspx?cat=513'>New World Order</a></li><li><a href='/reading.aspx?cat=514'>United States of America</a></li><li><a href='/reading.aspx?cat=520'>Benevolence</a></li><li><a href='/reading.aspx?cat=523'>Eagles Saving Nations</a></li><li><a href='/reading.aspx?cat=550'>Prophecies</a></li><li><a href='/reading.aspx?cat=590'>Soldiers of the Cross</a></li></ul>
+            </div>
+            <!-- end blog categories -->
+        </div>
+        <!-- end blog select  wrap -->
+        
+    </div>
+    <!-- end date filters -->
+</div>
+<!-- end row -->
+
+
+<div class="blog-content-wrap row">
+    
+    <div class="blog-single row">
+        
+        <meta property='og:title' content="2025 TV &amp; Radio Guests"/>
+        <meta property='og:image' content=""/>
+        <meta property='og:description' content="&nbsp;All programs were aired on Social Media and/or TV and Radio. 
+  January 11, 2025 Dr. Jonathan Hansen - A Very Prophetic Year - Breaking the Barriers Prophetic Conference 2025 Hosted by Apostle ..."/>
+    
+        <h1 class="post-title">2025 TV &amp; Radio Guests</h1>
+        
+    	<div class="meta row">
+    		<div class="post-date">4/30/2026</div>
+    		<div class="post-categories"><a href='/reading.aspx?cat=491'>Radio Guests</a>, <a href='/reading.aspx?cat=492'>TV Guests</a>, <a href='/reading.aspx?cat=493'>Pastoral Articles</a></div>
+    	</div>
+    	<!-- end meta -->
+    
+        <div class="post-content row">
+            <div class="post-featured-image"></div>
+            <p align="center">&nbsp;All programs were aired on Social Media and/or TV and Radio.</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-11-01.jpg" /><br /> <strong><span style="text-decoration: underline;">January 11, 2025</span></strong><br /><strong>Dr. Jonathan Hansen -</strong> A Very Prophetic Year - Breaking the Barriers Prophetic Conference 2025<br />Hosted by Apostle Ken Flynn</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-13-01.jpg" /><br /> <strong><span style="text-decoration: underline;">January 13, 2025</span></strong><br /> <strong>Jan-Aage Torp</strong>, President, European Apostolic Leaders, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-13-02.jpg" /><br /> <strong><span style="text-decoration: underline;">January 13, 2025</span></strong><br /> <strong>Thomas Moltu</strong>, Vice Chair, Christian Conservative Party, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-13-03.jpg" /><br /> <strong><span style="text-decoration: underline;">January 13, 2025</span></strong><br /> <strong>Eric England</strong>, Sales/Marketing - Mission Coordinator, Smokey Mountain Coffee</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-13-04.jpg" /><br /> <strong><span style="text-decoration: underline;">January 13, 2025</span></strong><br /> <strong>Rev. Gary Cristofaro</strong>, Vice President, Ezra International</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-13-05.jpg" /><br /> <strong><span style="text-decoration: underline;">January 13, 2025</span></strong><br /> <strong>Roy Kendall</strong>&nbsp; - The Piano &nbsp;</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-13-06.jpg" /><br /> <strong><span style="text-decoration: underline;">January 13, 2025</span></strong><br /> <strong>Rosemarie Fenchel</strong>, Babies Survive Abortion</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-21-01.jpg" /><br /> <strong><span style="text-decoration: underline;">January 21, 2025</span></strong><br /> <strong>Dr. Augustine (Augie) David</strong>, GLA Connection (Global Leadership Alignment)</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-23-01.jpg" /><br /> <strong><span style="text-decoration: underline;">January 23, 2025</span></strong><br /><strong>Minister Fred Christian -</strong> Speaking to you from the US capital where we were in the 119th Congress</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-23-02.jpg" /><br /> <strong><span style="text-decoration: underline;">January 23, 2025</span></strong><br /><strong>Minister Fred Christian -</strong> What is the Warning?</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-23-03.jpg" /><br /> <strong><span style="text-decoration: underline;">January 23, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Four sins that bring judgment on a nation</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-23-04.jpg" /><br /> <strong><span style="text-decoration: underline;">January 23, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> The Science of Judgment</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-23-05.jpg" /><br /> <strong><span style="text-decoration: underline;">January 23, 2025</span></strong><br /><strong>Minister Fred Christian -</strong> Join Eagle Saving Nations</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-01-31-01.jpg" /><br /> <strong><span style="text-decoration: underline;">January 31, 2025</span></strong><br /> <strong>Drs. Drake &amp; Serena Travis</strong>, Drake Travis Global Ministries</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-05-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 5, 2025</span></strong><br /> <strong>Minister Fred Christian</strong> - President Trump's Policies &amp; Strategies Pt 1</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-06-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 6, 2025</span></strong><br /> <strong>Rev. Anthony Githui</strong>, Missionary from Kenya - No Tribalism</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-08-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 8, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Without the Baptism, Power of the Holy Spirit, America &amp; the Nations will Fall (Holy Ghost Conference - Bellevue)</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-10-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 10, 2025</span></strong><br /> <strong>Apostolic Leader Eric Hurd</strong> - The Foot of Pride</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-10-02.jpg" /><br /> <strong><span style="text-decoration: underline;">February 10, 2025</span></strong><br /> <strong>Apostolic Leader Eric Hurd</strong> - Without Holy Spirit, the Nations will Fall</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-11-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 11, 2025</span></strong><br /> <strong>Minister Fred Christian</strong> - President Trump's Policies &amp; Strategies Pt 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-11-02.jpg" /><br /> <strong><span style="text-decoration: underline;">February 11, 2025</span></strong><br /> <strong>Missionary Dr. Bree Keyton</strong> - Pygmies</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-11-03.jpg" /><br /> <strong><span style="text-decoration: underline;">February 11, 2025</span></strong><br /> <strong>Pastor Matt Shea</strong> - Status of America</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-11-04.jpg" /><br /> <strong><span style="text-decoration: underline;">February 11, 2025</span></strong><br /> <strong>Shannon Davis</strong> - The Science of Judgment</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-11-05.jpg" /><br /> <strong><span style="text-decoration: underline;">February 11, 2025</span></strong><br /> <strong>Shannon Davis</strong> - The Baptism of the Holy Spirit</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-12-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 12, 2025</span></strong><br /> <strong>Dr. EJ Buckardt &amp; Minister Fred Christian</strong> - California Fires - Corruption - Sin (OmegaManRadio)</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-13-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 13, 2025</span></strong><br /> <strong>Minister Fred Christian</strong> - This Means War Part 1</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-13-02.jpg" /><br /> <strong><span style="text-decoration: underline;">February 13, 2025</span></strong><br /> <strong>Minister Fred Christian</strong> - This Means War Part 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-13-03.jpg" /><br /> <strong><span style="text-decoration: underline;">February 13, 2025</span></strong><br /> <strong>Dr. EJ Buckardt &amp; Minister Fred Christian</strong> - Protestants &amp; the Pope Part 1</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-13-04.jpg" /><br /> <strong><span style="text-decoration: underline;">February 13, 2025</span></strong><br /> <strong>Apostolic Leader Eric Hurd</strong> - The Humble of Heart</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-15-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 15, 2025</span></strong><br /> <strong>Apostle Williams Thumba</strong>, Malawi - Rebuilding the Broken Walls in Life</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-18-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 18, 2025</span></strong><br /> <strong>Dr. EJ Buckardt &amp; Minister Fred Christian</strong> - Protestants &amp; the Pope Part 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-18-02.jpg" /><br /> <strong><span style="text-decoration: underline;">February 18, 2025</span></strong><br /> <strong>Dr. EJ Buckardt &amp; Minister Fred Christian</strong> - Protestants &amp; the Pope Part 3</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-22-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 22, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Repent: Why?</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-22-02.jpg" /><br /> <strong><span style="text-decoration: underline;">February 22, 2025</span></strong><br /><strong>Dr. Jonathan Hansen -</strong> "Loyalty" - Bible College Graduation, Nairobi, Kenya</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-23-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 23, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> The New World Order &amp; Judgment - There is Hope - Deliverance Church Langata, Nairobi, Kenya, Host Bishop Geoffrey Njuguna</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-24-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 24, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Devotions at Kenya Bible School Nairobi, Kenya - NWO Wants to Control the World</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-02-27-01.jpg" /><br /> <strong><span style="text-decoration: underline;">February 27, 2025</span></strong><br /> <strong>Michael Lotem</strong>, Israel Ambassador to Kenya at the Israel Embassy in Nairobi, Kenya</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-03-01-01.jpg" /><br /> <strong><span style="text-decoration: underline;">March 1, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Spiritual Food &amp; Physical Food Part 1</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-03-02-01.jpg" /><br /> <strong><span style="text-decoration: underline;">March 2, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Great Awakening/National Repentance or Judgment - Hope - Majestic City Church, Kenya, hosted by Rev Dan Jr. Kariuki, for Arch Bishop Mark Kariuki</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-03-02-02.jpg" /><br /> <strong><span style="text-decoration: underline;">March 2, 2025</span></strong><br /><strong>Dr. Jonathan Hansen -</strong> House of Bread Church, Kenya, hosted by Reverend Francis Lincolns Agesa, for Arch Bishop Mark Kariuki</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-03-08-01.jpg" /><br /> <strong><span style="text-decoration: underline;">March 8, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Spiritual Food &amp; Physical Food Part 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-03-09-01.jpg" /><br /> <strong><span style="text-decoration: underline;">March 9, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Christian Foundation Fellowship, Nairobi, Kenya, for Archbishop Harrison Ng&rsquo;anga, with former VP the Honorable Stephen Kolonzo Musyoka in attendance</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-02-01.jpg" /><br /> <strong><span style="text-decoration: underline;">April 2, 2025</span></strong><br /><strong>Albert Veksler</strong> - President of the Jerusalem Prayer Breakfast in Oslo, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-02-02.jpg" /><br /> <strong><span style="text-decoration: underline;">April 2, 2025</span></strong><br /> <strong>Haakon Sengsvoll</strong>; Norway Admin. of the Jerusalem Prayer Breakfast, also a program host on TV Visjon Norway with The Israel Channel in Oslo, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-03-01.jpg" /><br /> <strong><span style="text-decoration: underline;">April 3, 2025</span></strong><br /><strong>Dr. Jonathan Hansen -</strong> Parliament Commentary (SHORT) Oslo, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-03-02.jpg" /><br /> <strong><span style="text-decoration: underline;">April 3, 2025</span></strong><br /><strong>Dr. Jonathan Hansen -</strong> The Consequences for Rejecting Israel - Jerusalem Prayer Breakfast, Oslo, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-03-03.jpg" /><br /> <strong><span style="text-decoration: underline;">April 3, 2025</span></strong><br /><strong>Selje Udjus</strong> and <strong>Lilly Kristin Langnes</strong>, Head Oslo Christian Democrats</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-03-04.jpg" /><br /> <strong><span style="text-decoration: underline;">April 3, 2025</span></strong><br /><strong>MP Humanshu Gilati</strong>, Norwegian Parliament</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-04-01.jpg" /><br /> <strong><span style="text-decoration: underline;">April 4, 2025</span></strong><br /> <strong>Eliezer Sandberg</strong>, former Israeli MK</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-04-02.jpg" /><br /> <strong><span style="text-decoration: underline;">April 4, 2025</span></strong><br /> <strong>Hananya Naftali</strong>, Digital Aid to Israeli Prime Minister, Benjamin Netanyahu, Oslo, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-04-03.jpg" /><br /> <strong><span style="text-decoration: underline;">April 4, 2025</span></strong><br /> <strong>Robert Ilatov,</strong> Co-Chairman of Jerusalem Prayer Breakfast and former Knesset Member, Oslo, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-05-01.jpg" /><br /> <strong><span style="text-decoration: underline;">April 5, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Prepare</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-06-01.jpg" /><br /> <strong><span style="text-decoration: underline;">April 6, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> The Science of Judgment - Without Repentance Norway is Damned - Visjonskirken in Drammen, Norway, Sunday AM</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-06-02.jpg" /><br /> <strong><span style="text-decoration: underline;">April 6, 2025</span></strong><br /> <strong>Drs. Jonathan &amp; Adalia Hansen</strong> lead intercessory prayer for Norway - Visjonskirken in Drammen, Norway, Sunday PM</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-04-07-01.jpg" /><br /> <strong><span style="text-decoration: underline;">April 7, 2025</span></strong><br /> <strong>Erik Selle</strong>, Leader of the Norwegian Conservative Party-Partileder Konservative, Oslo, Norway</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-05-11-01.jpg" /><br /> <strong><span style="text-decoration: underline;">May 11, 2025</span></strong><br /><strong>Rev. Dr. Adalia Hansen</strong> - Motherhood &amp; Spiritual Legacy - Love Fellowship Church International, Renton, WA</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-05-16-01.jpg" /><br /> <strong><span style="text-decoration: underline;">May 16, 2025</span></strong><br /> <strong>Bishop Paye Bagnon</strong> - Liberia</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-05-16-02.jpg" /><br /> <strong><span style="text-decoration: underline;">May 16, 2025</span></strong><br /> <strong>Minister Fred Christian</strong> - Trusting God when You Feel Forgotten Part 1</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-05-16-03.jpg" /><br /> <strong><span style="text-decoration: underline;">May 16, 2025</span></strong><br /> <strong>Minister Fred Christian - Dr. EJ Buckardt</strong> - Trusting God when You Feel Forgotten Part 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-05-24-01.jpg" /><br /> <strong><span style="text-decoration: underline;">May 24, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Critical Time for the Christian Church in America Part 1</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-05-31-01.jpg" /><br /> <strong><span style="text-decoration: underline;">May 31, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Critical Time for the Christian Church in America Part 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-11-01.jpg" /><br /> <strong><span style="text-decoration: underline;">June 11, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Illegal Aliens Riot in LA June 2025</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-11-02.jpg" /><br /> <strong><span style="text-decoration: underline;">June 11, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Tanzania Bishop Joshephat Gwajima Persecuted</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-15-01.jpg" /><br /> <strong><span style="text-decoration: underline;">June 15, 2025</span></strong><br /> <strong>Bishop Geoffrey Njuguna</strong> - Fathers as God's Image Bearers</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-17-01.jpg" /><br /> <strong><span style="text-decoration: underline;">June 17, 2025</span></strong><br /><strong>Bishop Geoffrey Njuguna</strong> - Kenya</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-17-02.jpg" /><br /> <strong><span style="text-decoration: underline;">June 17, 2025</span></strong><br /> <strong>Bishop Geoffrey Njuguna</strong> - Tanzania - Bishop Gwajima</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-17-03.jpg" /><br /> <strong><span style="text-decoration: underline;">June 17, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Israel Attacks Iran's Nuclear Facilities &nbsp;</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-19-01.jpg" /><br /> <strong><span style="text-decoration: underline;">June 19, 2025</span></strong><br /> <strong>Rev. Dr. Adalia Hansen &amp; Rev. Elizabeth Kamau</strong> - Breaking Spiritual Barriers &amp; Reclaiming Generational Blessings Part 1</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-19-02.jpg" /><br /> <strong><span style="text-decoration: underline;">June 19, 2025</span></strong><br /> <strong>Rev. Dr. Adalia Hansen &amp; Rev. Elizabeth Kamau</strong> - Breaking Spiritual Barriers &amp; Reclaiming Generational Blessings Part 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-21-01.jpg" /><br /> <strong><span style="text-decoration: underline;">June 21, 2025</span></strong><br /> <strong>Bishop Geoffrey Njuguna</strong> - Are You Earnestly Contending for the Faith?</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-27-01.jpg" /><br /> <strong><span style="text-decoration: underline;">June 27, 2025</span></strong><br /> <strong>Bishop Geoffrey Njuguna</strong> - The Demonic Spirits that Target the Five-Fold Ministries</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-06-30-01.jpg" /><br /> <strong><span style="text-decoration: underline;">June 30, 2025</span></strong><br /> <strong>Bishop Dr. Stanley Michuki &amp; Bishop J.M. Ole Kahara</strong> - Kenya</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-07-15-01.jpg" /><br /> <strong><span style="text-decoration: underline;">July 15, 2025</span></strong><br /> <strong>Dr. Apostle Vee Sitoh &amp; Rev. Janice Tan</strong> - The Apostolic Responsibility Worldwide</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-01-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 1, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya</strong> - Overcoming Fear&nbsp;</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-07-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 7, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya</strong> - Faith, Not Tears</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-08-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 8, 2025</span></strong><br /> <strong>Shannon Davis &amp; Bishop Tobias Nyamwaya - </strong>Church Racism</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-08-02.jpg" /><br /> <strong><span style="text-decoration: underline;">August 8, 2025</span></strong><br /> <strong>Shannon Davis &amp; Bishop Tobias Nyamwaya - </strong>Demons in the Church Today</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-08-03.jpg" /><br /> <strong><span style="text-decoration: underline;">August 8, 2025</span></strong><br /> <strong>Bishop Dr. Stanley Michuki &amp; Pastor Titus Njuguna - </strong>Crisis in Kenya</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-08-04.jpg" /><br /> <strong><span style="text-decoration: underline;">August 8, 2025</span></strong><strong>Bishop Dr. Stanley Michuki - </strong>Science of Judgment, Covenant Breaking Spirits</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-09-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 9, 2025</span></strong><br /> <strong>Bishop Dr. Stanley Michuki - </strong>Love Proves Covenant &amp; Christianity</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-14-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 14, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya - </strong>Dealing with Strongholds</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-15-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 15, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya - </strong>Enemies of Focus</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-15-02.jpg" /><br /> <strong><span style="text-decoration: underline;">August 15, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya &amp; Shannon Davis - </strong>Tyranny in the Nations - Tattoos - False Apostles/Prophets (Omega Man Radio)</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-16-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 16, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya - </strong>Principals of Love (Based on Ruth)</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-22-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 22, 2025</span></strong><br /> <strong>Dr EJ Buckardt &amp; Shannon Davis</strong> - Hitler - Obama &amp; Gaddafi -&nbsp;OMR</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-29-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 29, 2025</span></strong><br /> <strong>Minister Fred Christian - </strong>Altars, Piercings &amp; Tattoos</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-08-30-01.jpg" /><br /> <strong><span style="text-decoration: underline;">August 30, 2025</span></strong><br /><strong>Dr. Emmanuel Ziga - </strong>Turning Point</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-01-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 1, 2025</span></strong><br /> <strong>Bishop Dr. Stanley Michuki &amp; Pastor Peter Muthiora - </strong>The Church&rsquo;s Responsibility in the Nations</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-02-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 2, 2025</span></strong><br /> <strong>Bishop Dr. Stanley Michuki - </strong>An Agent of Transformation</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-02-02.jpg" /><br /> <strong><span style="text-decoration: underline;">September 2, 2025</span></strong><br /> <strong>Bishop Dr. Stanley Michuki - </strong>A Dangerous World</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-07-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 7, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Elijah's Mantle - Word of Faith Church in Kiambu, Kenya with Bishop Thomas Muthee</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-08-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 8, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya - </strong>Principles of Love - Forgiveness: Older Brother Syndrome</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-11-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 11, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya</strong> - God&rsquo;s Redirection or the Blessing of Obedience</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-12-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 12, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya</strong> - The Dead Still Speaks</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-13-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 13, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya</strong> - Principles of Love - Forgiveness Part 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-13-02.jpg" /><br /> <strong><span style="text-decoration: underline;">September 13, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Where are the Elijah's of God? - Church Leaders Conference, Lilongwe, Malawi</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-14-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 14, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> I Am a Debtor - Hand of God Church Int&rsquo;l, Lilongwe, Malawi</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-21-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 21, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> True Ambassadors Use Nuclear Weapons - Joy Bringers Church, Everett, WA</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-26-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 26, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya</strong> - Prayers</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-09-27-01.jpg" /><br /> <strong><span style="text-decoration: underline;">September 27, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya</strong> - Called to Add Value</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-01-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 1, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Who is The Holy Spirit? - 9th World Holy Spirit Conference, South Korea</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-01-02.jpg" /><br /> <strong><span style="text-decoration: underline;">October 1, 2025</span></strong><br /> <strong>Dr. EJ Buckardt - </strong>Having a Closer Walk with The Lord, 9th World Holy Spirit Conference, South Korea</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-01-03.jpg" /><br /> <strong><span style="text-decoration: underline;">October 1, 2025</span></strong><br /> <strong>Dr. Adalia Hansen - </strong>When the Spirit Comes Upon the Wounded, 9th World Holy Spirit Conference, South Korea</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-01-04.jpg" /><br /> <strong><span style="text-decoration: underline;">October 1, 2025</span></strong><br /><strong>Dr. Jonathan Hansen -</strong> Breakout Session - Where is the God of Elijah, 9th World Holy Spirit Conference, South Korea</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-03-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 3, 2025</span></strong><br /> <strong>Dr. EJ Buckardt</strong> - Are You Prepared?, 9th World Holy Spirit Conference, South Korea</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-03-02.jpg" /><br /> <strong><span style="text-decoration: underline;">October 3, 2025</span></strong><br /> <strong>Dr. Michael Hyodo - </strong>Don't Let the Fire Go Out, 9th World Holy Spirit Conference, South Korea</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-04-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 4, 2025</span></strong><br /> <strong>Minister Vance Miller - </strong>What&rsquo;s The &ldquo;Difference?&rdquo;</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-05-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 5, 2025</span></strong><br /><strong>Dr. Jonathan Hansen -</strong> The Holy Spirit Makes War in Korea -&nbsp;9th World Holy Spirit Conference, South Korea</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-09-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 9, 2025</span></strong><br /><strong>Bishop Tobias Nyamwaya - </strong>The Beloved of The Father</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-09-02.jpg" /><br /> <strong><span style="text-decoration: underline;">October 9, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya - </strong>The Wrong Belief System</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-10-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 10, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong>&nbsp;The Holy Spirit Makes War in Canada Parts 1 &amp; 2 at Regions Beyond Apostolic Network</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-11-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 11, 2025</span></strong><br /> <strong>Bishop Tobias Nyamwaya - </strong>Finding Peace in Times of Trouble</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-17-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 17, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Extending the Kingdom of God Through Relationship - &nbsp;Global Ministries Network Int&rsquo;l Congress 2025, Baltimore, MD</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-20-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 20, 2025</span></strong><br /> <strong>Dr. Adalia Hansen &amp; Rabbi Yehuda Glick</strong> (Former MK) - Discuss Amitsim, Supporting Families with Widowed Parents in Israel</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-10-25-01.jpg" /><br /> <strong><span style="text-decoration: underline;">October 25, 2025</span></strong><br /> <strong>Dr. EJ Buckardt - </strong>Unity/Disunity &amp; Where is the Church at Today</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-15-01.jpg" /><br /> <strong><span style="text-decoration: underline;">November 15, 2025</span></strong><br /> <strong>Dr. Jae Won-Kim - </strong>Founder, World Holy Spirit Ministries Int&rsquo;l - Korea</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-22-01.jpg" /><br /> <strong><span style="text-decoration: underline;">November 22, 2025</span></strong><br /> <strong>Dr. EJ Buckardt - </strong>Respect Pt 1</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-22-02.jpg" /><br /> <strong><span style="text-decoration: underline;">November 22, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Only the Holy Spirit Led Church Can Save the Philippines</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-22-03.jpg" /><br /> <strong><span style="text-decoration: underline;">November 22, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> It's Supernatural - God is Real - Philippines Crusade</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-23-01.jpg" /><br /> <strong><span style="text-decoration: underline;">November 23, 2025</span></strong><br /><strong>Engineer Edwin Canlas -&nbsp;</strong>Philippine interview, Bishop Israel Sanoy&rsquo;s friend</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-25-01.jpg" /><br /> <strong><span style="text-decoration: underline;">November 25, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> &ldquo;We serve a Living God&rdquo; - Flood Victims, Philippines Church Service</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-27-01.jpg" /><br /> <strong><span style="text-decoration: underline;">November 27, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> &ldquo;All the Heroes of the Bible Made Mistakes - God Can Use You - You Have a Destiny&rdquo; Philippine Maximum Security Prison with<strong> Bishop Israel Sanoy </strong></p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-29-01.jpg" /><br /> <strong><span style="text-decoration: underline;">November 29, 2025</span></strong><br /> <strong>Dr. EJ Buckardt - </strong>Respect Pt 2</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-11-29-02.jpg" /><br /> <strong><span style="text-decoration: underline;">November 29, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong> Spiritual Warfare - We will Save Our Nation through the Holy Spirit - Philippine church service</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-12-02-01.jpg" /><br /> <strong><span style="text-decoration: underline;">December 2, 2025</span></strong><br /> <strong>Dr. Adalia Hansen - </strong>Philippine Leaders Meeting</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-12-02-02.jpg" /><br /> <strong><span style="text-decoration: underline;">December 2, 2025</span></strong><br /> <strong>Dr. Jonathan Hansen -</strong>&nbsp;Eagles Guard the Sheep - Philippine Leaders Meeting<strong><br /></strong></p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-12-13-01.jpg" /><br /> <strong><span style="text-decoration: underline;">December 13, 2025</span></strong><br /> <strong>Dr. EJ Buckardt - </strong>Study to Show Thyself Approved</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-12-13-02.jpg" /><br /> <strong><span style="text-decoration: underline;">December 13, 2025</span></strong><br /> <strong>Marnix Van Ede - </strong>Zaka Search, Rescue &amp; Recovery</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-12-18-01.jpg" /><br /> <strong><span style="text-decoration: underline;">December 18, 2025</span></strong><br /><strong>Dr. EJ Buckardt - </strong>Tremendous Year, an Opportunity</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-12-18-02.jpg" /><br /> <strong><span style="text-decoration: underline;">December 18, 2025</span></strong><br /> <strong>Minister Fred Christian - </strong>Tremendous Year, Help Us Save the Nations</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-12-18-03.jpg" /><br /> <strong><span style="text-decoration: underline;">December 18, 2025</span></strong><br /> <strong>Steve Buckardt - </strong>Helping to Reach the Nations</p>
+<p align="center"><img src="https://www.worldministries.org/Userfiles/Blog-Images/2026-TVRadio-Guests/2025-12-18-04.jpg" /><br /> <strong><span style="text-decoration: underline;">December 18, 2025</span></strong><br /> <strong>Minister Fred Christian - </strong>Sharing the Full Gospel, We need Your Help</p>
+<p>&nbsp;</p>
+<p><strong><u>Social Media, TV, &amp; Radio Programs with Dr. Hansen alone</u></strong></p>
+<p>Hanukkah 2024</p>
+<p>The Science of Judgment Part 1</p>
+<p>Arise and Shine for Thy Light has Come</p>
+<p>The Science of Judgment Part 2</p>
+<p>God is Able</p>
+<p>The Science of Judgment Part 3</p>
+<p>God Blows Out the Threat</p>
+<p>The Science of Judgment Part 4</p>
+<p>God Warns &amp; Tests Our Prayers</p>
+<p>The Science of Judgment Part 5</p>
+<p>The Fight to the Death</p>
+<p>The Science of Judgment Part 6</p>
+<p>Be Patient &amp; Don't Give Up</p>
+<p>The Science of Judgment Part 7</p>
+<p>The Science of Judgment Part 8</p>
+<p>The Science of Judgment Part 9</p>
+<p>Is Your Belief System Bad?</p>
+<p>The Science of Judgment Part 10</p>
+<p>Covering</p>
+<p>The Science of Judgment Part 11</p>
+<p>The Science of Judgment Part 12</p>
+<p>The Passover Feasts / Resurrection Day</p>
+<p>The Science of Judgment Part 13</p>
+<p>The Dualistic Nature of God</p>
+<p>The Science of Judgment Part 14</p>
+<p>The Church has Divorced Itself from Its Roots</p>
+<p><span style="font-size: 14.0pt; font-family: 'Times New Roman','serif';">T</span>he Science of Judgment Part 15</p>
+<p>The Pope - Vatican &amp; Lies</p>
+<p>The Science of Judgment Part 16</p>
+<p>The Vatican &amp; Protestants (The Day of Worship)</p>
+<p>Prophetic Times</p>
+<p>World Control vs the Power of God</p>
+<p>Prophecy &amp; The Science of Judgment</p>
+<p>Covenant Breaking Spirits Part 1</p>
+<p>Covering in Prophetic Times - Racism / Tribalism is Evil</p>
+<p>Covenant Breaking Spirits Part 2</p>
+<p>Flawless Covering</p>
+<p>Covenant Breaking Spirits Part 3</p>
+<p>Iran-Israel War, Ceasefire a Mistake</p>
+<p>Iran-Israel Ceasefire Mistake - Nuclear War Instead</p>
+<p>Covenant Breaking Spirits Part 4 - Divine Judgment</p>
+<p>Israel-Iran Trump Mistake - Shannon Davis, Dr. Hansen</p>
+<p>Unholy Alliances</p>
+<p>Rejection Due to False Thoughts (Based on Mark 6:1-29)</p>
+<p>Unholy Alliances Part 2</p>
+<p>Where's the God of Elijah?</p>
+<p>Does God Dictate a President?</p>
+<p>Kenya / Malawi, Presidential Visit - Live with Shannon Davis (Eagles Saving Nations: Election Fraud, Spiritual Warfare &amp; The Mark of the Beast)</p>
+<p>Malawi Presidential Election</p>
+<p>God 's Enemies Reject Prophecy</p>
+<p>Prophecy - Ukraine &amp; Russia - America and Nuclear War</p>
+<p>Spiritual Warfare</p>
+<p>We Are Ambassadors</p>
+<p>Germany in Prophecy</p>
+<p>Fear Doesn't Stand a Chance Part 1</p>
+<p>Fear Doesn't Stand a Chance Part 2</p>
+<p>Israel Trip 2025</p>
+<p>The Forgotten Faces</p>
+<p>Rescuing Lives</p>
+<p>The Nature of Covenant Breaking Spirits Part 1</p>
+<p>Covenant Breaking Spirits&nbsp; Part 2 - Pres. Jomo Kenyatta &amp; Daniel Arap Moi</p>
+<p>Covenant Breaking Spirits&nbsp; Part 3 - Pres. Kibaki, Uhuru Kenyatta &amp; Ruto</p>
+<p>Covenant Breaking Spirits&nbsp; Part 4 - Broken Political Promises, Treaties &amp; Moral Values</p>
+<p>Give to the Forgotten Faces</p>
+<p>Covenant Breaking Spirits Part 5 - Spiritual Life &amp; Consequences</p>
+<p>Covenant Breaking Spirits Part 6 - Consequences</p>
+<p>Grace - Vision &amp; Revelation Work Together</p>
+<p>Christmas and Hanukkah</p>
+<p>Covenant Breaking Spirits Part 7 - Emotional &amp; Legal Consequences</p>
+<p>Covenant Breaking Spirits Part 8 - Harm to the Vulnerable</p>
+<p>Broken Dreams is the Beginning of Real Living</p>
+<p><strong><span style="text-decoration: underline;"><br />Dr. Hansen&rsquo;s TV / Radio Programs - (OMR) with Shannon Davis</span></strong></p>
+<p>Dr. EJ Buckardt for Dr. Hansen - Be Patient &amp; Don't Give Up &amp; Is Your Belief System Bad?</p>
+<p>Jerusalem Prayer breakfast, Oslo, Norway 4/3/25 &amp; The Passover Feasts/Resurrection Day</p>
+<p>The World Holy Spirit Conference Korea 2025</p>
+        </div>
+        <!-- end post content -->
+    
+    </div>
+    <!-- end blog single -->
+    
+</div>
+
+<input type="hidden" name="ucBlog135bo243$hdnSiteId" id="ucBlog135bo243_hdnSiteId" value="566" />
+<input type="hidden" name="ucBlog135bo243$hdnBlogId" id="ucBlog135bo243_hdnBlogId" value="135" />
+<input type="hidden" name="ucBlog135bo243$hdnPostId" id="ucBlog135bo243_hdnPostId" />
+<input type="hidden" name="ucBlog135bo243$hdnHomeTemplateId" id="ucBlog135bo243_hdnHomeTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnPostTemplateId" id="ucBlog135bo243_hdnPostTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnAuthorTemplateId" id="ucBlog135bo243_hdnAuthorTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnCategoryTemplateId" id="ucBlog135bo243_hdnCategoryTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnSearchTemplateId" id="ucBlog135bo243_hdnSearchTemplateId" />
+<input type="hidden" name="ucBlog135bo243$hdnTagTemplateId" id="ucBlog135bo243_hdnTagTemplateId" />
+
+<input type="hidden" name="ucBlog135bo243$hdnBlogPage" id="ucBlog135bo243_hdnBlogPage" /></div>
+<div id="counterBox" style="color: #ccc; font-size: 12px; text-align: center; margin-top: 40px; cursor: pointer;">Loading stats...</div>
+<div id="statsModalOverlay" style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 999999;">
+<div id="statsModal" style="background: #fff; border-radius: 10px; width: min(900px, 92vw); max-height: 85vh; box-shadow: 0 10px 30px rgba(0,0,0,0.35); display: flex; flex-direction: column; overflow: hidden;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #e6e6e6;">
+<div style="font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Arial;">Page stats (last 60 days)</div>
+<button id="statsModalCloseBtn" type="button" style="border: 0; background: transparent; font-size: 22px; line-height: 1; cursor: pointer; padding: 2px 6px;" aria-label="Close">&times;</button></div>
+<div style="padding: 12px 14px;">
+<div id="statsModalContent" style="white-space: pre; overflow: auto; font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; max-height: 65vh;"></div>
+</div>
+<div style="display: flex; justify-content: flex-end; gap: 10px; padding: 12px 14px; border-top: 1px solid #e6e6e6;"><button id="statsModalCopyBtn" type="button" style="border: 1px solid #ccc; background: #f7f7f7; border-radius: 6px; padding: 8px 10px; cursor: pointer; font: 600 12px system-ui;"> Copy </button> <button id="statsModalOkBtn" type="button" style="border: 1px solid #999; background: #eee; border-radius: 6px; padding: 8px 12px; cursor: pointer; font: 700 12px system-ui;"> OK </button></div>
+</div>
+</div>
